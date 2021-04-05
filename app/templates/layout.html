@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% if title %}
+            <title>Cipher's Reference - {{ title }}</title>
+        {% else %}
+            <title>Cipher's Reference</title>
+        {% endif %}
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{{ description }}">
+        <link rel="stylesheet" href='{{ url_for("static", filename="css/main.css") }}'>
+        <link rel="stylesheet" href='{{ url_for("static", filename="css/md.css") }}'>
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/bootstrap.min.css") }}'>
+    </head>
+    <body style="font-family: 'Times New Roman', Times, serif;">
+        {% block content %}{% endblock %}
+    </body>
+</html>

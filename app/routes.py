@@ -1,0 +1,248 @@
+from flask import Flask, render_template
+
+app = Flask(
+    __name__,
+    instance_relative_config=False,
+    static_folder='static',
+    template_folder='templates'
+    )
+
+'''
+when referencing a link url use url_for(function_name)
+'''
+
+@app.route('/')
+@app.route('/home')
+def home():
+    nav = [
+        {'name': 'Python', 'memo': 'Python Cheatsheet', 'url': 'python', 'img': 'static/img/Python.png'},
+        {'name': 'C++', 'memo': 'C++ Cheatsheet', 'url': 'cpp', 'img': 'static/img/cpp.png'},
+        {'name': 'HTML', 'memo': 'HTML Cheatsheet', 'url': 'htm', 'img': 'static/img/htm.png'},
+        {'name': 'JavaScript', 'memo': 'JavaScript Cheatsheet', 'url': 'js', 'img': 'static/img/js.png'},
+        {'name': 'MySQL', 'memo': 'MySQL Cheatsheet', 'url': 'sql', 'img': 'static/img/sql.png'},
+        {'name': 'React js', 'memo': 'React Cheatsheet', 'url': 'react', 'img': 'static/img/react.png'},
+        {'name': 'CSS', 'memo': 'CSS Cheatsheet', 'url': 'css', 'img': 'static/img/css.png'},
+        {'name': 'Flask', 'memo': 'Flask Cheatsheet', 'url': 'pyflask', 'img': 'static/img/flask.png'},
+    ]
+
+    return render_template(
+        'home.html',
+        description='A simple go to reference of knowledge - Code AutoBiography',
+        nav=nav 
+    )
+
+@app.route('/cpp')
+def cpp():
+    return render_template(
+        'cpp.html',
+        title='C++',
+        description='Code AutoBiography of C & C++'
+        )
+
+@app.route('/python')
+def python():
+    return render_template(
+        'py.html',
+        title='Python',
+        description='Code AutoBiography of Python'
+        )
+
+@app.route('/htm')
+def htm():
+    tags = [
+        {"tag": "!-- --", "description": "Defines a comment"},
+        {"tag": "!DOCTYPE html", "description": "Defines a document type"},
+        {"tag": "a", "description": "Defines a hyperlink"},
+        {"tag": "abbr", "description": "Defines an abbreviation"},
+        {"tag": "address", "description": "Defines contact information for the author or owner of a document"},
+        {"tag": "area", "description": "Defines an area inside an image-map"},
+        {"tag": "article", "description": "Defines an article"},
+        {"tag": "aside", "description": "Defines a content aside from page content"},
+        {"tag": "audio", "description": "Defines a sound content"},
+        {"tag": "b", "description": "Defines a bold text"},
+        {"tag": "base", "description": "Specifies the target URL/target for all relative URLs in a document"},
+        {"tag": "bdi", "description": "Isolates a part of text that might be formatted in a different from other text outside it"},
+        {"tag": "bdo", "description": "Overides the current text direction"},
+        {"tag": "blockquote", "description": "Defines a section that is quoted from another source"},
+        {"tag": "body", "description": "Defines the document's body"},
+        {"tag": "br", "description": "Defines a line break"},
+        {"tag": "button", "description": "Defines a clickable button"},
+        {"tag": "canvas", "description": "Used to draw graohics on the fly via scripting(usually javascript)"},
+        {"tag": "caption", "description": "Defines a table caption"},
+        {"tag": "cite", "description": "Defines the title of a work"},
+        {"tag": "code", "description": "Defines a piece of computer code"},
+        {"tag": "col", "description": "Specifies cloumn property for each column within a <colgroup> element"},
+        {"tag": "colgroup", "description": "Specifies a group of one or more columns in a table for formatting"},
+        {"tag": "datalist", "description": "Specifies a list of pre-defined options for input controls"},
+        {"tag": "dd", "description": "Defines a description/value of a term in a description list"},
+        {"tag": "del", "description": "Defines text that has been deleted from a document"},
+        {"tag": "details", "description": "Defines additional details that the user can view or hide"},
+        {"tag": "dfn", "description": "Represents the defining instance of a term"},
+        {"tag": "dialog", "description": "Defines a dialog box or window"},
+        {"tag": "div", "description": "Defines a section in a document"},
+        {"tag": "dl", "description": "Defines a description list"},
+        {"tag": "dt", "description": "Defines a term/name in a description list"},
+        {"tag": "em", "description": "Defines emphasized text"},
+        {"tag": "embed", "description": "Defines a container for an external(non-HTML) application"},
+        {"tag": "fieldset", "description": "groups related elements in a form"},
+        {"tag": "figcaption", "description": "Defines a caption for a <figure> element"},
+        {"tag": "figure", "description": "Specifies self-contained conntent"},
+        {"tag": "footer", "description": "Defines a footer for a document or section"},
+        {"tag": "form", "description": "Defines an HTML form for user input"},
+        {"tag": "h1 ... h6", "description": "Defines HTML headings"},
+        {"tag": "head", "description": "Defines information about the document"},
+        {"tag": "header", "description": "Defines a header for a document or a section"},
+        {"tag": "hr", "description": "Defines a horizontal line - a thematic change in content"},
+        {"tag": "html", "description": "Defines the root of an HTML document"},
+        {"tag": "i", "description": "Defines italicised text"},
+        {"tag": "iframe", "description": "Defines an inline frame"},
+        {"tag": "img", "description": "Defines an image"},
+        {"tag": "input", "description": "Defines an input control"},
+        {"tag": "ins", "description": "Defines a text that has been inserrted into s document"},
+        {"tag": "kbd", "description": "Defines keyboard input"},
+        {"tag": "keygen", "description": "Defines a key-pair generator field (for forms)"},
+        {"tag": "label", "description": "Defines a label for a input field"},
+        {"tag": "legend", "description": "Defines a caption for <fieldset> element"},
+        {"tag": "li", "description": "Defines a list item"},
+        {"tag": "link", "description": "Defines a relationship between a document and anexternal resource"},
+        {"tag": "main", "description": "Specifies the main content of a document"},
+        {"tag": "map", "description": "Defines a client-side image map"},
+        {"tag": "mark", "description": "Defines highlighted text"},
+        {"tag": "menu", "description": "Defines a list of menu/commands"},
+        {"tag": "menuitem", "description": "Defines a command that a user can invoke in a popup menu"},
+        {"tag": "meta", "description": "Defines metadata about an HTML document"},
+        {"tag": "meter", "description": "Defines a scalar measurement within a known range"},
+        {"tag": "nav", "description": "Defines navigation links"},
+        {"tag": "noscript", "description": "defines an alternate content for users that do not support client-side scripts"},
+        {"tag": "object", "description": "Defines an embedded object"},
+        {"tag": "ol", "description": "Defines an ordered list"},
+        {"tag": "optgroup", "description": "Defines a group of related options in a dropdown list"},
+        {"tag": "option", "description": "Defines an option in a dropdown list"},
+        {"tag": "output", "description": "Defines the result of a calculation"},
+        {"tag": "p", "description": "Defines a paragraph"},
+        {"tag": "param", "description": "Defines a parameter for an object"},
+        {"tag": "picture", "description": "Defines a container for multiple image resources"},
+        {"tag": "pre", "description": "Defines pre-formatted text"},
+        {"tag": "progress", "description": "Represents the progress of a task"},
+        {"tag": "q", "description": "Defines a short quotation"},
+        {"tag": "rp", "description": "Defines what to show in browsers tha do not support ruby annotations"},
+        {"tag": "samp", "description": 'Defines a sample output from a computer program'},
+        {"tag": "script", "description": "Defines a client-side script"},
+        {"tag": "section", "description": "Defines a section in a document"},
+        {"tag": "select", "description": "Defines a dropdown list"},
+        {"tag": "small", "description": "Defines a smaller text"},
+        {"tag": "source", "description": "Defines multiple media sources for media elements (<audio> & <video>)"},
+        {"tag": "span", "description": "Defines a section in a document"},
+        {"tag": "strong", "description": "Defines important text"},
+        {"tag": "sub", "description": "Defines a subscripted text"},
+        {"tag": "summary", "description": "Defines a visible heading for <details> element"},
+        {"tag": "sup", "description": "Defines a superscripted text"},
+        {"tag": "svg", "description": "defines a container for SVG graphics"},
+        {"tag": "table", "description": "Defines a table"},
+        {"tag": "tbody", "description": "Groups the body content in a table"},
+        {"tag": "td", "description": "Defines a cell in a table"},
+        {"tag": "textarea", "description": "Defines a multiline text input control"},
+        {"tag": "tfoot", "description": "Groups the footer content in a table"},
+        {"tag": "th", "description": "Defines a header cell in a table"},
+        {"tag": "thead", "description": "Groups the header content in a table"},
+        {"tag": "time", "description": "Deines date/time"},
+        {"tag": "title", "description": "Defines a title for the document"},
+        {"tag": "tr", "description": "Defines a row in a table"},
+        {"tag": "track", "description": "Defines text tracks for madia elements (<audio> & <video>)"},
+        {"tag": "u", "description": "Underlines text"},
+        {"tag": "ul", "description": "Defines an unordered list"},
+        {"tag": "var", "description": "Defines a variable"},
+        {"tag": "video", "description": "Defines a video content"},
+        {"tag": "wbr", "description": "Defines a possible line break"}
+    ]
+
+    lists = [
+        {"eg_1": "color", "eg_2": "tel"},
+        {"eg_1": "date", "eg_2": "name"},
+        {"eg_1": "datetime", "eg_2": "time"},
+        {"eg_1": "datetime-local", "eg_2": "text"},
+        {"eg_1": "email", "eg_2": "password"},
+        {"eg_1": "url", "eg_2": "radio"},
+        {"eg_1": "week", "eg_2": "checkbox"},
+        {"eg_1": "month", "eg_2": "submit"},
+        {"eg_1": "number", "eg_2": "range"},
+        {"eg_1": "search", "eg_2": "radio"},
+        {"eg_1": "submit", "eg_2": "checkbox"}
+    ]
+
+    attr = [
+        {"eg_1": "form", "eg_2": "list"},
+        {"eg_1": "max", "eg_2": "min"},
+        {"eg_1": "formaction", "eg_2": "multiple"},
+        {"eg_1": "formenctype", "eg_2": "placeholder"},
+        {"eg_1": "formnovalidate", "eg_2": "required"},
+        {"eg_1": "formtarget", "eg_2": "step"},
+        {"eg_1": "height", "eg_2": "width"},
+        {"eg_1": "autofocus", "eg_2": "pattern"},
+    ]
+
+    specs = [
+        {"code": "&amp; &#38;", "display": "Ampersand(&)"},
+        {"code": "&gt; &#62", "display": "Greater than(>)"},
+        {"code": "&lt; &#60", "display": "Less than(<)"},
+        {"code": "&quot; &#34", "display": "Quotation marks(\"\")"},
+        {"code": "&copy; &#169", "display": "Copyright"},
+        {"code": "&reg; &#174", "display": "Registered"},
+        {"code": "&trade; &#8482", "display": "Trademark"},
+        {"code": "&nbsp; &#160", "display": "Non-breaking space"}
+
+    ]
+
+    return render_template(
+        'html/htm.html',
+        title='HTML',
+        description='Code AutoBiography of HTML',
+        tags=tags,
+        lists=lists,
+        attr=attr,
+        specs=specs
+    )
+
+@app.route('/js')
+def js():
+    return render_template(
+        'js.html',
+        title='JavaScript',
+        description='Code AutoBiography of JavaScript'
+    )
+
+@app.route('/sql')
+def sql():
+    return render_template(
+        'sql.html',
+        title='MySQL',
+        description='Code AutoBiography of MySQL'
+    )
+
+@app.route('/react')
+def react():
+    return render_template(
+        'react.html',
+        title='React',
+        description='Code AutoBiography of React js'
+    )
+
+@app.route('/css')
+def css():
+    return render_template(
+        'css.html',
+        title='CSS',
+        description='Code AutoBiography of CSS'
+    )
+
+@app.route('/flask')
+def pyflask():
+    return render_template(
+        'flask.html',
+        title='Flask',
+        description='Code AutoBiography of Flask'
+    )
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

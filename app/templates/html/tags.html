@@ -1,0 +1,22 @@
+<div>
+    <div class="bd-example">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tag in tags %}
+                    <tr>
+                        <td>
+                            <code style="color:#7700ff">&lt;{{ tag.tag }}&gt;</code>
+                        </td>
+                        <td>{{ tag.description }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

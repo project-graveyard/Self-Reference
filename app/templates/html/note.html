@@ -1,0 +1,34 @@
+<div>
+    <h3 style="text-align: center;">GET & POST</h3>
+    <p>Code Sample:</p>
+    <pre><code>&lt;form action = "" method = "GET" or "POST"&gt;</code></pre>
+    <p>GET: The form data will be visisble in the page address<br/>POST: Offers better security because submitted data is not visisble in the page address</p>
+</div>
+<div>
+    <h3 style="text-align: center;">The &lt;iframe&gt; element</h3>
+    <p>It as <em>src</em> and <em>name</em> attributes. The src attribute can be set to a url you want to embed into your page. E.g. </p><pre><code>&lt;iframe sandbox src="http://somedomain.net/content"&gt;&lt;/iframe&gt;</code></pre>
+    <p>To override restrictions, use the following values: <br/>
+    <ul>
+        <li><em>allow-forms</em> - Enables forms.</li>
+        <li><em>allow-same-origin</em> - Allows the content to be treated as being from the same origin.</li>
+        <li><em>allow-scripts</em> - Enables scripts except popups.</li>
+        <li><em>allow-top-navigation</em> - Allows content to navigate it's top-level browing content.</li>
+    </ul>
+    </p>
+    <pre><code>&lt;iframe sandbox="allow-same-origin allow-forms allow-scripts" src="http://somedomain.net/content"&gt;&lt;/iframe&gt;</code></pre>
+    <p>
+        The iframe tag has a <em>seamless</em> attribute that indicates that the source content is to appear as though its part of the containing document. How to enable seamless:
+    </p>
+    <pre><code>&lt;iframe seamless="seamless"&gt;<br/>&lt;iframe seamless=""&gt;<br/>&lt;iframe seamless&gt;</code></pre><br/>
+</div>
+<div>
+    <h3 style="text-align: center;">Internal Links</h3>
+    <p>If the link is internal, the <em>href</em> will contain the hash(#) symbol followed by  the id of the tag that you want to jump to. If you use only the hash(#) symbol, clicking the link will take you to the top of the HTML document. E.g. </p>
+    <pre><code>&lt;a href="#"&gt;Top&lt;/a&gt;<br/>&lt;a href="#bill_address"&gt;Go to BIlling Address&lt;/a&gt;</code></pre>
+</div>
+<div>
+    <h3 style="text-align: center;">Sending E-mail With Hyperlinks</h3>
+    <p>
+        You can use <em>mailto</em> protocol to send e-mail messages. The <em>mailto</em> url accpets the following parameters: subject, cc, bcc and body. The parameters can be added in any order by adding a question mark(?) after the email address and separating the parameters with the ampersand(&).<br/>Code Sample:
+    </p>
+</div>

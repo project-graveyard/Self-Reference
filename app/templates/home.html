@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1 class="head">Welcome To My Personal Reference WebApp</h1>
+    {% for link in nav %}
+    <a href="{{ url_for(link.url) }}">
+    <div class="card">
+        <div class="container">
+            <img src='{{ link.img }}' alt="img"/>
+            <h4><b>{{ link.name }}</b></h4>
+            <p>{{ link.memo }}</p>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+{% endblock %}
