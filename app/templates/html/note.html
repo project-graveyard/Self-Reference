@@ -31,5 +31,15 @@
     <p>
         You can use <em>mailto</em> protocol to send e-mail messages. The <em>mailto</em> url accpets the following parameters: subject, cc, bcc and body. The parameters can be added in any order by adding a question mark(?) after the email address and separating the parameters with the ampersand(&).<br/>Code Sample:
     </p>
-    <pre><cocde></cocde></pre>
+    <div id="preview">
+        <pre><code class="has-line-data" data-line-start="1" data-line-end="11" class="language-html"><span class="hljs-comment">&lt;!-- basic mailto --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- add name, (email is wrapped with &amp;lt; and &amp;gt:) --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:Joe&amp;lt;sales@gmail.com&amp;gt;"</span>&gt;</span>Contact Joe in Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- multiple receipients are separated by a comma --&gt;</span>
+        <span class="hljs-comment">&lt;!-- Add carbon copy, same for bcc --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com,services@gmail.com"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- Adding basic mailto with message --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com?body=Call me"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        </code></pre></div>
 </div>
