@@ -5,31 +5,41 @@ app = Flask(
     instance_relative_config=False,
     static_folder='static',
     template_folder='templates'
-    )
+)
 
 '''
 when referencing a link url use url_for(function_name)
 '''
 
+
 @app.route('/')
 @app.route('/home')
 def home():
     nav = [
-        {'name': 'Python', 'memo': 'Python Cheatsheet', 'url': 'python', 'img': 'static/img/Python.png'},
-        {'name': 'C++', 'memo': 'C++ Cheatsheet', 'url': 'cpp', 'img': 'static/img/cpp.png'},
-        {'name': 'HTML', 'memo': 'HTML Cheatsheet', 'url': 'htm', 'img': 'static/img/htm.png'},
-        {'name': 'JavaScript', 'memo': 'JavaScript Cheatsheet', 'url': 'js', 'img': 'static/img/js.png'},
-        {'name': 'MySQL', 'memo': 'MySQL Cheatsheet', 'url': 'sql', 'img': 'static/img/sql.png'},
-        {'name': 'React js', 'memo': 'React Cheatsheet', 'url': 'react', 'img': 'static/img/react.png'},
-        {'name': 'CSS', 'memo': 'CSS Cheatsheet', 'url': 'css', 'img': 'static/img/css.png'},
-        {'name': 'Flask', 'memo': 'Flask Cheatsheet', 'url': 'pyflask', 'img': 'static/img/flask.png'},
+        {'name': 'Python', 'memo': 'Python Cheatsheet',
+            'url': 'python', 'img': 'static/img/Python.png'},
+        {'name': 'C++', 'memo': 'C++ Cheatsheet',
+            'url': 'cpp', 'img': 'static/img/cpp.png'},
+        {'name': 'HTML', 'memo': 'HTML Cheatsheet',
+            'url': 'htm', 'img': 'static/img/htm.png'},
+        {'name': 'JavaScript', 'memo': 'JavaScript Cheatsheet',
+            'url': 'js', 'img': 'static/img/js.png'},
+        {'name': 'MySQL', 'memo': 'MySQL Cheatsheet',
+            'url': 'sql', 'img': 'static/img/sql.png'},
+        {'name': 'React js', 'memo': 'React Cheatsheet',
+            'url': 'react', 'img': 'static/img/react.png'},
+        {'name': 'CSS', 'memo': 'CSS Cheatsheet',
+            'url': 'css', 'img': 'static/img/css.png'},
+        {'name': 'Flask', 'memo': 'Flask Cheatsheet',
+            'url': 'pyflask', 'img': 'static/img/flask.png'},
     ]
 
     return render_template(
         'home.html',
         description='A simple go to reference of knowledge - Code AutoBiography',
-        nav=nav 
+        nav=nav
     )
+
 
 @app.route('/cpp')
 def cpp():
@@ -37,15 +47,17 @@ def cpp():
         'cpp.html',
         title='C++',
         description='Code AutoBiography of C & C++'
-        )
+    )
+
 
 @app.route('/python')
 def python():
     return render_template(
-        'py.html',
+        'python/py.html',
         title='Python',
         description='Code AutoBiography of Python'
-        )
+    )
+
 
 @app.route('/htm')
 def htm():
@@ -63,11 +75,13 @@ def htm():
         {"tag": "base", "description": "Specifies the target URL/target for all relative URLs in a document"},
         {"tag": "bdi", "description": "Isolates a part of text that might be formatted in a different from other text outside it"},
         {"tag": "bdo", "description": "Overides the current text direction"},
-        {"tag": "blockquote", "description": "Defines a section that is quoted from another source"},
+        {"tag": "blockquote",
+            "description": "Defines a section that is quoted from another source"},
         {"tag": "body", "description": "Defines the document's body"},
         {"tag": "br", "description": "Defines a line break"},
         {"tag": "button", "description": "Defines a clickable button"},
-        {"tag": "canvas", "description": "Used to draw graohics on the fly via scripting(usually javascript)"},
+        {"tag": "canvas",
+            "description": "Used to draw graohics on the fly via scripting(usually javascript)"},
         {"tag": "caption", "description": "Defines a table caption"},
         {"tag": "cite", "description": "Defines the title of a work"},
         {"tag": "code", "description": "Defines a piece of computer code"},
@@ -83,7 +97,8 @@ def htm():
         {"tag": "dl", "description": "Defines a description list"},
         {"tag": "dt", "description": "Defines a term/name in a description list"},
         {"tag": "em", "description": "Defines emphasized text"},
-        {"tag": "embed", "description": "Defines a container for an external(non-HTML) application"},
+        {"tag": "embed",
+            "description": "Defines a container for an external(non-HTML) application"},
         {"tag": "fieldset", "description": "groups related elements in a form"},
         {"tag": "figcaption", "description": "Defines a caption for a <figure> element"},
         {"tag": "figure", "description": "Specifies self-contained conntent"},
@@ -100,7 +115,8 @@ def htm():
         {"tag": "input", "description": "Defines an input control"},
         {"tag": "ins", "description": "Defines a text that has been inserrted into s document"},
         {"tag": "kbd", "description": "Defines keyboard input"},
-        {"tag": "keygen", "description": "Defines a key-pair generator field (for forms)"},
+        {"tag": "keygen",
+            "description": "Defines a key-pair generator field (for forms)"},
         {"tag": "label", "description": "Defines a label for a input field"},
         {"tag": "legend", "description": "Defines a caption for <fieldset> element"},
         {"tag": "li", "description": "Defines a list item"},
@@ -116,7 +132,8 @@ def htm():
         {"tag": "noscript", "description": "defines an alternate content for users that do not support client-side scripts"},
         {"tag": "object", "description": "Defines an embedded object"},
         {"tag": "ol", "description": "Defines an ordered list"},
-        {"tag": "optgroup", "description": "Defines a group of related options in a dropdown list"},
+        {"tag": "optgroup",
+            "description": "Defines a group of related options in a dropdown list"},
         {"tag": "option", "description": "Defines an option in a dropdown list"},
         {"tag": "output", "description": "Defines the result of a calculation"},
         {"tag": "p", "description": "Defines a paragraph"},
@@ -131,7 +148,8 @@ def htm():
         {"tag": "section", "description": "Defines a section in a document"},
         {"tag": "select", "description": "Defines a dropdown list"},
         {"tag": "small", "description": "Defines a smaller text"},
-        {"tag": "source", "description": "Defines multiple media sources for media elements (<audio> & <video>)"},
+        {"tag": "source",
+            "description": "Defines multiple media sources for media elements (<audio> & <video>)"},
         {"tag": "span", "description": "Defines a section in a document"},
         {"tag": "strong", "description": "Defines important text"},
         {"tag": "sub", "description": "Defines a subscripted text"},
@@ -148,7 +166,8 @@ def htm():
         {"tag": "time", "description": "Deines date/time"},
         {"tag": "title", "description": "Defines a title for the document"},
         {"tag": "tr", "description": "Defines a row in a table"},
-        {"tag": "track", "description": "Defines text tracks for madia elements (<audio> & <video>)"},
+        {"tag": "track",
+            "description": "Defines text tracks for madia elements (<audio> & <video>)"},
         {"tag": "u", "description": "Underlines text"},
         {"tag": "ul", "description": "Defines an unordered list"},
         {"tag": "var", "description": "Defines a variable"},
@@ -203,6 +222,7 @@ def htm():
         specs=specs
     )
 
+
 @app.route('/js')
 def js():
     return render_template(
@@ -210,6 +230,7 @@ def js():
         title='JavaScript',
         description='Code AutoBiography of JavaScript'
     )
+
 
 @app.route('/sql')
 def sql():
@@ -219,6 +240,7 @@ def sql():
         description='Code AutoBiography of MySQL'
     )
 
+
 @app.route('/react')
 def react():
     return render_template(
@@ -227,6 +249,7 @@ def react():
         description='Code AutoBiography of React js'
     )
 
+
 @app.route('/css')
 def css():
     return render_template(
@@ -234,6 +257,7 @@ def css():
         title='CSS',
         description='Code AutoBiography of CSS'
     )
+
 
 @app.route('/flask')
 def pyflask():

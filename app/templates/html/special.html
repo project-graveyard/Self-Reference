@@ -1,21 +1,23 @@
-<h3 style="font-family: 'Times New Roman', Times, serif;">Common Special Characters</h3>
+<h3 style="font-family: 'Times New Roman', Times, serif">
+  Common Special Characters
+</h3>
 <div>
-    <div class="bd-example">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Code</th>
-                    <th scope="col">Display(output)</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for spec in specs %}
-                    <tr>
-                        <td>{{ spec.code }}</td>
-                        <td>{{ spec.display }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+  <div class="bd-example">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Display(output)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for spec in specs %}
+        <tr>
+          <td>{{ spec.code }}</td>
+          <td>{{ spec.display }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>

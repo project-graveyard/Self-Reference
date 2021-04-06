@@ -3,8 +3,8 @@
 {% block content %}
 <div><img src="{{ url_for('static', filename='img/htm.png')}}" alt="python-icon"
         style="position: relative; float: left;" />
+    <h2>HTML Reference</h2>
 </div>
-<h3>HTML Reference</h3>
 <article class="my-3" id="accordion">
     <div>
         <div class="bd-example">
@@ -13,8 +13,7 @@
                     <h4 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Introduction
-                        </button>
+                            Introduction</button>
                     </h4>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
@@ -119,35 +118,10 @@
                     </div>
                 </div>
             </div>
-            <!--
-                    <div class="accordion-item">
-                        <h4 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                --Content Title--
-                            </button>
-                        </h4>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                --Body Content--
-                            </div>
-                        </div>
-                    </div>-->
         </div>
+    </div>
     </div>
     </div>
 </article>
 
 {% endblock %}
-
-
-<!--
-<div><a href="{{url_for('html_layout')}}">
-    <div class="card">
-        <div class="container">
-            <h4><b>Layout Structure</b></h4>
-        </div>
-    </div>
-    </a></div>
-    -->

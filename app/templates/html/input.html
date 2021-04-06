@@ -1,32 +1,31 @@
-<h3 style="font-family: 'Times New Roman', Times, serif;">Input Types</h3>
+<h3 style="font-family: 'Times New Roman', Times, serif">Input Types</h3>
 <div>
-    <div class="bd-example">
-        <table class="table table-striped">
-            <tbody>
-                {% for list in lists %}
-                    <tr>
-                        <td>{{ list.eg_1 }}</td>
-                        <td>{{ list.eg_2 }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+  <div class="bd-example">
+    <table class="table table-striped">
+      <tbody>
+        {% for list in lists %}
+        <tr>
+          <td>{{ list.eg_1 }}</td>
+          <td>{{ list.eg_2 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
-<br/>
-<h3 style="font-family: 'Times New Roman', Times, serif;">Input Attributes</h3>
+<br />
+<h3 style="font-family: 'Times New Roman', Times, serif">Input Attributes</h3>
 <div>
-    <div class="bd-example">
-        <table class="table table-striped">
-            <tbody>
-                {% for attr in attr %}
-                    <tr>
-                        <td>{{ attr.eg_1 }}</td>
-                        <td>{{ attr.eg_2 }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+  <div class="bd-example">
+    <table class="table table-striped">
+      <tbody>
+        {% for attr in attr %}
+        <tr>
+          <td>{{ attr.eg_1 }}</td>
+          <td>{{ attr.eg_2 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
-
