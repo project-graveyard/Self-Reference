@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT app:routes.py
+web: gunicorn routes:app --log-file=-
