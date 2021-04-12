@@ -1,0 +1,141 @@
+<div id="preview">
+    <p class="has-line-data" data-line-start="0" data-line-end="1">The main data structures are:</p>
+    <ul>
+    <li class="has-line-data" data-line-start="1" data-line-end="2">list</li>
+    <li class="has-line-data" data-line-start="2" data-line-end="3">tuples</li>
+    <li class="has-line-data" data-line-start="3" data-line-end="4">dictionaries</li>
+    <li class="has-line-data" data-line-start="4" data-line-end="6">sets</li>
+    </ul>
+    <h3 class="code-line" data-line-start=6 data-line-end=7><a id="Lists_6"></a>Lists</h3>
+    <ul>
+    <li class="has-line-data" data-line-start="7" data-line-end="9">It is an object in python; used to store an indexed list of items. It is created using square brackets ([]) with commas separating them.</li>
+    </ul>
+    <p class="has-line-data" data-line-start="9" data-line-end="10">Syntax:</p>
+    <pre><code class="has-line-data" data-line-start="11" data-line-end="13" class="language-python">var = [<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>]
+    </code></pre>
+    <ul>
+    <li class="has-line-data" data-line-start="13" data-line-end="14">To access the values, use index starting from 0.</li>
+    <li class="has-line-data" data-line-start="14" data-line-end="16">The <code>in</code> and <code>not in</code> operators checks if items are in the list.</li>
+    </ul>
+    <h5 class="code-line" data-line-start=16 data-line-end=17><a id="Common_List_Functions_16"></a>Common List Functions:</h5>
+    <ul>
+    <li class="has-line-data" data-line-start="17" data-line-end="19"><code>append</code> method addds an item to an existing list at the end.<br>
+    E.g.</li>
+    </ul>
+    <pre><code class="has-line-data" data-line-start="20" data-line-end="24" class="language-python">nums = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
+    nums.append(<span class="hljs-number">4</span>)
+    nums = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+    </code></pre>
+    <ul>
+    <li class="has-line-data" data-line-start="25" data-line-end="27">To get the number of items in a list, use <code>len</code> function.<br>
+    E.g. <code>len(list)</code></li>
+    <li class="has-line-data" data-line-start="27" data-line-end="29"><code>insert</code> method allows you to add an item to any position in a list.<br>
+    Syntax: <code>list.insert(index, value)</code></li>
+    <li class="has-line-data" data-line-start="29" data-line-end="31"><code>index</code> method finds the first occurence of an item in a list and returns its index.<br>
+    Syntax: <code>list.index(obj_value)</code></li>
+    <li class="has-line-data" data-line-start="31" data-line-end="32"><code>max</code> function returns the list item with the maximum value.</li>
+    <li class="has-line-data" data-line-start="32" data-line-end="33"><code>min</code> function returns the list item with the minimum value.</li>
+    <li class="has-line-data" data-line-start="33" data-line-end="34"><code>list.count(obj)</code> returns the count of how many times an item occurs in a list.</li>
+    <li class="has-line-data" data-line-start="34" data-line-end="35"><code>list.remove(obj)</code> removes an object from a list.</li>
+    <li class="has-line-data" data-line-start="35" data-line-end="36"><code>list.reverse()</code> function reverses objects in a list.</li>
+    </ul>
+    <h5 class="code-line" data-line-start=36 data-line-end=37><a id="List_Comprehensions_36"></a>List Comprehensions:</h5>
+    <p class="has-line-data" data-line-start="37" data-line-end="39">It is a useful way of quickly creating lists whose contents obey a simple rule.<br>
+    E.g.</p>
+    <pre><code class="has-line-data" data-line-start="40" data-line-end="43" class="language-python">cubes = [i**<span class="hljs-number">3</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>)]
+    <span class="hljs-string">'''output: [0, 1, 8, 27, 64]'''</span>
+    </code></pre>
+    <h5 class="code-line" data-line-start=43 data-line-end=44><a id="List_Slices_43"></a>List Slices:</h5>
+    <p class="has-line-data" data-line-start="44" data-line-end="45">E.g.</p>
+    <pre><code class="has-line-data" data-line-start="46" data-line-end="50" class="language-python">sq = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+    print(sq[<span class="hljs-number">1</span>:<span class="hljs-number">5</span>])
+    <span class="hljs-string">'''output: [1, 2, 3, 4]'''</span>
+    </code></pre>
+    <ul>
+    <li class="has-line-data" data-line-start="50" data-line-end="51"><code>[1:5]</code> starts from index 1 and stops at index 5(with index 5’s value excluded).</li>
+    <li class="has-line-data" data-line-start="51" data-line-end="52">If the first number of a slice is omitted, it is taken from the start of the list. E.g. <code>[:5]</code></li>
+    <li class="has-line-data" data-line-start="52" data-line-end="53">If the second number of a slice is omitted, it is taken to the end of the list. E.g. <code>[1:]</code></li>
+    <li class="has-line-data" data-line-start="53" data-line-end="54">It can be applied to turples.</li>
+    <li class="has-line-data" data-line-start="54" data-line-end="55">There is a third number for step. E.g. <code>[2:3:3]</code></li>
+    <li class="has-line-data" data-line-start="55" data-line-end="57">When negative values are used in slices, they count from the end of the list.</li>
+    </ul>
+    <h3 class="code-line" data-line-start=57 data-line-end=58><a id="Turples_57"></a>Turples</h3>
+    <ul>
+    <li class="has-line-data" data-line-start="58" data-line-end="60">They are very similar to lists except that they cannot be changed.<br>
+    Syntax:</li>
+    </ul>
+    <pre><code class="has-line-data" data-line-start="61" data-line-end="65" class="language-python">var = (val, val, val)
+    <span class="hljs-comment">#Or</span>
+    var = val, val, val
+    </code></pre>
+    <ul>
+    <li class="has-line-data" data-line-start="65" data-line-end="67">Turples are faster than lists.</li>
+    </ul>
+    <h3 class="code-line" data-line-start=67 data-line-end=68><a id="Dictionaries_67"></a>Dictionaries</h3>
+    <p class="has-line-data" data-line-start="68" data-line-end="70">They are used to map arbituary keys to values.<br>
+    Syntax:</p>
+    <pre><code class="has-line-data" data-line-start="71" data-line-end="77" class="language-python">var = {val: val1}
+    <span class="hljs-comment">#To access the value</span>
+    var[val]
+    <span class="hljs-comment">#Adding new values</span>
+    var[key] = value
+    </code></pre>
+    <h3 class="code-line" data-line-start=78 data-line-end=79><a id="Sets_78"></a>Sets</h3>
+    <ul>
+    <li class="has-line-data" data-line-start="79" data-line-end="81">They are similar to lists and dictionaries but are unordered, so they cannot be indexed.<br>
+    Syntax:</li>
+    </ul>
+    <pre><code class="has-line-data" data-line-start="82" data-line-end="88" class="language-python">var = {val1, val2, val3}
+    <span class="hljs-comment">#Or</span>
+    var = set([val1, val2, val3])
+    <span class="hljs-comment">#For empty set</span>
+    var = set()
+    </code></pre>
+    <ul>
+    <li class="has-line-data" data-line-start="88" data-line-end="89">They cannot contain duplicate elements</li>
+    <li class="has-line-data" data-line-start="89" data-line-end="90">To add new value, use the <code>add(val)</code> method,</li>
+    <li class="has-line-data" data-line-start="90" data-line-end="91"><code>remove(val)</code> method removes specific elements from a set.</li>
+    <li class="has-line-data" data-line-start="91" data-line-end="92"><code>pop()</code> method removes the first element</li>
+    </ul>
+    <h5 class="code-line" data-line-start=92 data-line-end=93><a id="Set_Operators_92"></a>Set Operators</h5>
+    <p class="has-line-data" data-line-start="93" data-line-end="94"><div>
+        <div class="bd-example">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Operator</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for ops in sets %}
+              <tr>
+                <td>{{ ops.sign }}</td>
+                <td>{{ ops.description }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div></p>
+    <h3 class="code-line" data-line-start=95 data-line-end=96><a id="Note_When_to_use_the_different_types_of_data_structures_95"></a>Note: When to use the different types of data structures</h3>
+    <hr>
+    <h5 class="code-line" data-line-start=97 data-line-end=98><a id="When_To_Use_Lists_97"></a>When To Use Lists:</h5>
+    <ul>
+    <li class="has-line-data" data-line-start="98" data-line-end="99">When you have a collection of data that does not need random access.</li>
+    <li class="has-line-data" data-line-start="99" data-line-end="100">When you need a simple iterable collection that is modified frequently.</li>
+    </ul>
+    <h5 class="code-line" data-line-start=100 data-line-end=101><a id="When_to_use_Dictionaries_100"></a>When to use Dictionaries:</h5>
+    <ul>
+    <li class="has-line-data" data-line-start="101" data-line-end="102">When you need a logical association between a key value pair.</li>
+    <li class="has-line-data" data-line-start="102" data-line-end="103">When you need fast lookup on your data based on a custom key.</li>
+    <li class="has-line-data" data-line-start="103" data-line-end="104">When data is constantly modified since they are mutable.</li>
+    </ul>
+    <h5 class="code-line" data-line-start=104 data-line-end=105><a id="When_to_use_Turples_104"></a>When to use Turples:</h5>
+    <ul>
+    <li class="has-line-data" data-line-start="105" data-line-end="106">When your data cannot change</li>
+    </ul>
+    <h5 class="code-line" data-line-start=106 data-line-end=107><a id="When_to_use_Sets_106"></a>When to use Sets:</h5>
+    <ul>
+    <li class="has-line-data" data-line-start="107" data-line-end="108">When you need uniqueness for data elements.</li>
+    </ul>
+    </div>

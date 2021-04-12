@@ -52,10 +52,37 @@ def cpp():
 
 @app.route('/python')
 def python():
+    operator = [
+        {"sign": "**", "description": "Exponentiation"},
+        {"sign": "~, +, -", "description": "Complement, plus, minus"},
+        {"sign": "*, /, %, //",
+            "description": "Multiply, division, modulus, floor division"},
+        {"sign": ">>, <<", "description": "Right and left bitwise shift"},
+        {"sign": "&", "description": "Bitwise AND"},
+        {"sign": "^", "description": "Bitwise exclusive OR"},
+        {"sign": "|", "description": "Bitwise OR"},
+        {"sign": "", "description": "in, not in, is not, is"},
+        {"sign": "<, >, <=, >=, !=, ==",
+            "description": "Less than, greater than, less than or equal to, greater than ot equal, not equal, equal to"},
+        {"sign": "not", "description": "Boolean \'NOT\'"},
+        {"sign": "and", "description": "Boolean \'AND\'"},
+        {"sign": "or", "description": "Boolean \'OR\'"},
+        {"sign": "=, +=, -=, %=, /=, //=, *=, **=",
+            "description": "Assignment operators"},
+    ]
+
+    sets = [
+        {"sign": "|", "description": "Union"},
+        {"sign": "&", "description": "Intersection"},
+        {"sign": "-", "description": "Difference - gets items in the first set that is not in the second"},
+        {"sign": "^", "description": "Symmetric difference - gets items in either sets but not both"}
+    ]
     return render_template(
         'python/py.html',
         title='Python',
-        description='Code AutoBiography of Python'
+        description='Code AutoBiography of Python',
+        operator=operator,
+        sets=sets
     )
 
 

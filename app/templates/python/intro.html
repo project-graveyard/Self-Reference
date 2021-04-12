@@ -1,5 +1,42 @@
-{% extends 'layout.html' %}
-
-{% block content %}
-
-{% endblock %}
+<div>
+  <p>Uses:</p>
+  <ul>
+    <li>Web Programming</li>
+    <li>Scripting</li>
+    <li>Scientific Computing</li>
+    <li>Artificial Intelligence</li>
+  </ul>
+  <q
+    >Lexicography: alphabetical order of words based on alphabetical order of
+    component letters</q
+  >
+  <h3 style="font-family: 'Times New Roman', Times, serif">
+    Operator Precedence & Descriptions
+  </h3>
+  <div>
+    <div class="bd-example">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for ops in operator %}
+          <tr>
+            <td>{{ ops.sign }}</td>
+            <td>{{ ops.description }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>
+    <ul>
+      <li>For single-line comment, use octothorpe(#)</li>
+      <li>For multi-line comments, use """....."""</li>
+    </ul>
+  </p>
+</div>
