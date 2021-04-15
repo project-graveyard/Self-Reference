@@ -16,22 +16,22 @@ when referencing a link url use url_for(function_name)
 @app.route('/home')
 def home():
     nav = [
-        {'name': 'Python', 'memo': 'Python Cheatsheet',
-            'url': 'python', 'img': 'static/img/Python.png'},
-        {'name': 'C++', 'memo': 'C++ Cheatsheet',
-            'url': 'cpp', 'img': 'static/img/cpp.png'},
         {'name': 'HTML', 'memo': 'HTML Cheatsheet',
             'url': 'htm', 'img': 'static/img/htm.png'},
-        {'name': 'JavaScript', 'memo': 'JavaScript Cheatsheet',
-            'url': 'js', 'img': 'static/img/js.png'},
-        {'name': 'MySQL', 'memo': 'MySQL Cheatsheet',
-            'url': 'sql', 'img': 'static/img/sql.png'},
-        {'name': 'React js', 'memo': 'React Cheatsheet',
-            'url': 'react', 'img': 'static/img/react.png'},
+        {'name': 'Python', 'memo': 'Python Cheatsheet',
+            'url': 'python', 'img': 'static/img/Python.png'},
         {'name': 'CSS', 'memo': 'CSS Cheatsheet',
             'url': 'css', 'img': 'static/img/css.png'},
+        {'name': 'JavaScript', 'memo': 'JavaScript Cheatsheet',
+            'url': 'js', 'img': 'static/img/js.png'},
+        {'name': 'C++', 'memo': 'C++ Cheatsheet',
+            'url': 'cpp', 'img': 'static/img/cpp.png'},
+        {'name': 'MySQL', 'memo': 'MySQL Cheatsheet',
+            'url': 'sql', 'img': 'static/img/sql.png'},
         {'name': 'Flask', 'memo': 'Flask Cheatsheet',
             'url': 'pyflask', 'img': 'static/img/flask.png'},
+        {'name': 'React js', 'memo': 'React Cheatsheet',
+            'url': 'react', 'img': 'static/img/react.png'}   
     ]
 
     return render_template(
@@ -239,6 +239,15 @@ def htm():
 
     ]
 
+    target = [
+        {"value": "_blank", "description": "Opens in a new browser window"},
+        {"value": "_parent", "description": "Open in the parent frame or window"},
+        {"value": "_self", "description": "Opens in the current window. Target is set to this value by default."},
+        {"value": "_top", "description": "Opens in the topmost frame, thus replacing the contents of the window"},
+        {"value": "<iframe_name>",
+            "description": "Opens in an iframe element with the matching name attribute"}
+    ]
+
     return render_template(
         'html/htm.html',
         title='HTML',
@@ -246,7 +255,8 @@ def htm():
         tags=tags,
         lists=lists,
         attr=attr,
-        specs=specs
+        specs=specs,
+        target=target
     )
 
 

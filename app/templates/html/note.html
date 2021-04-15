@@ -42,4 +42,29 @@
         <span class="hljs-comment">&lt;!-- Adding basic mailto with message --&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com?body=Call me"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
         </code></pre></div>
+    <h3 style="text-align: center;">Target Attribute of &lt;a&gt; tag</h3>
+    It specifies where to open a linked document or page.
+    Syntax: <code>&lt;a target="<i>value</i>"&gt;</code>
+    <div>
+        <div class="bd-example">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Value</th>
+                <th scope="col">description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for target in target %}
+              <tr>
+                <td>{{ target.value }}</td>
+                <td>{{ target.description }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+
 </div>
