@@ -1,50 +1,57 @@
-<div>
-    <h3 style="text-align: center;">GET & POST</h3>
-    <p>Code Sample:</p>
-    <pre><code>&lt;form action = "" method = "GET" or "POST"&gt;</code></pre>
-    <p>GET: The form data will be visisble in the page address<br/>POST: Offers better security because submitted data is not visisble in the page address</p>
-</div>
-<div>
-    <h3 style="text-align: center;">The &lt;iframe&gt; element</h3>
-    <p>It as <em>src</em> and <em>name</em> attributes. The src attribute can be set to a url you want to embed into your page. E.g. </p><pre><code>&lt;iframe sandbox src="http://somedomain.net/content"&gt;&lt;/iframe&gt;</code></pre>
-    <p>To override restrictions, use the following values: <br/>
-    <ul>
-        <li><em>allow-forms</em> - Enables forms.</li>
-        <li><em>allow-same-origin</em> - Allows the content to be treated as being from the same origin.</li>
-        <li><em>allow-scripts</em> - Enables scripts except popups.</li>
-        <li><em>allow-top-navigation</em> - Allows content to navigate it's top-level browing content.</li>
-    </ul>
-    </p>
-    <pre><code>&lt;iframe sandbox="allow-same-origin allow-forms allow-scripts" src="http://somedomain.net/content"&gt;&lt;/iframe&gt;</code></pre>
-    <p>
-        The iframe tag has a <em>seamless</em> attribute that indicates that the source content is to appear as though its part of the containing document. How to enable seamless:
-    </p>
-    <pre><code>&lt;iframe seamless="seamless"&gt;<br/>&lt;iframe seamless=""&gt;<br/>&lt;iframe seamless&gt;</code></pre><br/>
-</div>
-<div>
-    <h3 style="text-align: center;">Internal Links</h3>
-    <p>If the link is internal, the <em>href</em> will contain the hash(#) symbol followed by  the id of the tag that you want to jump to. If you use only the hash(#) symbol, clicking the link will take you to the top of the HTML document. E.g. </p>
-    <pre><code>&lt;a href="#"&gt;Top&lt;/a&gt;<br/>&lt;a href="#bill_address"&gt;Go to BIlling Address&lt;/a&gt;</code></pre>
-</div>
-<div>
-    <h3 style="text-align: center;">Sending E-mail With Hyperlinks</h3>
-    <p>
-        You can use <em>mailto</em> protocol to send e-mail messages. The <em>mailto</em> url accpets the following parameters: subject, cc, bcc and body. The parameters can be added in any order by adding a question mark(?) after the email address and separating the parameters with the ampersand(&).<br/>Code Sample:
-    </p>
-    <div id="preview">
-        <pre><code class="has-line-data" data-line-start="1" data-line-end="11" class="language-html"><span class="hljs-comment">&lt;!-- basic mailto --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<div class="html">
+  <div class="body">
+<div id="rendered-md"><h2 id="get-post">GET &amp; POST</h2>
+<p>Code Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;form action = &quot;&quot; method = &quot;GET&quot; or &quot;POST&quot;&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span> = <span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">method</span> = <span class="hljs-string">&quot;GET&quot;</span> <span class="hljs-attr">or</span> &quot;<span class="hljs-attr">POST</span>&quot;&gt;</span></code></pre></div>
+<p><code>GET:</code> The form data will be visisble in the page address.<br>
+<code>POST:</code> Offers better security because submitted data is not visisble in the page address.</p>
+<h2 id="the-iframe-element">The <code class="inline-code">&lt;iframe&gt;</code> element</h2>
+<p>It as <code class="inline-code">src</code> and <code class="inline-code">name</code> attributes. The src attribute can be set to a url you want to embed into your page. E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;iframe sandbox src=&quot;http://somedomain.net/content&quot;&gt;&lt;/iframe&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">sandbox</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://somedomain.net/content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span></code></pre></div>
+<p>To override restrictions, use the following values:</p>
+<ul>
+<li><em>allow-forms</em> - Enables forms.</li>
+<li><em>allow-same-origin</em> - Allows the content to be treated as being from the same origin.</li>
+<li><em>allow-scripts</em> - Enables scripts except popups.</li>
+<li><em>allow-top-navigation</em> - Allows content to navigate it's top-level browing content.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;iframe sandbox=&quot;allow-same-origin allow-forms allow-scripts&quot; src=&quot;http://somedomain.net/content&quot;&gt;&lt;/iframe&gt;
+</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">sandbox</span>=<span class="hljs-string">&quot;allow-same-origin allow-forms allow-scripts&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://somedomain.net/content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+</code></pre></div>
+<p>The iframe tag has a <code class="inline-code">seamless</code> attribute that indicates that the source content is to appear as though its part of the containing document. How to enable seamless:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;iframe seamless=&quot;seamless&quot;&gt;
+&lt;iframe seamless=&quot;&quot;&gt;
+&lt;iframe seamless&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">seamless</span>=<span class="hljs-string">&quot;seamless&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">seamless</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">seamless</span>&gt;</span></code></pre></div>
+<h2 id="internal-links">Internal Links</h2>
+<p>If the link is internal, the <code class="inline-code">href</code> will contain the hash(#) symbol followed by the id of the tag that you want to jump to. If you use only the hash(#) symbol, clicking the link will take you to the top of the HTML document. E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;a href=&quot;#&quot;&gt;Top&lt;/a&gt;
+&lt;a href=&quot;#bill_address&quot;&gt;Go to BIlling Address&lt;/a&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>Top<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#bill_address&quot;</span>&gt;</span>Go to BIlling Address<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+<h2 id="sending-e-mail-with-hyperlinks">Sending E-mail With Hyperlinks</h2>
+<p>You can use <code class="inline-code">mailto</code> protocol to send e-mail messages. The <code class="inline-code">mailto</code> url accepts the following parameters: subject, cc, bcc and body. The parameters can be added in any order by adding a question mark(?) after the email address and separating the parameters with the ampersand(&amp;).<br>
+Code Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">        &lt;!-- basic mailto --&gt;
+&lt;a href=&quot;mailto:sales@gmail.com&quot;&gt;Contact Sales&lt;/a&gt;
+        &lt;!-- add name, (email is wrapped with &amp;lt; and &amp;gt:) --&gt;
+&lt;a href=&quot;mailto:Joe&amp;lt;sales@gmail.com&amp;gt;&quot;&gt;Contact Joe in Sales&lt;/a&gt;
+        &lt;!-- multiple receipients are separated by a comma --&gt;
+        &lt;!-- Add carbon copy, same for bcc --&gt;
+&lt;a href=&quot;mailto:sales@gmail.com,services@gmail.com&quot;&gt;Contact Sales&lt;/a&gt;
+        &lt;!-- Adding basic mailto with message --&gt;
+&lt;a href=&quot;mailto:sales@gmail.com?body=Call me&quot;&gt;Contact Sales&lt;/a&gt;</pre><pre class="hljs"><code>        <span class="hljs-comment">&lt;!-- basic mailto --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:sales@gmail.com&quot;</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- add name, (email is wrapped with &amp;lt; and &amp;gt:) --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:Joe&amp;lt;sales@gmail.com&amp;gt;"</span>&gt;</span>Contact Joe in Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:Joe<span class="hljs-symbol">&amp;lt;</span>sales@gmail.com<span class="hljs-symbol">&amp;gt;</span>&quot;</span>&gt;</span>Contact Joe in Sales<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- multiple receipients are separated by a comma --&gt;</span>
         <span class="hljs-comment">&lt;!-- Add carbon copy, same for bcc --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com,services@gmail.com"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:sales@gmail.com,services@gmail.com&quot;</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- Adding basic mailto with message --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:sales@gmail.com?body=Call me"</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-        </code></pre></div>
-    <h3 style="text-align: center;">Target Attribute of &lt;a&gt; tag</h3>
-    It specifies where to open a linked document or page.
-    Syntax: <code>&lt;a target="<i>value</i>"&gt;</code>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:sales@gmail.com?body=Call me&quot;</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+<h2 id="target-attribute-of-a-tag">Target Attribute of <code class="inline-code">&lt;a&gt;</code> tag</h2>
+<p>It specifies where to open a linked document or page. Syntax: <code class="inline-code">&lt;a target=&quot;value&quot;&gt;</code></p>
+</div></div>
     <div>
         <div class="bd-example">
           <table class="table table-striped">
@@ -65,6 +72,5 @@
           </table>
         </div>
       </div>
-      
-
+</div>
 </div>
