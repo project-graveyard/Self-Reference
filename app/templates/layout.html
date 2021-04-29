@@ -13,20 +13,18 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="description" content="{{ description }}" />
+    <link rel="stylesheet" href='{{ url_for("static", filename="pluginAssets/katex/katex.css") }}'><script type="application/javascript" src='{{ url_for("static", filename="pluginAssets/mermaid/mermaid.min.js") }}'></script><script type="application/javascript" src='{{ url_for("static", filename="pluginAssets/mermaid/mermaid_render.js") }}'></script><link rel="stylesheet" href='{{ url_for("static", filename="pluginAssets/highlight.js/atom-one-light.css") }}'>
     <link
       rel="stylesheet"
       href='{{ url_for("static", filename="css/main.css") }}'
     />
     <link
       rel="stylesheet"
-      href='{{ url_for("static", filename="css/md.css") }}'
-    />
-    <link
-      rel="stylesheet"
       href='{{ url_for("static", filename="css/bootstrap.min.css") }}'
     />
   </head>
-  <body style="font-family: 'Times New Roman', Times, serif; font-size: 12pt;">
+  <body>
+    {% include 'joplin.html' %}
     {% block content %}{% endblock %}
   </body>
 </html>
