@@ -1,0 +1,53 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="opening-files">Opening Files</h2>
+<p>Syntax</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">open('filename.txt')
+    #Or
+open('filepath')
+
+#Read mode
+open('filename.txt', 'r')
+
+#Write mode
+open('filename.txt', 'w')
+
+#Binary write mode
+open('filename.txt', 'wb')
+open('filename.txt', 'r+')</pre><pre class="hljs"><code>open(<span class="hljs-string">&#x27;filename.txt&#x27;</span>)
+    <span class="hljs-comment">#Or</span>
+open(<span class="hljs-string">&#x27;filepath&#x27;</span>)
+
+<span class="hljs-comment">#Read mode</span>
+open(<span class="hljs-string">&#x27;filename.txt&#x27;</span>, <span class="hljs-string">&#x27;r&#x27;</span>)
+
+<span class="hljs-comment">#Write mode</span>
+open(<span class="hljs-string">&#x27;filename.txt&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>)
+
+<span class="hljs-comment">#Binary write mode</span>
+open(<span class="hljs-string">&#x27;filename.txt&#x27;</span>, <span class="hljs-string">&#x27;wb&#x27;</span>)
+open(<span class="hljs-string">&#x27;filename.txt&#x27;</span>, <span class="hljs-string">&#x27;r+&#x27;</span>)</code></pre></div>
+<ul>
+<li>To close a file use the <code class="inline-code">.close()</code> method.</li>
+</ul>
+<h2 id="reading-files">Reading Files</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">file = open('filename.txt')
+readfile = file.read()
+print(readfile)
+file.close()</pre><pre class="hljs"><code><span class="hljs-keyword">file</span> = <span class="hljs-keyword">open</span>(<span class="hljs-string">&#x27;filename.txt&#x27;</span>)
+<span class="hljs-built_in">readfile</span> = <span class="hljs-keyword">file</span>.<span class="hljs-keyword">read</span>()
+<span class="hljs-keyword">print</span>(<span class="hljs-built_in">readfile</span>)
+<span class="hljs-keyword">file</span>.<span class="hljs-keyword">close</span>()</code></pre></div>
+<ul>
+<li>To read byte by byte, input byte number into () in read.</li>
+<li>Negative arguements will return entire contents.</li>
+<li>To retrieve each line in a file, use the <code class="inline-code">readlines</code> method to return a list in which each element is a line in a file. Syntax: <code class="inline-code">file.readlines()</code></li>
+<li>To write files, use <code class="inline-code">.write()</code> method.</li>
+<li>To automatically close file after reading its contents:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">with open('filename.txt') as f:
+    print(f.read())</pre><pre class="hljs"><code><span class="hljs-keyword">with</span> open(<span class="hljs-string">&#x27;filename.txt&#x27;</span>) <span class="hljs-keyword">as</span> f:
+    print(f.read())</code></pre></div>
+</div></div>
+    </div>
+</div>
