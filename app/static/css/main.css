@@ -1,6 +1,6 @@
 h1.head {
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   background-color: aquamarine;
 }
 
@@ -10,7 +10,7 @@ h2 {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 20%;
   border-radius: 8px;
@@ -20,18 +20,46 @@ h2 {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
   padding: 2px 16px;
   text-align: center;
-  width: 30%;
-  height: 30%;
 }
 
-a, a:active, a:visited {
-  color:#0000ff;
+a,
+a:active,
+a:visited {
+  color: #0000ff;
   text-decoration: None;
 }
 
+/* #### Mobile Phones Portrait or Landscape #### */
+@media only screen and (max-device-width: 640px) {
+  html,
+  body,
+  .container,
+  .head {
+    width: auto;
+    text-decoration: none;
+  }
+  .card {
+    width: 30vw;
+  }
+}
+
+
+/* #### Tablets Portrait #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: Portrait) {
+  html,
+  body,
+  .container,
+  .head {
+    width: auto;
+    text-decoration: none;
+  }
+  .card {
+    width: 30vw;
+  }
+}
