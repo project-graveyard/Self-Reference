@@ -97,16 +97,58 @@
               </div>
           </div>
           <div class="accordion-item">
-              <h4 class="accordion-header" id="headingSeven">
+            <h4 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Object Oriented Programming
+                </button>
+            </h4>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% include 'python/oop.html' %}
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h4 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    Regular Expressions
+                </button>
+            </h4>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% include 'python/re.html' %}
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h4 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    Packaging
+                </button>
+            </h4>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    {% include 'python/pack.html' %}
+                </div>
+            </div>
+        </div>
+          <div class="accordion-item">
+              <h4 class="accordion-header" id="headingTen">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                       Things To Note!
                   </button>
               </h4>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                   data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                      
+                      {% include 'python/note.html' %}
                   </div>
               </div>
           </div>
