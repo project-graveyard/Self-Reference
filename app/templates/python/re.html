@@ -1,0 +1,116 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>They verify if strings matches a pattern.</li>
+<li>They can also perform substitutions in a string.</li>
+<li>It can be access through the <code class="inline-code">re</code> module.</li>
+</ul>
+<h2 id="some-functions-in-the-re-module">Some Functions in the <code class="inline-code">re</code> module</h2>
+<ul>
+<li><code class="inline-code">re.match()</code> determines whether a value matches the beginning of a text.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">import re
+
+# Use raw strings for patterns
+pat = r'span'
+
+if re.match(pat, 'spanner'):
+    print('match')
+else:
+    print('no match')
+
+# Outputs match</pre><pre class="hljs"><code><span class="hljs-keyword">import</span> re
+
+<span class="hljs-comment"># Use raw strings for patterns</span>
+pat = <span class="hljs-string">r&#x27;span&#x27;</span>
+
+<span class="hljs-keyword">if</span> re.match(pat, <span class="hljs-string">&#x27;spanner&#x27;</span>):
+    print(<span class="hljs-string">&#x27;match&#x27;</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">&#x27;no match&#x27;</span>)
+
+<span class="hljs-comment"># Outputs match</span></code></pre></div>
+<ul>
+<li><code class="inline-code">re.search()</code> finds a match of a pattern anywhere in the string.</li>
+<li><code class="inline-code">re.findall()</code> and  <code class="inline-code">re.finditer()</code> returns a list of all substrings that match a pattern.</li>
+<li><code class="inline-code">re.sub()</code> replaces all occurences in a string; a <em><code class="inline-code">patttern</code></em> replaces with <em><code class="inline-code">repl</code></em> unless <em><code class="inline-code">count</code></em> is provided.<br>
+Syntax:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">re.sub(pattern, repl, string, count=0)</pre><pre class="hljs"><code>re.sub(pattern, repl, string, count=<span class="hljs-number">0</span>)</code></pre></div>
+<hr>
+<h2 id="python-regular-expression-quick-guide">Python Regular Expression Quick Guide</h2>
+<table>
+<thead>
+<tr>
+<th>Symbols</th>
+<th>Desciption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>Matches the beginning of a string</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Matches the end of the string</td>
+</tr>
+<tr>
+<td>. (dot)</td>
+<td>Matches any character other than a new line</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>Matches whitespace</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>Matches any non-whitespace character</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Repeats a character zero or more times</td>
+</tr>
+<tr>
+<td>*?</td>
+<td>Repeats a character zero or more times (non-greedy)</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Repeats a character one or more times</td>
+</tr>
+<tr>
+<td>+?</td>
+<td>Repeats a character one or more times (non-greedy)</td>
+</tr>
+<tr>
+<td>[aeiou]</td>
+<td>Matches a single character in the listed set</td>
+</tr>
+<tr>
+<td>[^XYZ]</td>
+<td>Matches a single character not in the listed set</td>
+</tr>
+<tr>
+<td>[a-z0-9]</td>
+<td>The set of characters can include a range</td>
+</tr>
+<tr>
+<td>(</td>
+<td>Indicates where string extraction is to start</td>
+</tr>
+<tr>
+<td>)</td>
+<td>Indicates where string extraction is to end</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>Represents repetitions between two numbers</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+    </div>
+</div>
