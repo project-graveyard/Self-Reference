@@ -1,0 +1,70 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="making-custom-modules">Making custom modules</h2>
+<p>To make a module from a script, add the following code to the end of the file.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">if __name__ == '__main__':
+    #preferably enter file name
+    filename()</pre><pre class="hljs"><code><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+    <span class="hljs-comment">#preferably enter file name</span>
+    filename()</code></pre></div>
+<h2 id="packaging-a-source-code">Packaging a source code</h2>
+<ul>
+<li>To organise your code so it can be installed and used, use <code class="inline-code">disutils</code> and <code class="inline-code">setuptools</code></li>
+<li>File Structure:
+<ul>
+<li>Root directory/
+<ul>
+<li>LICENSE</li>
+<li>README.md</li>
+<li>setup.py</li>
+</ul>
+</li>
+<li>App directory
+<ul>
+<li>__init__.py</li>
+<li>//python_files_for_app</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Writing <em><strong>setup.py</strong></em> :</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">from disutils import setup
+
+setup(
+    name='Root directory',
+    version='1.0',
+    packages=['App directory'],
+    license='license_name',
+    long_description=open('README.md').read()
+)</pre><pre class="hljs"><code><span class="hljs-keyword">from</span> disutils <span class="hljs-keyword">import</span> setup
+
+setup(
+    name=<span class="hljs-string">&#x27;Root directory&#x27;</span>,
+    version=<span class="hljs-string">&#x27;1.0&#x27;</span>,
+    packages=[<span class="hljs-string">&#x27;App directory&#x27;</span>],
+    license=<span class="hljs-string">&#x27;license_name&#x27;</span>,
+    long_description=open(<span class="hljs-string">&#x27;README.md&#x27;</span>).read()
+)</code></pre></div>
+<h4 id="building-binary-distribution">Building Binary Distribution</h4>
+<ul>
+<li>In the directory with <em>setup.py</em>, run:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash&#10;" data-joplin-source-close="&#10;```">&gt;&gt; python setup.py sdist
+&gt;&gt; python setup.py bdist
+
+# For windows
+&gt;&gt; python setup.py bdist_wininst</pre><pre class="hljs"><code>&gt;&gt; python setup.py sdist
+&gt;&gt; python setup.py bdist
+
+<span class="hljs-comment"># For windows</span>
+&gt;&gt; python setup.py bdist_wininst</code></pre></div>
+<h4 id="uploading-a-package">Uploading A Package</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash&#10;" data-joplin-source-close="&#10;```">&gt;&gt; python setup.py register
+&gt;&gt; python setup.py sdist upload</pre><pre class="hljs"><code>&gt;&gt; python setup.py register
+&gt;&gt; python setup.py sdist upload</code></pre></div>
+<h4 id="installing-a-package">Installing A Package</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="bash" data-joplin-source-open="```bash&#10;" data-joplin-source-close="&#10;```">&gt;&gt; python setup.py install</pre><pre class="hljs"><code>&gt;&gt; python setup.py install</code></pre></div>
+</div></div>
+    </div>
+</div>
