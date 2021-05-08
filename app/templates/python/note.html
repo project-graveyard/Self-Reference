@@ -1,0 +1,158 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="the-zen-of-python">The Zen OF Python</h2>
+<ul>
+<li>To access this use:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">import this
+
+### Output is as follows:
+'''
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+'''</pre><pre class="hljs"><code><span class="hljs-keyword">import</span> this
+
+<span class="hljs-comment">### Output is as follows:</span>
+<span class="hljs-string">&#x27;&#x27;&#x27;
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#x27;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#x27;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#x27;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#x27;s do more of those!
+&#x27;&#x27;&#x27;</span></code></pre></div>
+<h2 id="string-formatting">String Formatting</h2>
+<ul>
+<li>Applied when you need to combine strings and non-strings.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">name = David
+age = 19
+country = Ghana
+msg = &quot;My name is {0} and I am {1} of age and I come from {2}&quot;.format(name, age, country)
+
+#OR
+msg = f&quot;My name is {name} and I am {age} of age and I come from {country}&quot;
+
+print(msg)
+# Outputs
+# My name is David and I'm 19 years of age and I come from Ghana.</pre><pre class="hljs"><code>name = David
+age = <span class="hljs-number">19</span>
+country = Ghana
+msg = <span class="hljs-string">&quot;My name is {0} and I am {1} of age and I come from {2}&quot;</span>.format(name, age, country)
+
+<span class="hljs-comment">#OR</span>
+msg = <span class="hljs-string">f&quot;My name is <span class="hljs-subst">{name}</span> and I am <span class="hljs-subst">{age}</span> of age and I come from <span class="hljs-subst">{country}</span>&quot;</span>
+
+print(msg)
+<span class="hljs-comment"># Outputs</span>
+<span class="hljs-comment"># My name is David and I&#x27;m 19 years of age and I come from Ghana.</span></code></pre></div>
+<h2 id="string-functions">String Functions</h2>
+<ul>
+<li><code class="inline-code">startswith()</code> returns True or False.</li>
+<li><code class="inline-code">endswith()</code> returns True or False.</li>
+<li><code class="inline-code">upper()</code> returns in caps.</li>
+<li><code class="inline-code">lower()</code> returns in lower caps.</li>
+<li><code class="inline-code">split()</code> returns elemnts of a string as a list based on a separator.</li>
+<li><code class="inline-code">join()</code> adds strings to other strings based on a separator. It's more or less the opposite of <code class="inline-code">split</code> function.</li>
+</ul>
+<h2 id="numeric-functions">Numeric Functions</h2>
+<ul>
+<li><code class="inline-code">abs()</code> returns absolute value of a number.</li>
+<li><code class="inline-code">sum()</code> returns the sum of numbers.</li>
+<li><code class="inline-code">round(num, no. of dp)</code> rounds a number to a specified decimal places.</li>
+</ul>
+<h2 id="function-arguements">Function Arguements</h2>
+<ul>
+<li>There can be a varying number of arguements.</li>
+<li>Using *args (or any name), the arguements are accepted as a turple.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">def func(arg_name, *args):
+    print(arg_name)
+    print(args)
+    
+func(1, 2, 3, 4, 5)
+
+#Outputs
+# 1 
+# (2, 3, 4, 5)</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func</span>(<span class="hljs-params">arg_name, *args</span>):</span>
+    print(arg_name)
+    print(args)
+    
+func(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+
+<span class="hljs-comment">#Outputs</span>
+<span class="hljs-comment"># 1 </span>
+<span class="hljs-comment"># (2, 3, 4, 5)</span></code></pre></div>
+<ul>
+<li>When an arguement is not passed in, a default value is used.</li>
+</ul>
+<blockquote>
+<p>Always pass in arguements with no default values first before arguements of the default value is named.<br>
+Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">func(x, y, a=0, b=&quot;we&quot;)</pre><pre class="hljs"><code>func(x, y, a=<span class="hljs-number">0</span>, b=<span class="hljs-string">&quot;we&quot;</span>)</code></pre></div>
+</blockquote>
+<h2 id="turple-unpacking">Turple Unpacking</h2>
+<ul>
+<li>It allows you to assign each item in an iterable (often a turple) to a variable. E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">nums = (1, 2, 3)
+a, b, c = nums
+
+# a= 1, b = 2, c =3</pre><pre class="hljs"><code>nums = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+a, b, c = nums
+
+<span class="hljs-comment"># a= 1, b = 2, c =3</span></code></pre></div>
+<ul>
+<li>If a variable is prefaced with an asterisk (*), then it takes all values from the iterable left over by other variables. E.g. <code class="inline-code">*c</code></li>
+</ul>
+<h2 id="ternary-operator">Ternary Operator</h2>
+<ul>
+<li>They are conditional expressions in the assigning of variables, taking in three arguements. E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">a = 1
+b = 1 if a &gt;= 5 else 40
+
+print(b)
+#Outputs 40</pre><pre class="hljs"><code>a = <span class="hljs-number">1</span>
+b = <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> a &gt;= <span class="hljs-number">5</span> <span class="hljs-keyword">else</span> <span class="hljs-number">40</span>
+
+print(b)
+<span class="hljs-comment">#Outputs 40</span></code></pre></div>
+<blockquote>
+<p>Else statements in <code class="inline-code">while</code> and <code class="inline-code">for</code> loops are executed when the break statement fails to stop the loop.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
