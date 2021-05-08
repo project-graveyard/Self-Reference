@@ -1,0 +1,210 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="classes">Classes</h2>
+<ul>
+<li>It describes what the object will be, but is separate from the object itself; it is an object's blueprint, description or definition. They are created using the keyword <code class="inline-code">class</code> and an indented block which contains <code class="inline-code">class methods</code> (which are functions).<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">class Cat:
+    def __init__(self, color, legs):
+        self.color = color
+        self.legs = legs
+
+Garfield = Cat(&quot;ginger&quot;, 4)
+Tom = Cat('blue', 4)</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, color, legs</span>):</span>
+        self.color = color
+        self.legs = legs
+
+Garfield = Cat(<span class="hljs-string">&quot;ginger&quot;</span>, <span class="hljs-number">4</span>)
+Tom = Cat(<span class="hljs-string">&#x27;blue&#x27;</span>, <span class="hljs-number">4</span>)</code></pre></div>
+<ul>
+<li>The above code defines a class <code class="inline-code">Cat</code> with <code class="inline-code">color</code> and <code class="inline-code">legs</code> as attributes. <code class="inline-code">Garfield</code> and <code class="inline-code">Tom</code> are objects of the class.</li>
+<li>The <em><code class="inline-code">__init__</code></em> method is the most important method in a class. All methods must have <code class="inline-code">self</code> as a parameter.</li>
+<li><code class="inline-code">self</code> refers to the insrance calling of the method.</li>
+<li>In the <code class="inline-code">___init___</code> method, <code class="inline-code">self.attribute</code> is used to set the initial value of an attribute.</li>
+<li>The <code class="inline-code">__init__</code> method is called the class constructor.</li>
+</ul>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li>It provides a functionality between classes.</li>
+<li>To inherit a class from another class, put the super class in parenthesis after the classname.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">class Animal:
+    #Statements
+    
+class Cat(Animal):
+    #Statements</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span>:</span>
+    <span class="hljs-comment">#Statements</span>
+    
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span>(<span class="hljs-params">Animal</span>):</span>
+    <span class="hljs-comment">#Statements</span></code></pre></div>
+<ul>
+<li>The inherits is called the subclass.</li>
+<li>If a class inherits from another class with the same attributes or methods already defined in it, it overrides them.</li>
+</ul>
+<h2 id="magic-methods">Magic Methods</h2>
+<ul>
+<li>They are special methods which have double underscores at the beginning and end of their names. They are known as <em>dunders</em>.</li>
+<li>Their common use is operator overloading.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```"># __add__ for addition
+class Vector2D:
+    '''Defines a class to perform vector addition'''
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __add__(self, other):
+        return Vector2D(self.x + other.x, self.y + other.y)
+    
+
+'''Sample inputs'''
+# &gt;&gt; f = Vector2D(5, 7)
+# &gt;&gt; d = Vector2D(3, 9)
+# &gt;&gt; a = f + d
+# &gt;&gt; print(a.x, a.y)
+# &gt;&gt; (8, 16)</pre><pre class="hljs"><code><span class="hljs-comment"># __add__ for addition</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Vector2D</span>:</span>
+    <span class="hljs-string">&#x27;&#x27;&#x27;Defines a class to perform vector addition&#x27;&#x27;&#x27;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, x, y</span>):</span>
+        self.x = x
+        self.y = y
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__add__</span>(<span class="hljs-params">self, other</span>):</span>
+        <span class="hljs-keyword">return</span> Vector2D(self.x + other.x, self.y + other.y)
+    
+
+<span class="hljs-string">&#x27;&#x27;&#x27;Sample inputs&#x27;&#x27;&#x27;</span>
+<span class="hljs-comment"># &gt;&gt; f = Vector2D(5, 7)</span>
+<span class="hljs-comment"># &gt;&gt; d = Vector2D(3, 9)</span>
+<span class="hljs-comment"># &gt;&gt; a = f + d</span>
+<span class="hljs-comment"># &gt;&gt; print(a.x, a.y)</span>
+<span class="hljs-comment"># &gt;&gt; (8, 16)</span></code></pre></div>
+<h4 id="list-of-some-magic-methods-and-their-descriptions">List of some magic methods and their descriptions</h4>
+<table>
+<thead>
+<tr>
+<th>Magic Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="inline-code">__add__</code></td>
+<td>addition (+)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__sub__</code></td>
+<td>subtraction (-)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__mul__</code></td>
+<td>multipication (*)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__truediv__</code></td>
+<td>division (/)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__floordiv__</code></td>
+<td>integer division (//)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__mod__</code></td>
+<td>modulo (%)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__eq__</code></td>
+<td>equality (==)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__ne__</code></td>
+<td>not equal (!=)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__gt__</code></td>
+<td>greater than (&gt;)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__lt__</code></td>
+<td>less than (&lt;)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__ge__</code></td>
+<td>greater than or equals (&gt;=)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__le__</code></td>
+<td>less than or equals (&lt;=)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__pow__</code></td>
+<td>exponent (**)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__and__</code></td>
+<td>anintd (&amp;)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__xor__</code></td>
+<td>exclusive or (^)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__or__</code></td>
+<td>or (|)</td>
+</tr>
+<tr>
+<td><code class="inline-code">__len__</code></td>
+<td>len()</td>
+</tr>
+<tr>
+<td><code class="inline-code">__getitem__</code></td>
+<td>for indexing</td>
+</tr>
+<tr>
+<td><code class="inline-code">__setitem__</code></td>
+<td>for assigning to indexed values</td>
+</tr>
+<tr>
+<td><code class="inline-code">__delitem__</code></td>
+<td>for deleting indexed values</td>
+</tr>
+<tr>
+<td><code class="inline-code">__iter__</code></td>
+<td>for iteration over objects</td>
+</tr>
+<tr>
+<td><code class="inline-code">__contains__</code></td>
+<td>for <code class="inline-code">in</code></td>
+</tr>
+<tr>
+<td><code class="inline-code">__call__</code></td>
+<td>for calling objects as functions</td>
+</tr>
+<tr>
+<td><code class="inline-code">__int__</code></td>
+<td>integer</td>
+</tr>
+<tr>
+<td><code class="inline-code">__str__</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code class="inline-code">__del__</code></td>
+<td>for delete</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="object-lifecycle">Object Lifecycle</h3>
+<ol>
+<li>Creation or definition</li>
+<li>Instantiation</li>
+<li>Manipulation</li>
+<li>Destruction</li>
+</ol>
+</blockquote>
+</div></div>
+    </div>
+</div>
