@@ -77,10 +77,24 @@ def python():
         {"sign": "-", "description": "Difference - gets items in the first set that is not in the second"},
         {"sign": "^", "description": "Symmetric difference - gets items in either sets but not both"}
     ]
+
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Control Structures & Loops', 'url': 'python/loops.html'},
+        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Data Structures', 'url': 'python/data.html'},
+        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Functions & Modules', 'url': 'python/func.html'},
+        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Raising Expections & Error Handling', 'url': 'python/err.html'},
+        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'File Handling', 'url': 'python/file.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Object Oriented Programming', 'url': 'python/oop.html'},
+        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'Regular Expressions', 'url': 'python/re.html'},
+        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Packaging', 'url': 'python/pack.html'},
+        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Things To Note', 'url': 'python/note.html'}
+    ]
+
     return render_template(
         'python/py.html',
         title='Python',
         description='Code AutoBiography of Python',
+        block=block,
         operator=operator,
         sets=sets
     )
@@ -248,10 +262,19 @@ def htm():
             "description": "Opens in an iframe element with the matching name attribute"}
     ]
 
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Layout Structure', 'url': 'html/layout.html'},
+        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Tags Reference', 'url': 'html/tags.html'},
+        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Input Types & Its Attributes', 'url': 'html/input.html'},
+        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Special Characters', 'url': 'html/special.html'},
+        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Things To Note', 'url': 'html/note.html'}
+    ]
+
     return render_template(
         'html/htm.html',
         title='HTML',
         description='Code AutoBiography of HTML',
+        block=block,
         tags=tags,
         lists=lists,
         attr=attr,
@@ -289,10 +312,29 @@ def react():
 
 @app.route('/css')
 def css():
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Vertical Align', 'url': 'css/valign.html'},
+        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Text Styling', 'url': 'css/text.html'},
+        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'White Spaces', 'url': 'css/space.html'},
+        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Positioning Elements', 'url': 'css/position.html'},
+        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Table & Border Styling', 'url': 'css/border.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Backgroung Styling', 'url': 'css/background.html'},
+        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'List Styling', 'url': 'css/list.html'},
+        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Box Shadow', 'url': 'css/shadow.html'},
+        {'id': "headingTen", 'data': 'collapseTen', 'heading': '@Font-face Rule', 'url': 'css/font.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Pseudo Classes', 'url': 'css/class.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Linear & Radial Gradients', 'url': 'css/gradient.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'Transitions', 'url': 'css/transition.html'},
+        {'id': "headingFourteen", 'data': 'collapseFourteen', 'heading': 'Transformations', 'url': 'css/transform.html'},
+        {'id': "headingFifteen", 'data': 'collapseFifteen', 'heading': 'Animations', 'url': 'css/animate.html'},
+        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Things To Note', 'url': 'css/note.html'}
+    ]
+
     return render_template(
-        'css.html',
+        'css/css.html',
         title='CSS',
-        description='Code AutoBiography of CSS'
+        description='Code AutoBiography of CSS',
+        block=block
     )
 
 
