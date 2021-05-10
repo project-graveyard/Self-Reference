@@ -1,127 +1,66 @@
-{% extends 'layout.html' %}
-
-{% block content %}
-<div><img src="{{ url_for('static', filename='img/htm.png')}}" alt="html-icon"
-        style="position: relative; float: left;" />
-    <h2>HTML Reference</h2>
+{% extends 'layout.html' %} {% block content %}
+<div>
+  <img
+    src="{{ url_for('static', filename='img/htm.png')}}"
+    alt="html-icon"
+    style="position: relative; float: left"
+  />
+  <h2>HTML Reference</h2>
 </div>
 <article class="my-3" id="accordion">
-    <div>
-        <div class="bd-example">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Introduction</button>
-                    </h4>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            {% include 'html/intro.html' %}
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Layout Structure
-                        </button>
-                    </h4>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            {% include 'html/layout.html' %}
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Tags Reference
-                        </button>
-                    </h4>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            {% include 'html/tags.html' %}
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h4 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            List Types
-                        </button>
-                    </h4>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div class="bd-example">
-                                <table class="table table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <td>Ordered lists: 1,2,3 | A,B,C | a,b,c | i,ii,iii | I,II,III</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Unordered lists: disk, square, circle</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h4 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Input Types & Its Attributes
-                    </button>
-                </h4>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        {% include 'html/input.html' %}
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h4 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        Special Characters
-                    </button>
-                </h4>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        {% include 'html/special.html' %}
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h4 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        Things To Note!
-                    </button>
-                </h4>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        {% include 'html/note.html' %}
-                    </div>
-                </div>
-            </div>
+  <div>
+    <div class="bd-example">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h4 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Introduction
+            </button>
+          </h4>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">{% include 'html/intro.html' %}</div>
+          </div>
         </div>
+
+        {% for val in block %}
+        <div class="accordion-item">
+          <h4 class="accordion-header" id="{{ val.id }}">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#{{ val.data }}"
+              aria-expanded="false"
+              aria-controls="{{ val.data }}"
+            >
+              {{ val.heading }}
+            </button>
+          </h4>
+          <div
+            id="{{ val.data }}"
+            class="accordion-collapse collapse"
+            aria-labelledby="{{ val.id }}"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">{% include val.url %}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
 </article>
 
 {% endblock %}
