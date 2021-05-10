@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div><img src="{{ url_for('static', filename='img/css.png') }}" alt="python-icon" style="position: relative; float: left;" /><h2>CSS Reference</h2></div>
+
+    <article class="my-3" id="accordion">
+        <div>
+          <div class="bd-example">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Introduction
+                  </button>
+                </h4>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">{% include 'css/intro.html' %}</div>
+                </div>
+              </div>
+      
+              {% for val in block %}
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="{{ val.id }}">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#{{ val.data }}"
+                    aria-expanded="false"
+                    aria-controls="{{ val.data }}"
+                  >
+                    {{ val.heading }}
+                  </button>
+                </h4>
+                <div
+                  id="{{ val.data }}"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="{{ val.id }}"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">{% include val.url %}</div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </article>
+{% endblock %}
