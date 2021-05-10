@@ -49,28 +49,30 @@ Code Sample:</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:sales@gmail.com,services@gmail.com&quot;</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-comment">&lt;!-- Adding basic mailto with message --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto:sales@gmail.com?body=Call me&quot;</span>&gt;</span>Contact Sales<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
-<h2 id="target-attribute-of-a-tag">Target Attribute of <code class="inline-code">&lt;a&gt;</code> tag</h2>
+<h2 id='list-types'>List Types</h2>
+      <ul>
+        <li>Ordered lists: 1,2,3 | A,B,C | a,b,c | i,ii,iii | I,II,III</li>
+        <li>Unordered lists: disk, square, circle</li>
+      </ul>
+      <h2 id="target-attribute-of-a-tag">Target Attribute of <code class="inline-code">&lt;a&gt;</code> tag</h2>
 <p>It specifies where to open a linked document or page. Syntax: <code class="inline-code">&lt;a target=&quot;value&quot;&gt;</code></p>
+<div class="bd-example">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Value</th>
+        <th scope="col">description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for target in target %}
+      <tr>
+        <td>{{ target.value }}</td>
+        <td>{{ target.description }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
 </div></div>
-    <div>
-        <div class="bd-example">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Value</th>
-                <th scope="col">description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for target in target %}
-              <tr>
-                <td>{{ target.value }}</td>
-                <td>{{ target.description }}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-</div>
-</div>
