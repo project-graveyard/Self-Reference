@@ -1,1 +1,92 @@
-Hello World
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h1 id="css-cascading-style-sheets">CSS - Cascading Style Sheets</h1>
+<ul>
+<li>A style rule has 3 parts: Selector, Property and Value.</li>
+<li>A CSS declaration always ends with a semi-colon(;) and are surround curly braces ({}).<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">h1 {
+    color: red;
+}
+/*
+h1 --&gt; selector
+color --&gt; property
+red --&gt; value
+*/</pre><pre class="hljs"><code><span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+<span class="hljs-comment">/*
+h1 --&gt; selector
+color --&gt; property
+red --&gt; value
+*/</span></code></pre></div>
+<ul>
+<li>The property and value part is separated by a colon(:).</li>
+</ul>
+<h2 id="adding-css">Adding CSS</h2>
+<ul>
+<li>Inline.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">&lt;h1 style='color:red;'&gt;</pre><pre class="hljs"><code>&lt;<span class="hljs-selector-tag">h1</span> <span class="hljs-selector-tag">style</span>=&#x27;<span class="hljs-selector-tag">color</span><span class="hljs-selector-pseudo">:red</span>;&#x27;&gt;</code></pre></div>
+<ul>
+<li>Internal: Put the styling in a <code class="inline-code">&lt;style&gt;</code> tag which is placed in the <code class="inline-code">&lt;head&gt;</code> tag.</li>
+<li>External: Linking to a stylesheet.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;link rel='stylesheet' href='styles.css'&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&#x27;stylesheet&#x27;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&#x27;styles.css&#x27;</span>&gt;</span></code></pre></div>
+<h2 id="class-attribute">class Attribute</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p class='error'&gt;&lt;/p&gt;
+&lt;!--In the head tag--&gt;
+&lt;style&gt;
+    /*&lt;p&gt; with specific class*/
+    p.error {
+        color: red;
+    }
+    /*General class*/
+    .error{
+        color: red;
+    }
+&lt;/style&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#x27;error&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-comment">&lt;!--In the head tag--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-comment">/*&lt;p&gt; with specific class*/</span>
+    <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.error</span> {
+        <span class="hljs-attribute">color</span>: red;
+    }
+    <span class="hljs-comment">/*General class*/</span>
+    <span class="hljs-selector-class">.error</span>{
+        <span class="hljs-attribute">color</span>: red;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre></div>
+<h2 id="id-attribute">id Attribute</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p id='lead'&gt;&lt;/p&gt;
+&lt;!--In the head tag--&gt;
+&lt;style&gt;
+    /*&lt;p&gt; with specific id*/
+    p#lead {
+        color: red;
+    }
+    /*General id*/
+    #lead{
+        color: red;
+    }
+&lt;/style&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;lead&#x27;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-comment">&lt;!--In the head tag--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-comment">/*&lt;p&gt; with specific id*/</span>
+    <span class="hljs-selector-tag">p</span><span class="hljs-selector-id">#lead</span> {
+        <span class="hljs-attribute">color</span>: red;
+    }
+    <span class="hljs-comment">/*General id*/</span>
+    <span class="hljs-selector-id">#lead</span>{
+        <span class="hljs-attribute">color</span>: red;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre></div>
+<blockquote>
+<p>Create a css file for external linking with extension (.css) and state all the styling rules.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
