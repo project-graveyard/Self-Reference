@@ -1,0 +1,122 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="border-style-examples">Border Style Examples</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">none {border-style: none;}
+dotted {border-style: dotted;}
+double {border-style: double;}
+groove {border-style: groove;}
+ridge {border-style: ridge;}
+inset {border-style: inset;}
+hidden {border-style: hidden;}</pre><pre class="hljs"><code><span class="hljs-selector-tag">none</span> {<span class="hljs-attribute">border-style</span>: none;}
+<span class="hljs-selector-tag">dotted</span> {<span class="hljs-attribute">border-style</span>: dotted;}
+<span class="hljs-selector-tag">double</span> {<span class="hljs-attribute">border-style</span>: double;}
+<span class="hljs-selector-tag">groove</span> {<span class="hljs-attribute">border-style</span>: groove;}
+<span class="hljs-selector-tag">ridge</span> {<span class="hljs-attribute">border-style</span>: ridge;}
+<span class="hljs-selector-tag">inset</span> {<span class="hljs-attribute">border-style</span>: inset;}
+<span class="hljs-selector-tag">hidden</span> {<span class="hljs-attribute">border-style</span>: hidden;}</code></pre></div>
+<blockquote>
+<p>You can specify different borders for different sides using:</p>
+<ul>
+<li>border-top-style</li>
+<li>border-right-style</li>
+<li>border-bottom-style</li>
+<li>border-left-style</li>
+</ul>
+</blockquote>
+<h2 id="border-collapse-property">Border-collapse Property</h2>
+<ul>
+<li>Specifies whether the table borders are collapsed into a single border or separated as default.</li>
+<li>Values:
+<ul>
+<li>separate</li>
+<li>collapse</li>
+</ul>
+</li>
+<li>If the borders are separate, the <strong><code class="inline-code">border-spacing</code></strong> property can be used to change the spacing.</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">table{
+    border-collapse: separate;
+    border-spacing: 20px 40px;
+}
+
+{border-collapse: collapse;}</pre><pre class="hljs"><code><span class="hljs-selector-tag">table</span>{
+    <span class="hljs-attribute">border-collapse</span>: separate;
+    <span class="hljs-attribute">border-spacing</span>: <span class="hljs-number">20px</span> <span class="hljs-number">40px</span>;
+}
+
+{<span class="hljs-attribute">border-collapse</span>: collapse;}</code></pre></div>
+<h2 id="caption-side-property">Caption-side Property</h2>
+<ul>
+<li>Specifies the position of a table caption.</li>
+<li>Values:
+<ul>
+<li>top</li>
+<li>bottom</li>
+</ul>
+</li>
+</ul>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{caption-side: top;}</pre><pre class="hljs"><code>{<span class="hljs-attribute">caption-side</span>: top;}</code></pre></div>
+<h2 id="empty-cells-property">Empty-cells Property</h2>
+<ul>
+<li>Specifies whether or not to display borders and background on an empty cell in a table.</li>
+<li>Values:
+<ul>
+<li><strong><code class="inline-code">show</code>:</strong> borders of empty cells are rendered.</li>
+<li><strong><code class="inline-code">hide</code>:</strong> borders of empty cells are not drawn.</li>
+</ul>
+</li>
+</ul>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    border-collapse: separate;
+    empty-cells: hide;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">border-collapse</span>: separate;
+    <span class="hljs-attribute">empty-cells</span>: hide;
+}</code></pre></div>
+<h2 id="table-layout-property">Table-layout Property</h2>
+<ul>
+<li>Specifies how the width of table columns are calculated.</li>
+<li>Values
+<ul>
+<li><strong><code class="inline-code">auto</code>:</strong> When columns or cell width are not explictly set, the column width will be in proportion to the amount of content in the cells that make up the column. (default)</li>
+<li><strong><code class="inline-code">fixed</code>:</strong> Cell width will not be affected by the amount of content in the cells.</li>
+</ul>
+</li>
+</ul>
+<p>Sample&quot;</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    table-layout: auto;
+    table-layout: fixed;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">table-layout</span>: auto;
+    <span class="hljs-attribute">table-layout</span>: fixed;
+}</code></pre></div>
+<h2 id="border-radius-property">Border-radius Property</h2>
+<ul>
+<li>Used for creating rounded corners.</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    border-radius: 20px;
+    background-color: #00ff00;
+    color: #ffffff;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#00ff00</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+}</code></pre></div>
+<ul>
+<li>Specified <strong><code class="inline-code">border-radius</code></strong> can be added in the following order: <em>top-left</em>, <em>top-right</em>, <em>bottom-right</em>, <em>bottom-left</em>.</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    border-radius: 0 0 20px 20px;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20px</span> <span class="hljs-number">20px</span>;
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
