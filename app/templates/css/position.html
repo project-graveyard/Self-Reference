@@ -1,0 +1,86 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It allows you to position an element.</li>
+<li>It can place an element before another and specify what should happen when the element's content is too big.</li>
+<li>Positions can be set with <em>top</em>, <em>left</em>, <em>bottom</em> and <em>right</em> properties. They work differently dependng on the positioning method.</li>
+<li><strong>Static positioning</strong>
+<ul>
+<li>Elements are positioned <em>static</em> by default. It is positioned according to the normal flow of the page.</li>
+</ul>
+</li>
+<li><strong>Fixed positioning</strong>
+<ul>
+<li>Elements are positioned relative to the browser's window and will not move even if the window is scrolled.</li>
+</ul>
+</li>
+</ul>
+<p>Samples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    position: relative;
+    top: 150px;
+    left: 50px;
+
+    position: fixed;
+
+    position: static;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">150px</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">50px</span>;
+
+    <span class="hljs-attribute">position</span>: fixed;
+
+    <span class="hljs-attribute">position</span>: static;
+}</code></pre></div>
+<ul>
+<li><strong>Float</strong>
+<ul>
+<li>It allows the elements to be pushed/shifted allowing other elements to wrap around it. It is normally used for images.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    float: left;
+    width: 120px;
+    margin-right: 10px;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+}</code></pre></div>
+</li>
+<li><strong>Clearing</strong>
+<ul>
+<li>The <em><code class="inline-code">both</code></em> value is used to clear floats coming from either direction.</li>
+<li>E.g. <code class="inline-code">clear: both</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="overflow-property">Overflow Property</h4>
+<ul>
+<li>Overflow specifies the behavior that occurs when an element's content overflows the element's box.</li>
+<li>Values: <em>visible</em> (default), <em>scroll</em>, <em>hidden</em>, <em>auto</em>.
+<ul>
+<li><strong><code class="inline-code">scroll</code>:</strong> In a clipped overflow, a scroll bar is added.</li>
+<li><strong><code class="inline-code">hidden</code>:</strong> In a clipped overflow, the rest of the content is hidden.</li>
+</ul>
+</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{overflow: auto;}</pre><pre class="hljs"><code>{<span class="hljs-attribute">overflow</span>: auto;}</code></pre></div>
+<h4 id="z-index-property">Z-index Property</h4>
+<ul>
+<li>It specifies the stack order of an element (which element should be placed in front of, or behind the others.)</li>
+<li>It works only on positioned elements.</li>
+<li>Assigning a higher value of <em>z-index</em> to an element places in front of the other elements with lower <em>z-index</em> value.</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    z-index: 3;
+    position: relative;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">3</span>;
+    <span class="hljs-attribute">position</span>: relative;
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
