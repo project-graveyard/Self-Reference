@@ -35,6 +35,50 @@
     <span class="hljs-attribute">background-attachment</span>: scroll;
     <span class="hljs-attribute">background-attachment</span>: inherit;
 }</code></pre></div>
+<h2 id="background-size-property">Background-size Property</h2>
+<p>Samples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    background-size: 100px 100px;
+    background-size: contain;
+    background-size: cover;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">100px</span> <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">background-size</span>: contain;
+    <span class="hljs-attribute">background-size</span>: cover;
+}</code></pre></div>
+<h2 id="background-clip-property">Background-clip Property</h2>
+<ul>
+<li>Specifies the painting area of the background.</li>
+<li>Values:
+<ul>
+<li>border-box</li>
+<li>padding-box</li>
+<li>content-box</li>
+</ul>
+</li>
+<li>Transparency effect is achieved when <code class="inline-code">background-clip: padding-box</code></li>
+</ul>
+<h2 id="background-position-property">Background-position Property</h2>
+<ul>
+<li>Used when defining multiple background images.</li>
+<li>The position is separated by comma.<br>
+Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    background-position: left, right;
+}
+
+/*Defining multiple backgrounds*/
+{
+    background: url(&quot;&quot;) left no-repeat, url(&quot;&quot;) right no-repeat;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">background-position</span>: left, right;
+}
+
+<span class="hljs-comment">/*Defining multiple backgrounds*/</span>
+{
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;&quot;</span>) left no-repeat, <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;&quot;</span>) right no-repeat;
+}</code></pre></div>
+</li>
+</ul>
 </div></div>
     </div>
 </div>
