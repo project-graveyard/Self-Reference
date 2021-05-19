@@ -327,7 +327,8 @@ def css():
         {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'Transitions', 'url': 'css/transition.html'},
         {'id': "headingFourteen", 'data': 'collapseFourteen', 'heading': 'Transformations', 'url': 'css/transform.html'},
         {'id': "headingFifteen", 'data': 'collapseFifteen', 'heading': 'Animations', 'url': 'css/animate.html'},
-        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Things To Note', 'url': 'css/note.html'}
+        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Filters', 'url': 'css/filter.html'},
+        {'id': "headingSeventeen", 'data': 'collapseSeventeen', 'heading': 'Things To Note', 'url': 'css/note.html'},
     ]
 
     return render_template(
