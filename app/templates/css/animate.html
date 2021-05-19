@@ -1,0 +1,115 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="keyframes-rule">@keyframes Rule</h2>
+<ul>
+<li>The animation will gradually change from the current style to the new style at certain times.</li>
+<li>To get the animation to work, you must bind the animation to an element.<br>
+Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">@keyframes name {
+    %{Styles}
+}
+
+/*Example*/
+div {
+    width: 10px;
+    animation-name: color;
+    animation-duration: 1s;
+}
+@keyframes color {
+    0% {background-color: red;}
+    50% {background-color: green;}
+    100% {background-color: yellow;}
+}</pre><pre class="hljs"><code><span class="hljs-keyword">@keyframes</span> name {
+    %{Styles}
+}
+
+<span class="hljs-comment">/*Example*/</span>
+<span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">animation-name</span>: color;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">1s</span>;
+}
+<span class="hljs-keyword">@keyframes</span> color {
+    0% {<span class="hljs-attribute">background-color</span>: red;}
+    50% {<span class="hljs-attribute">background-color</span>: green;}
+    100% {<span class="hljs-attribute">background-color</span>: yellow;}
+}</code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>If the <code class="inline-code">animation-duration</code> is not specified, the animation will have no effect.</p>
+</blockquote>
+<h2 id="animation-timing-function-property">Animation-timing-function Property</h2>
+<ul>
+<li>Specifies the speed curve of an animation.</li>
+<li>Values:
+<ul>
+<li><strong>ease:</strong> Slow start, then fast, then end slowly.</li>
+<li><strong>linear:</strong> Same speed from start to end.</li>
+<li><strong>ease-in:</strong> With slow start.</li>
+<li><strong>ease-out:</strong> With slow end.</li>
+<li><strong>ease-in-out:</strong> With a slow start and end.</li>
+</ul>
+</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    animation-timing-function: ease;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">animation-timing-function</span>: ease;
+}</code></pre></div>
+<h2 id="animation-name">Animation-name</h2>
+<ul>
+<li>Defines animation name.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    animation-name: name_of_animation;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">animation-name</span>: name_of_animation;
+}</code></pre></div>
+<h2 id="animation-delay">Animation-delay</h2>
+<ul>
+<li>Defines a delay before the animation starts.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    animation-delay: 5s;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">5s</span>;
+}</code></pre></div>
+<h2 id="animation-iteration-count">Animation-iteration-count</h2>
+<ul>
+<li>Determines the number of times an animation repeats.</li>
+<li>To repeat forever, use <code class="inline-code">infinite</code>.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    animation-iteration-count: 5;
+    animation-iteration-count: infinite;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">animation-iteration-count</span>: <span class="hljs-number">5</span>;
+    <span class="hljs-attribute">animation-iteration-count</span>: infinite;
+}</code></pre></div>
+<h2 id="animation-direction">Animation-direction</h2>
+<ul>
+<li>Indicates how the keyframes rule should be applied</li>
+<li>Values:
+<ul>
+<li><strong>normal:</strong> Plays from 0% to 100%.</li>
+<li><strong>reverse:</strong> Plays from 100% to 0%.</li>
+<li><strong>alternate:</strong> Runs forward, backward and forward.</li>
+<li><strong>alternate-reverse:</strong> Runs backward, forward and backward again.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h4 id="order-of-writing-animations">Order Of Writing Animations</h4>
+<ol>
+<li>animation-name</li>
+<li>animation-duration</li>
+<li>animation-timing-function</li>
+<li>animation-delay</li>
+<li>animation-iteration-count</li>
+<li>animation-direction</li>
+</ol>
+</blockquote>
+</div></div>
+    </div>
+</div>
