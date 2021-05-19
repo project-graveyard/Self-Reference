@@ -1,0 +1,35 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>A pseudo class starts with a colon (:).</li>
+<li>The common ones are <strong><code class="inline-code">:first-child</code></strong> and <strong><code class="inline-code">:last-child</code></strong>.</li>
+<li>The <strong><code class="inline-code">:first-child</code></strong> matches an element that is the first child element.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div id='parent'&gt;
+    &lt;p&gt;Das&lt;/p&gt;
+    &lt;p&gt;Orange&lt;/p&gt;
+&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#x27;parent&#x27;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Das<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">/*Affects only the first &lt;p&gt; tag*/
+#parent p:first-child {
+    color: #00ff00;
+    text-decoration: underline;
+}</pre><pre class="hljs"><code><span class="hljs-comment">/*Affects only the first &lt;p&gt; tag*/</span>
+<span class="hljs-selector-id">#parent</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:first-child</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#00ff00</span>;
+    <span class="hljs-attribute">text-decoration</span>: underline;
+}</code></pre></div>
+</li>
+</ul>
+<h4 id="other-types-of-classes">Other Types Of Classes</h4>
+<ul>
+<li><strong><code class="inline-code">::first-line</code>:</strong> The first line of text in the selector.</li>
+<li><strong><code class="inline-code">::first-letter</code>:</strong> The first letter of the text in a selector.</li>
+<li><strong><code class="inline-code">::selection</code>:</strong> Selects a portion of an  element that is selected by the user.</li>
+<li><strong><code class="inline-code">::before</code>:</strong> Inserts some content before an element.</li>
+<li><strong><code class="inline-code">::after</code>:</strong> Inserts some content after an element.</li>
+</ul>
+</div></div>
+    </div>
+</div>
