@@ -1,0 +1,84 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It allows you to apply graphical effects on images, background and borders.</li>
+<li><code class="inline-code">filter</code> functions include: blur(), brightness(), contrast(), drop-shadow(), grayscale(), hue-rotate(), inver(), opacity(), saturate() and sepia().</li>
+</ul>
+<h4 id="drop-shadow-function">Drop-shadow function</h4>
+<p><code class="inline-code">drop-shadow(w h b c)</code> creates a shadow effect that extends beyond an image for the width(w), height(h), blur(b) and color(c).</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: drop-shadow(5px 6px 2px blue);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">drop-shadow</span>(<span class="hljs-number">5px</span> <span class="hljs-number">6px</span> <span class="hljs-number">2px</span> blue);}</code></pre></div>
+<blockquote>
+<p>Negative values are allowed for w and h.</p>
+</blockquote>
+<h4 id="alpha">Alpha</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    filter: alpha(opacity=x);
+    /*where 0 &lt;= x &gt;= 100*/
+}
+
+/*example*/
+{
+    filter: alpha(opacity=50);
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">filter</span>: <span class="hljs-built_in">alpha</span>(opacity=x);
+    <span class="hljs-comment">/*where 0 &lt;= x &gt;= 100*/</span>
+}
+
+<span class="hljs-comment">/*example*/</span>
+{
+    <span class="hljs-attribute">filter</span>: <span class="hljs-built_in">alpha</span>(opacity=<span class="hljs-number">50</span>);
+}</code></pre></div>
+<h4 id="grayscale-function">Grayscale Function</h4>
+<p>Converts an image to grayscale with values from 0% to 100%.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: grayscale(50%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">grayscale</span>(<span class="hljs-number">50%</span>);}</code></pre></div>
+<h4 id="sepia-function">Sepia Function</h4>
+<p>Converts an image to sepia with values 0% to 100%.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: sepia(70%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">sepia</span>(<span class="hljs-number">70%</span>);}</code></pre></div>
+<h4 id="saturate-function">Saturate Function</h4>
+<p>Controls color saturation for an image. 100% is the original image.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: saturate(50%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">saturate</span>(<span class="hljs-number">50%</span>);}</code></pre></div>
+<h4 id="hue-rotate-function">Hue-rotate Function</h4>
+<ul>
+<li>Applies a hue rotation (based on the color circle) to an image.</li>
+<li>It takes an angle as a value.</li>
+<li>0deg and 360deg leaves the image unchanged.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: hue-rotation(180deg);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">hue-rotation</span>(<span class="hljs-number">180deg</span>);}</code></pre></div>
+<h4 id="invert-function">Invert Function</h4>
+<ul>
+<li>Inverts the color of an image to make dark places bright and bright places dark.</li>
+<li>Values are 0% to 100%. 100% is completely converted to a photographic negative.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: invert(70%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">invert</span>(<span class="hljs-number">70%</span>);}</code></pre></div>
+<h4 id="opacity-function">Opacity Function</h4>
+<p>Allows you to create a completely transparent image. From 0% to 100%. 100% is the original image.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: opacity(70%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">opacity</span>(<span class="hljs-number">70%</span>);}</code></pre></div>
+<h4 id="brightness-function">Brightness Function</h4>
+<ul>
+<li>Adjusts the brightness of an image from 0% to 100%.</li>
+<li>0% results in a completely black image.</li>
+<li>100% results in the original images.</li>
+<li>Over 100% results in a brighter images.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: brightness(150%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">brightness</span>(<span class="hljs-number">150%</span>);}</code></pre></div>
+<h4 id="contrast-function">Contrast Function</h4>
+<ul>
+<li>Adjusts the contrast of an image.</li>
+<li>A value under 100% decreases the contrast while over 100% increases it.</li>
+<li>0% will make the image completely gray.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: contrast(104%);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">contrast</span>(<span class="hljs-number">104%</span>);}</code></pre></div>
+<h4 id="blur-function">Blur Function</h4>
+<ul>
+<li>Applies a blur effect to an image.</li>
+<li>It defines how many pixels on the screen blend into each other.</li>
+<li>0 leaves the image completely unchanged.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{filter: blur(2px);}</pre><pre class="hljs"><code>{<span class="hljs-attribute">filter</span>: <span class="hljs-built_in">blur</span>(<span class="hljs-number">2px</span>);}</code></pre></div>
+<blockquote>
+<p>Multiple filters can be added by separating with spaces.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
