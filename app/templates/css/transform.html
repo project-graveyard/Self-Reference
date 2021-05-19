@@ -1,0 +1,133 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="transform-property">Transform Property</h2>
+<p>Allows elements to change shape, size and position.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    transform: rotate(360deg);
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);
+}</code></pre></div>
+<h2 id="transform-origin-property">Transform-origin Property</h2>
+<ul>
+<li>Allows you to change the position of trnasformed elements.</li>
+<li>The default value is <code class="inline-code">50% 50%</code> which is the center of the element.</li>
+</ul>
+<blockquote>
+<p>It must be used with transform.</p>
+</blockquote>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    transform-origin: 25% 75%;
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">transform-origin</span>: <span class="hljs-number">25%</span> <span class="hljs-number">75%</span>;
+}</code></pre></div>
+<h2 id="translate-method">Translate Method</h2>
+<ul>
+<li>Moves an element from its current position.<br>
+Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">/*Syntax*/
+{
+    transform: translate(x, y);
+}
+
+/*example*/
+{
+    transform: translate(100px, 50px);
+}</pre><pre class="hljs"><code><span class="hljs-comment">/*Syntax*/</span>
+{
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(x, y);
+}
+
+<span class="hljs-comment">/*example*/</span>
+{
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">100px</span>, <span class="hljs-number">50px</span>);
+}</code></pre></div>
+</li>
+</ul>
+<h2 id="skew-method">Skew Method</h2>
+<ul>
+<li>Turns an element along the x-axis and y-axis by given angles.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    transform: skew(39deg);
+    /*note: If the second angle is not given, it uses a default value of 0*/
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">39deg</span>);
+    <span class="hljs-comment">/*<span class="hljs-doctag">note:</span> If the second angle is not given, it uses a default value of 0*/</span>
+}</code></pre></div>
+</li>
+</ul>
+<h2 id="scale-method">Scale Method</h2>
+<ul>
+<li>It increases or decreases the size of an element, according to the parameters given for width and height.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    width: 200px;
+    height: 110px;
+    transform: scale(0.7, 0.7);
+    /*If only one parameter is given, it applies to both wodth and height*/
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">110px</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>);
+    <span class="hljs-comment">/*If only one parameter is given, it applies to both wodth and height*/</span>
+}</code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>Multiple transforms can be added by separating them with spaces.</p>
+</blockquote>
+<h2 id="3d-transforms">3D-transforms</h2>
+<ul>
+<li>It allows you to move the element horizontally (<code class="inline-code">translateX</code>), vertically (<code class="inline-code">translateY</code>) and into or out of the screen (<code class="inline-code">translateZ</code>), using any css length (px, em, %, ...).</li>
+<li>Positive values moves the elements toward the viewer and negative values away.</li>
+</ul>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    transform: translateX(20px);
+    transform: translateY(100px);
+    transform: translateZ(45px);
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(<span class="hljs-number">20px</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(<span class="hljs-number">100px</span>);
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateZ</span>(<span class="hljs-number">45px</span>);
+}</code></pre></div>
+<h4 id="translate-3d">Translate-3d</h4>
+<p>It allows you to pass the x, y and z offsets at once.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    transform: translate3d(10px, 20px, 5em);
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate3d</span>(<span class="hljs-number">10px</span>, <span class="hljs-number">20px</span>, <span class="hljs-number">5em</span>);
+}</code></pre></div>
+<h4 id="scale-3d-rotate-3d">Scale-3d &amp; Rotate-3d</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">{
+    /*For scaling elements in 3D.*/
+    transform: scale3d(0.2, 0.1, 1);
+    
+    /*For rotating elements in 3D*/
+    transform: rotate3d(30deg);
+}</pre><pre class="hljs"><code>{
+    <span class="hljs-comment">/*For scaling elements in 3D.*/</span>
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale3d</span>(<span class="hljs-number">0.2</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">1</span>);
+    
+    <span class="hljs-comment">/*For rotating elements in 3D*/</span>
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate3d</span>(<span class="hljs-number">30deg</span>);
+}</code></pre></div>
+<h4 id="perspective-property">Perspective Property</h4>
+<ul>
+<li>It affects only 3D-transformed elements.</li>
+<li>It defines how the depth of the 3D scene is rendered. (It is the distance of the viewer from the object.).</li>
+<li>It is the child elements that get the perspective view not the element itself.</li>
+</ul>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">div.emptydiv {
+    perspective: 100px;
+}
+div.greendiv {
+    transform: rotateX(45deg);
+}</pre><pre class="hljs"><code><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.emptydiv</span> {
+    <span class="hljs-attribute">perspective</span>: <span class="hljs-number">100px</span>;
+}
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.greendiv</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">45deg</span>);
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
