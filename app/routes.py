@@ -24,6 +24,8 @@ def home():
             'url': 'css', 'img': 'static/img/css.png'},
         {'name': 'JavaScript', 'memo': 'JavaScript Cheatsheet',
             'url': 'js', 'img': 'static/img/js.png'},
+        {'name': 'jQuery', 'memo': 'jQuery Cheatsheet',
+            'url': 'jQuery', 'img': 'static/img/jquery.png'},
         {'name': 'C++', 'memo': 'C++ Cheatsheet',
             'url': 'cpp', 'img': 'static/img/cpp.png'},
         {'name': 'MySQL', 'memo': 'MySQL Cheatsheet',
@@ -285,11 +287,25 @@ def htm():
 
 @app.route('/js')
 def js():
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Things To Note', 'url': 'html/note.html'}
+    ]
     return render_template(
-        'js.html',
+        'js/js.html',
         title='JavaScript',
-        description='Code AutoBiography of JavaScript'
+        description='Code AutoBiography of JavaScript',
+        block=block
     )
+
+
+@app.route("/jQuery")
+def jQuery():
+    return render_template(
+        'jquery.html',
+        title='jQuery',
+        description='Code AutoBiography of jQuery'
+    )
+
 
 
 @app.route('/sql')
