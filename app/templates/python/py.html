@@ -1,5 +1,13 @@
 {% extends 'layout.html' %} 
 
+{% block icon %}
+<link
+  rel="icon"
+  href="{{ url_for('static', filename='img/Python.png') }}"
+  type="image/x-icon"
+/>
+{% endblock %}
+
 {% block content %}
 <div>
   <img
