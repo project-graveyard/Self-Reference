@@ -1,7 +1,15 @@
 {% extends 'layout.html' %}
 
+{% block icon %}
+<link
+  rel="icon"
+  href="{{ url_for('static', filename='img/css.png') }}"
+  type="image/x-icon"
+/>
+{% endblock %}
+
 {% block content %}
-    <div><img src="{{ url_for('static', filename='img/css.png') }}" alt="python-icon" style="position: relative; float: left;" /><h2>CSS Reference</h2></div>
+    <div><img src="{{ url_for('static', filename='img/css.png') }}" alt="css-icon" style="position: relative; float: left;" /><h2>CSS Reference</h2></div>
 
     <article class="my-3" id="accordion">
         <div>
