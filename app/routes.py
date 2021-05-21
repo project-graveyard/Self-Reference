@@ -26,10 +26,10 @@ def home():
             'url': 'js', 'img': 'static/img/js.png'},
         {'name': 'jQuery', 'memo': 'jQuery Cheatsheet',
             'url': 'jQuery', 'img': 'static/img/jquery.png'},
-        {'name': 'C++', 'memo': 'C++ Cheatsheet',
-            'url': 'cpp', 'img': 'static/img/cpp.png'},
         {'name': 'MySQL', 'memo': 'MySQL Cheatsheet',
             'url': 'sql', 'img': 'static/img/sql.png'},
+        {'name': 'C++', 'memo': 'C++ Cheatsheet',
+            'url': 'cpp', 'img': 'static/img/cpp.png'},
         {'name': 'Flask', 'memo': 'Flask Cheatsheet',
             'url': 'pyflask', 'img': 'static/img/flask.png'},
         {'name': 'React js', 'memo': 'React Cheatsheet',
@@ -288,7 +288,18 @@ def htm():
 @app.route('/js')
 def js():
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Things To Note', 'url': 'html/note.html'}
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Symbols & Operators', 'url': 'js/symbol.html'},
+        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Variables & Data Structures', 'url': 'js/variable.html'},
+        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'JSON', 'url': 'js/json.html'},
+        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Conditionals & Loops', 'url': 'js/loops.html'},
+        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Functions', 'url': 'js/func.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Popup Boxes', 'url': 'js/pop.html'},
+        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'Object Oriented Programming', 'url': 'js/oop.html'},
+        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Manipulating The DOM', 'url': 'js/dom.html'},
+        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'The Math Object', 'url': 'js/math.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'The Date Object', 'url': 'js/date.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Events', 'url': 'js/event.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'Things To Note', 'url': 'js/note.html'},
     ]
     return render_template(
         'js/js.html',
@@ -300,10 +311,24 @@ def js():
 
 @app.route("/jQuery")
 def jQuery():
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Selectors', 'url': 'jquery/select.html'},
+        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'The attr() method', 'url': 'jquery/attr.html'},
+        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'The html() method', 'url': 'jquery/html.html'},
+        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'The text() method', 'url': 'jquery/text.html'},
+        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'The val() method', 'url': 'jquery/val.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Class Methods', 'url': 'jquery/class.html'},
+        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'The css() method', 'url': 'jquery/css.html'},
+        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Sizing Methods', 'url': 'jquery/size.html'},
+        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Parent & Child Methods', 'url': 'jquery/parent.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Handling Events', 'url': 'jquery/event.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Things To Note', 'url': 'jquery/note.html'},
+    ]
     return render_template(
-        'jquery.html',
+        'jquery/jquery.html',
         title='jQuery',
-        description='Code AutoBiography of jQuery'
+        description='Code AutoBiography of jQuery',
+        block=block
     )
 
 
