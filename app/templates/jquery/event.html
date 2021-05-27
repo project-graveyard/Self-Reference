@@ -1,0 +1,83 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;#demo&quot;).click(funcction(){
+    $(&quot;body&quot;).html(Date());
+});</pre><pre class="hljs"><code>$(<span class="hljs-string">&quot;#demo&quot;</span>).click(funcction(){
+    $(<span class="hljs-string">&quot;body&quot;</span>).html(<span class="hljs-built_in">Date</span>());
+});</code></pre></div>
+<h2 id="common-events">Common Events</h2>
+<h4 id="mouse-events">Mouse Events</h4>
+<ul>
+<li><strong>Click</strong> occurs when an element is clicked.</li>
+<li><strong>dblclick</strong> occurs when an element is double-clicked.</li>
+<li><strong>mouseenter</strong> occurs when the mouse pointer enters the selected elements.</li>
+<li><strong>mouseleaves</strong> occurs when the mouse pointer leaves the selected elements.</li>
+<li><strong>mouseover</strong> occurs when the mouse pointer is over the selected elements.</li>
+</ul>
+<h4 id="keyboard-events">Keyboard Events</h4>
+<ul>
+<li><strong>keydown</strong> occurs when a keyboard key is pressed down.</li>
+<li><strong>keyup</strong> occurs when a keyboard key is released.</li>
+</ul>
+<h4 id="form-events">Form Events</h4>
+<ul>
+<li><strong>submit</strong> occurs when a form is submitted.</li>
+<li><strong>change</strong> occurs when the value of an object has been changed.</li>
+<li><strong>focus</strong> occurs when an element gets focus.</li>
+<li><strong>blur</strong> occurs when an element loses focus.</li>
+</ul>
+<h4 id="document-events">Document Events</h4>
+<ul>
+<li><strong>ready</strong> occurs when the document has been loaded.</li>
+<li><strong>resize</strong> occurs when a browser window changes size.</li>
+<li><strong>scroll</strong> occurs when a user scrolls in the specified element.</li>
+</ul>
+<p>Samples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;input type=&quot;text&quot; id=&quot;name&quot; /&gt;
+&lt;div id=&quot;msg&quot;&gt;&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;#name&quot;).keydown(function(){
+    $(&quot;#msg&quot;).html($(&quot;#name&quot;).val());
+});
+//assigns the content of div, the value of the input field.</pre><pre class="hljs"><code>$(<span class="hljs-string">&quot;#name&quot;</span>).keydown(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    $(<span class="hljs-string">&quot;#msg&quot;</span>).html($(<span class="hljs-string">&quot;#name&quot;</span>).val());
+});
+<span class="hljs-comment">//assigns the content of div, the value of the input field.</span></code></pre></div>
+<h2 id="note">Note</h2>
+<ul>
+<li>To handle events, you can also use the <code class="inline-code">on()</code> method. It attaches an event to the selected element.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$('p').on(&quot;click&quot;, function(){
+    console.log(&quot;clicked&quot;);
+});</pre><pre class="hljs"><code>$(<span class="hljs-string">&#x27;p&#x27;</span>).on(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;clicked&quot;</span>);
+});</code></pre></div>
+</li>
+<li>Multiple event names can be handled by separating them with spaces in the first arguement to pass the same function.</li>
+<li>Event handlers can be removed using <code class="inline-code">off()</code> method.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;div&quot;).on(&quot;click&quot;, function(){
+    console.log(&quot;Hi there!&quot;);
+    $(&quot;div&quot;).off(&quot;click&quot;);
+});</pre><pre class="hljs"><code>$(<span class="hljs-string">&quot;div&quot;</span>).on(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hi there!&quot;</span>);
+    $(<span class="hljs-string">&quot;div&quot;</span>).off(<span class="hljs-string">&quot;click&quot;</span>);
+});</code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>The arguement of the <code class="inline-code">off()</code> method is the event name you want to remove the handler for.</p>
+</blockquote>
+<ul>
+<li>You can trigger events programmatically using the <code class="inline-code">trigger()</code> method (without the user necessarily initiating the event).<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;div&quot;).on(&quot;click&quot;, function(){
+    console.log(&quot;Clicked&quot;);
+    $(&quot;div&quot;).trigger(&quot;click&quot;);
+});</pre><pre class="hljs"><code>$(<span class="hljs-string">&quot;div&quot;</span>).on(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Clicked&quot;</span>);
+    $(<span class="hljs-string">&quot;div&quot;</span>).trigger(<span class="hljs-string">&quot;click&quot;</span>);
+});</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
