@@ -1,14 +1,10 @@
-{% extends 'layout.html' %} 
-
-{% block icon %}
+{% extends 'layout.html' %} {% block icon %}
 <link
   rel="icon"
   href="{{ url_for('static', filename='img/htm.png') }}"
   type="image/x-icon"
 />
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div>
   <img
     src="{{ url_for('static', filename='img/htm.png')}}"
