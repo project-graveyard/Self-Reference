@@ -1,0 +1,45 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>The <code class="inline-code">attr()</code> method is used for getting the value of an attribute.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;a href=&quot;github.com&quot;&gt;Click here&lt;/a&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;github.com&quot;</span>&gt;</span>Click here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">//jQuery
+$(function(){
+    var val = $('a').attr(&quot;href&quot;);
+    alert(val);
+});
+//alerts &quot;github.com&quot;</pre><pre class="hljs"><code><span class="hljs-comment">//jQuery</span>
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> val = $(<span class="hljs-string">&#x27;a&#x27;</span>).attr(<span class="hljs-string">&quot;href&quot;</span>);
+    alert(val);
+});
+<span class="hljs-comment">//alerts &quot;github.com&quot;</span></code></pre></div>
+<ul>
+<li>The <code class="inline-code">attr()</code> method also allows us to set a value for an attribute by specifying it as a second parameter.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(function() {
+    $('a').attr(&quot;href&quot;, &quot;jquery.com&quot;);
+});
+//This will change the href attribute of the &lt;a&gt; element to the provided value</pre><pre class="hljs"><code>$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&#x27;a&#x27;</span>).attr(<span class="hljs-string">&quot;href&quot;</span>, <span class="hljs-string">&quot;jquery.com&quot;</span>);
+});
+<span class="hljs-comment">//This will change the href attribute of the &lt;a&gt; element to the provided value</span></code></pre></div>
+<ul>
+<li>The <code class="inline-code">removeAttr()</code> method is used for removing any attribute of an element.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">//removes border attribute
+$(&quot;table&quot;).removeAttr(&quot;border&quot;);
+
+//removes class attribute
+$(&quot;table&quot;).removeAttr(&quot;class&quot;);</pre><pre class="hljs"><code><span class="hljs-comment">//removes border attribute</span>
+<span class="hljs-constructor">$(<span class="hljs-string">&quot;table&quot;</span>)</span>.remove<span class="hljs-constructor">Attr(<span class="hljs-string">&quot;border&quot;</span>)</span>;
+
+<span class="hljs-comment">//removes class attribute</span>
+<span class="hljs-constructor">$(<span class="hljs-string">&quot;table&quot;</span>)</span>.remove<span class="hljs-constructor">Attr(<span class="hljs-string">&quot;class&quot;</span>)</span>;</code></pre></div>
+</div></div>
+    </div>
+</div>
