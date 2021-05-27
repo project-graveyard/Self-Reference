@@ -1,0 +1,22 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><p>The <code class="inline-code">html()</code> method is used to get the content of the selected element, including the heml markup.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p&gt;
+    jQuery is &lt;b&gt;fun&lt;/b&gt; fun
+&lt;/p&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+    jQuery is <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>fun<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> fun
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">//jQuery
+$(function() {
+    var val = $('p').html();
+    console.log(val);
+});
+//outputs: jQuery is &lt;b&gt;fun&lt;/b&gt;</pre><pre class="hljs"><code><span class="hljs-comment">//jQuery</span>
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> val = $(<span class="hljs-string">&#x27;p&#x27;</span>).html();
+    <span class="hljs-built_in">console</span>.log(val);
+});
+<span class="hljs-comment">//outputs: jQuery is &lt;b&gt;fun&lt;/b&gt;</span></code></pre></div>
+</div></div>
+    </div>
+</div>
