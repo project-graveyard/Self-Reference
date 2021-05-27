@@ -1,0 +1,32 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It is used to get and/or set css property values.<br>
+Sample:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p&gt;Some text&lt;/p&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Some text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">p {
+    background-color: red;
+    color: white;
+}</pre><pre class="hljs"><code><span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">background-color</span>: red;
+    <span class="hljs-attribute">color</span>: white;
+}</code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(function() {
+    //Outputs the current background color of p
+    console.log($('p').css(&quot;background-color&quot;));
+    //sets the background color to blue
+    $('p').css(&quot;background-color&quot;, &quot;blue&quot;);
+});</pre><pre class="hljs"><code>$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">//Outputs the current background color of p</span>
+    <span class="hljs-built_in">console</span>.log($(<span class="hljs-string">&#x27;p&#x27;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>));
+    <span class="hljs-comment">//sets the background color to blue</span>
+    $(<span class="hljs-string">&#x27;p&#x27;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>);
+});</code></pre></div>
+<ul>
+<li>To set multiple css properties, the <code class="inline-code">css()</code> method uses the JSON syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">css({&quot;property&quot;: &quot;value&quot;, &quot;property&quot;: &quot;value&quot;, ...});</pre><pre class="hljs"><code>css({<span class="hljs-string">&quot;property&quot;</span>: <span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-string">&quot;property&quot;</span>: <span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-params">...</span>});</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
