@@ -1,0 +1,50 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li><code class="inline-code">append()</code> inserts content at the end of selected elements.</li>
+<li><code class="inline-code">prepend()</code> inserts content at the beginning of selected elements.</li>
+<li><code class="inline-code">after()</code> inserts content after the selected elements.</li>
+<li><code class="inline-code">before()</code> inserts the content before the selected elements.<br>
+Sample:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p id=&quot;demo&quot;&gt;Hi&lt;/p&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span>&gt;</span>Hi<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(function() {
+    $(&quot;#demo&quot;).append(&quot;David&quot;);
+});
+//Output: Hi David
+
+$(function() {
+    $(&quot;#demo&quot;).before(&quot;&lt;b&gt;Good day!&lt;b/&gt;&quot;);
+});
+//Output: Good day (in bold)! Hi David
+
+$(function() {
+    $(&quot;#demo&quot;).after(&quot;&lt;i&gt;Welcome&lt;i/&gt;&quot;);
+});
+//Good day (in bold)! Hi David Welcome
+
+$(function() {
+    var txt = $(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;Hi&quot;);
+    //This creates a new &lt;p&gt; element which contains the text, &quot;Hi&quot;
+});</pre><pre class="hljs"><code>$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&quot;#demo&quot;</span>).append(<span class="hljs-string">&quot;David&quot;</span>);
+});
+<span class="hljs-comment">//Output: Hi David</span>
+
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&quot;#demo&quot;</span>).before(<span class="hljs-string">&quot;&lt;b&gt;Good day!&lt;b/&gt;&quot;</span>);
+});
+<span class="hljs-comment">//Output: Good day (in bold)! Hi David</span>
+
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&quot;#demo&quot;</span>).after(<span class="hljs-string">&quot;&lt;i&gt;Welcome&lt;i/&gt;&quot;</span>);
+});
+<span class="hljs-comment">//Good day (in bold)! Hi David Welcome</span>
+
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> txt = $(<span class="hljs-string">&quot;&lt;p&gt;&lt;/p&gt;&quot;</span>).text(<span class="hljs-string">&quot;Hi&quot;</span>);
+    <span class="hljs-comment">//This creates a new &lt;p&gt; element which contains the text, &quot;Hi&quot;</span>
+});</code></pre></div>
+</div></div>
+    </div>
+</div>
