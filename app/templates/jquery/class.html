@@ -1,0 +1,50 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h4 id="addclass">addClass()</h4>
+<ul>
+<li>The <code class="inline-code">addClass()</code> method adds one or more classes to selected elements.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div&gt;Some text&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Some text<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">.header {
+    color: blue;
+    font-size: x-large;
+}</pre><pre class="hljs"><code><span class="hljs-selector-class">.header</span> {
+    <span class="hljs-attribute">color</span>: blue;
+    <span class="hljs-attribute">font-size</span>: x-large;
+}</code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jqeury" data-joplin-source-open="```jqeury&#10;" data-joplin-source-close="&#10;```">$(&quot;div&quot;).addClass(&quot;header&quot;);</pre><pre class="hljs"><code><span class="hljs-constructor">$(<span class="hljs-string">&quot;div&quot;</span>)</span>.add<span class="hljs-constructor">Class(<span class="hljs-string">&quot;header&quot;</span>)</span>;</code></pre></div>
+<ul>
+<li>To specify multiple classes within the <code class="inline-code">addclass()</code> method, just separate them using spaces.</li>
+</ul>
+<h4 id="removeclass">removeClass()</h4>
+<p>The <code class="inline-code">removeClass()</code> method removes one or more class names from the selected elements.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;div&quot;).removeClass(&quot;red&quot;);</pre><pre class="hljs"><code><span class="hljs-constructor">$(<span class="hljs-string">&quot;div&quot;</span>)</span>.remove<span class="hljs-constructor">Class(<span class="hljs-string">&quot;red&quot;</span>)</span>;</code></pre></div>
+<h4 id="toggleclass">toggleClass()</h4>
+<p>It toggles between removing and adding classes from the selected elements; meaning that if the specified class exists for the element, it is removed; else it is added.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p&gt;Some text&lt;/p&gt;
+&lt;button&gt;Toggle class&lt;/button&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Some text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Toggle class<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="css" data-joplin-source-open="```css&#10;" data-joplin-source-close="&#10;```">.red {
+    color: red;
+    font-weight: bold;
+}</pre><pre class="hljs"><code><span class="hljs-selector-class">.red</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">font-weight</span>: bold;
+}</code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">//toggles the class &quot;red&quot; upon clicking the button
+$(function() {
+    $(&quot;button&quot;).click(function() {
+        $('p').toggleClass(&quot;red&quot;);
+    });
+});</pre><pre class="hljs"><code><span class="hljs-comment">//toggles the class &quot;red&quot; upon clicking the button</span>
+$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&quot;button&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        $(<span class="hljs-string">&#x27;p&#x27;</span>).toggleClass(<span class="hljs-string">&quot;red&quot;</span>);
+    });
+});</code></pre></div>
+</div></div>
+    </div>
+</div>
