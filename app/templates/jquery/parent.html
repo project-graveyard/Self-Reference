@@ -1,0 +1,66 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p>The <code class="inline-code">parent()</code> method returns the direct parent element of the selected element.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div&gt;
+    Div element
+    &lt;p&gt;Paragraph&lt;/p&gt;
+&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    Div element
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">var e = $('p').parent();
+e.css(&quot;border&quot;, &quot;2px solid red&quot;)</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> e = $(<span class="hljs-string">&#x27;p&#x27;</span>).parent();
+e.css(<span class="hljs-string">&quot;border&quot;</span>, <span class="hljs-string">&quot;2px solid red&quot;</span>)</code></pre></div>
+</li>
+<li>
+<p>The <code class="inline-code">parent()</code> method moves one level up the DOM tree.</p>
+</li>
+<li>
+<p>The <code class="inline-code">children()</code> method selects all direct children of the selected element.</p>
+</li>
+<li>
+<p><code class="inline-code">siblings()</code> method returns all siblings' elements.</p>
+</li>
+<li>
+<p><code class="inline-code">next()</code> returns the next sibling element.</p>
+</li>
+<li>
+<p><code class="inline-code">nextAll()</code> returns all the next sibling elements.</p>
+</li>
+<li>
+<p><code class="inline-code">prev()</code> returns previous sibling element of the selected element.</p>
+</li>
+<li>
+<p><code class="inline-code">prevAll()</code> returns all previous sibling elements of the selected element.</p>
+</li>
+<li>
+<p>The <code class="inline-code">eq()</code> method returns an element with a soecific index number of the selected elements.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;div&quot;).eq(2);
+//This returns the 3rd 'div' element</pre><pre class="hljs"><code>$(<span class="hljs-string">&quot;div&quot;</span>).e<span class="hljs-string">q(2)</span>;
+<span class="hljs-regexp">//</span>This returns the <span class="hljs-number">3</span>rd <span class="hljs-string">&#x27;div&#x27;</span> element</code></pre></div>
+</li>
+<li>
+<p>The <code class="inline-code">remove()</code> method removes selected elements.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;p style=&quot;color: red;&quot;&gt;Red&lt;/p&gt;
+&lt;p style=&quot;color: blue;&quot;&gt;Blue&lt;/p&gt;
+&lt;p style=&quot;color: green&quot;&gt;Green&lt;/p&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: red;&quot;</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: blue;&quot;</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: green&quot;</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jqeury" data-joplin-source-open="```jqeury&#10;" data-joplin-source-close="&#10;```">$('p').eq(1).remove();</pre><pre class="hljs"><code>$(<span class="hljs-string">&#x27;p&#x27;</span>).e<span class="hljs-string">q(1)</span>.remove();</code></pre></div>
+<blockquote>
+<p>This removes selected elements as well as its child elements.</p>
+</blockquote>
+</li>
+<li>
+<p>The <code class="inline-code">empty()</code> method is used to remove the child elements of selected elements.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="jquery" data-joplin-source-open="```jquery&#10;" data-joplin-source-close="&#10;```">$(&quot;div&quot;).empty();</pre><pre class="hljs"><code>$(<span class="hljs-string">&quot;div&quot;</span>).empty();</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
