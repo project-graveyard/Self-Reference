@@ -1,0 +1,77 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It consists of a: year, month, day, hour, minute, second, milliseconds.</li>
+<li>Using <code class="inline-code">new Date()</code> statement to create a new change object with the current time and date.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var d = new Date();</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();</code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>One day consists of <span class="joplin-editable"><span class="joplin-source" data-joplin-language="katex" data-joplin-source-open="$" data-joplin-source-close="$">86,400,000</span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>86</mn><mo separator="true">,</mo><mn>400</mn><mo separator="true">,</mo><mn>000</mn></mrow><annotation encoding="application/x-tex">86,400,000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">8</span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span></span> milliseconds.<br>
+Date objects don't change once created.</p>
+</blockquote>
+<h4 id="date-methods">Date Methods</h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getFullYear</td>
+<td>gets the year</td>
+</tr>
+<tr>
+<td>getMonth</td>
+<td>gets the month</td>
+</tr>
+<tr>
+<td>getDate</td>
+<td>get the day of the month</td>
+</tr>
+<tr>
+<td>getDay</td>
+<td>get the day of the week</td>
+</tr>
+<tr>
+<td>getHours</td>
+<td>gets the hours</td>
+</tr>
+<tr>
+<td>getMinutes</td>
+<td>gets the minutes</td>
+</tr>
+<tr>
+<td>getSeconds</td>
+<td>gets the seconds</td>
+</tr>
+<tr>
+<td>getMilliseconds</td>
+<td>gets the milliseconds</td>
+</tr>
+</tbody>
+</table>
+<p>Sample: Displays the current time</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">function printTime(){
+    var  d = new Date();
+    var hours = d.getHours();
+    var mins = g.getMinutes();
+    var secs = d.getSeconds();
+    document.body.innerHTML = `${hours}:${mins}:${secs}`;
+}
+setInterval(printTime, 1000);</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printTime</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span>  d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    <span class="hljs-keyword">var</span> hours = d.getHours();
+    <span class="hljs-keyword">var</span> mins = g.getMinutes();
+    <span class="hljs-keyword">var</span> secs = d.getSeconds();
+    <span class="hljs-built_in">document</span>.body.innerHTML = <span class="hljs-string">`<span class="hljs-subst">${hours}</span>:<span class="hljs-subst">${mins}</span>:<span class="hljs-subst">${secs}</span>`</span>;
+}
+<span class="hljs-built_in">setInterval</span>(printTime, <span class="hljs-number">1000</span>);</code></pre></div>
+<blockquote>
+<p>The <code class="inline-code">innerHTML</code> property sets or returns the HTML content of an element.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
