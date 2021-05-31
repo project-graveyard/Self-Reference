@@ -1,0 +1,152 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="declaring-arrays">Declaring Arrays</h2>
+<ul>
+<li>It is a variable that holds multiple values.<br>
+Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const num = new Array(1, 2, 3, 4, 5);
+/* OR */
+const fruits = [&quot;apples&quot;, &quot;oranges&quot;, &quot;pears&quot;];
+/* OR */
+var array_name = new Array(n); 	//where n = specified number of items in the array
+array_name[0] = value;	//assign values later
+/* OR */
+var array_name = new Array(); 	//can contain any number of values.</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> num = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>);
+<span class="hljs-comment">/* OR */</span>
+<span class="hljs-keyword">const</span> fruits = [<span class="hljs-string">&quot;apples&quot;</span>, <span class="hljs-string">&quot;oranges&quot;</span>, <span class="hljs-string">&quot;pears&quot;</span>];
+<span class="hljs-comment">/* OR */</span>
+<span class="hljs-keyword">var</span> array_name = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(n); 	<span class="hljs-comment">//where n = specified number of items in the array</span>
+array_name[<span class="hljs-number">0</span>] = value;	<span class="hljs-comment">//assign values later</span>
+<span class="hljs-comment">/* OR */</span>
+<span class="hljs-keyword">var</span> array_name = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(); 	<span class="hljs-comment">//can contain any number of values.</span></code></pre></div>
+</li>
+</ul>
+<h2 id="manipulating-an-array">Manipulating an array</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">// Add values by assigning
+fruits[3] = &quot;grapes&quot;;
+
+/* push(&quot;new element&quot;) adds a new element at the end of an array */	
+fruits.push(&quot;mangoes&quot;);
+    
+/* unshift(&quot;element&quot;) adds an element at the beginning of an array */
+fruits.unshift(&quot;Lemon&quot;);
+
+/* pop() removes the last element in an array */
+fruits.pop();
+    
+/* concat() creates a new array by merging existing arrays */
+let bikes = [&quot;haha&quot;, &quot;toy&quot;, &quot;food&quot;];
+let vech = cars.concat(bikes);
+console.log(vech);
+
+/* toString() converts an array into a string */
+console.log(cars.toString())</pre><pre class="hljs"><code><span class="hljs-comment">// Add values by assigning</span>
+fruits[<span class="hljs-number">3</span>] = <span class="hljs-string">&quot;grapes&quot;</span>;
+
+<span class="hljs-comment">/* push(&quot;new element&quot;) adds a new element at the end of an array */</span>	
+fruits.push(<span class="hljs-string">&quot;mangoes&quot;</span>);
+    
+<span class="hljs-comment">/* unshift(&quot;element&quot;) adds an element at the beginning of an array */</span>
+fruits.unshift(<span class="hljs-string">&quot;Lemon&quot;</span>);
+
+<span class="hljs-comment">/* pop() removes the last element in an array */</span>
+fruits.pop();
+    
+<span class="hljs-comment">/* concat() creates a new array by merging existing arrays */</span>
+<span class="hljs-keyword">let</span> bikes = [<span class="hljs-string">&quot;haha&quot;</span>, <span class="hljs-string">&quot;toy&quot;</span>, <span class="hljs-string">&quot;food&quot;</span>];
+<span class="hljs-keyword">let</span> vech = cars.concat(bikes);
+<span class="hljs-built_in">console</span>.log(vech);
+
+<span class="hljs-comment">/* toString() converts an array into a string */</span>
+<span class="hljs-built_in">console</span>.log(cars.toString())</code></pre></div>
+<ul>
+<li><strong><code class="inline-code">shift()</code></strong> removes the first element in an array.</li>
+<li><strong><code class="inline-code">sort()</code></strong> sort an array in ascending order.</li>
+<li><strong><code class="inline-code">reverse()</code></strong> reverses the elements of an array.</li>
+</ul>
+<h2 id="iterating-through-arrays">Iterating through arrays</h2>
+<ul>
+<li><strong><code class="inline-code">forEach</code>:</strong> It loops through an array.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">/*
+SYNTAX:
+ array_name.forEach(function(variable){
+    //statements
+    e.g. console.log(variable)
+ });
+*/
+
+let cars = [&quot;BMW&quot;, &quot;Volvo&quot;, &quot;Honda&quot;];
+cars.forEach((item, index, array) =&gt; (console.log(item, index)));</pre><pre class="hljs"><code><span class="hljs-comment">/*
+SYNTAX:
+ array_name.forEach(function(variable){
+    //statements
+    e.g. console.log(variable)
+ });
+*/</span>
+
+<span class="hljs-keyword">let</span> cars = [<span class="hljs-string">&quot;BMW&quot;</span>, <span class="hljs-string">&quot;Volvo&quot;</span>, <span class="hljs-string">&quot;Honda&quot;</span>];
+cars.forEach(<span class="hljs-function">(<span class="hljs-params">item, index, array</span>) =&gt;</span> (<span class="hljs-built_in">console</span>.log(item, index)));</code></pre></div>
+</li>
+<li><strong><code class="inline-code">of</code>:</strong> It goes through all values in an array.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">for(let todo of todos){
+   console.log(todo.text);
+}</pre><pre class="hljs"><code><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> todo <span class="hljs-keyword">of</span> todos){
+   <span class="hljs-built_in">console</span>.log(todo.text);
+}</code></pre></div>
+</li>
+</ul>
+<h4 id="map-reduce-filter">MAP, REDUCE &amp; FILTER</h4>
+<ul>
+<li>
+<p><strong><code class="inline-code">map</code>:</strong> Creates a new array from an array and performs a function on each array element.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let num1 = [2, 3, 4];
+
+function multiply(val){
+    return val * 2;
+}
+
+let num2 = num1.map(multiply);
+console.log(num2);
+//outputs [4, 6, 8]</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> num1 = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiply</span>(<span class="hljs-params">val</span>)</span>{
+    <span class="hljs-keyword">return</span> val * <span class="hljs-number">2</span>;
+}
+
+<span class="hljs-keyword">let</span> num2 = num1.map(multiply);
+<span class="hljs-built_in">console</span>.log(num2);
+<span class="hljs-comment">//outputs [4, 6, 8]</span></code></pre></div>
+</li>
+<li>
+<p>The <strong><code class="inline-code">filter()</code></strong> method takes each element in an array and it applies a conditional statement against it.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">//checks if even
+function even(val){
+    return val % 2 == 0;
+}
+
+let num2 = num1.filter(even);
+console.log(num2);</pre><pre class="hljs"><code><span class="hljs-comment">//checks if even</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">even</span>(<span class="hljs-params">val</span>)</span>{
+    <span class="hljs-keyword">return</span> val % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">let</span> num2 = num1.filter(even);
+<span class="hljs-built_in">console</span>.log(num2);</code></pre></div>
+</li>
+<li>
+<p><strong><code class="inline-code">reduce()</code></strong> method reduces an array of values down to just one value using a function.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">function sum(total, val){
+    return total + val;
+}
+
+let num2 = num1.reduce(sum);
+console.log(num2);
+//outputs the sum</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">total, val</span>)</span>{
+    <span class="hljs-keyword">return</span> total + val;
+}
+
+<span class="hljs-keyword">let</span> num2 = num1.reduce(sum);
+<span class="hljs-built_in">console</span>.log(num2);
+<span class="hljs-comment">//outputs the sum</span></code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
