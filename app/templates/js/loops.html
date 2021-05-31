@@ -1,0 +1,124 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="loops">Loops</h2>
+<h4 id="for-loops">For loops</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">for(statement1; statement2; statement3){
+    //Codes
+}</pre><pre class="hljs"><code><span class="hljs-keyword">for</span>(statement1; statement2; statement3){
+    <span class="hljs-comment">//Codes</span>
+}</code></pre></div>
+<ul>
+<li><code class="inline-code">statement1</code> is executed before the loop starts. (Initialisation is done here.)</li>
+<li><code class="inline-code">statement2</code> defines the condition for running the loop.</li>
+<li><code class="inline-code">statement3</code> is executed each time after the loop has been executed. (Normally, increments or decrements are declared here.)</li>
+</ul>
+<h4 id="while-loops">While loops</h4>
+<ul>
+<li>The code only runs when the condition is true.</li>
+</ul>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">while(condition){
+   //codes
+}</pre><pre class="hljs"><code><span class="hljs-keyword">while</span>(condition){
+   <span class="hljs-comment">//codes</span>
+}</code></pre></div>
+<h4 id="do-while-loop">Do-while loop</h4>
+<ul>
+<li>The code only runs when the condition is true.</li>
+<li>It runs at least once since the block of code runs before the condition is checked.</li>
+</ul>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">do{
+   //codes
+}
+while(condition);</pre><pre class="hljs"><code><span class="hljs-keyword">do</span>{
+   <span class="hljs-comment">//codes</span>
+}
+<span class="hljs-keyword">while</span>(condition);</code></pre></div>
+<h2 id="conditionals-if-statement">Conditionals (if statement)</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const x = 10;
+const y = 5;</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">const</span> y = <span class="hljs-number">5</span>;</code></pre></div>
+<ul>
+<li>
+<p><code class="inline-code">==</code> matches the value not the data type.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">if(x == 10){
+    console.log(&quot;x is 10&quot;);
+}
+else {
+   console.log(&quot;x is not 10&quot;);
+}</pre><pre class="hljs"><code><span class="hljs-keyword">if</span>(x == <span class="hljs-number">10</span>){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x is 10&quot;</span>);
+}
+<span class="hljs-keyword">else</span> {
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x is not 10&quot;</span>);
+}</code></pre></div>
+</li>
+<li>
+<p><code class="inline-code">===</code> matches both the value and the data type.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">if(x === 10){
+   console.log(&quot;x is 10&quot;);
+}
+
+if (x &gt; 5 || y === 10){
+   console.log(&quot;True condition&quot;);
+}</pre><pre class="hljs"><code><span class="hljs-keyword">if</span>(x === <span class="hljs-number">10</span>){
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x is 10&quot;</span>);
+}
+
+<span class="hljs-keyword">if</span> (x &gt; <span class="hljs-number">5</span> || y === <span class="hljs-number">10</span>){
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;True condition&quot;</span>);
+}</code></pre></div>
+</li>
+</ul>
+<h4 id="ternary-operator">Ternary operator</h4>
+<ul>
+<li>It is a single line <code class="inline-code">if</code> statement used to set a variable based on a condition.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const x  = 20;
+const color = x &gt; 10 ? 'Red' : &quot;Blue&quot;;
+console.log(color);
+//if x&gt;10, color=Red, else color=Blue</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> x  = <span class="hljs-number">20</span>;
+<span class="hljs-keyword">const</span> color = x &gt; <span class="hljs-number">10</span> ? <span class="hljs-string">&#x27;Red&#x27;</span> : <span class="hljs-string">&quot;Blue&quot;</span>;
+<span class="hljs-built_in">console</span>.log(color);
+<span class="hljs-comment">//if x&gt;10, color=Red, else color=Blue</span></code></pre></div>
+</li>
+</ul>
+<h2 id="switches">Switches</h2>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">switch(expression){
+    case n1:
+        //Statements
+        break;
+    case n2:
+        //Statements
+        break;
+    case n3:
+        //Statements
+        break;
+    // Any number of cases
+    default:
+        //Statements
+}</pre><pre class="hljs"><code><span class="hljs-keyword">switch</span>(expression){
+    <span class="hljs-keyword">case</span> n1:
+        <span class="hljs-comment">//Statements</span>
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> n2:
+        <span class="hljs-comment">//Statements</span>
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> n3:
+        <span class="hljs-comment">//Statements</span>
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">// Any number of cases</span>
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-comment">//Statements</span>
+}</code></pre></div>
+<ul>
+<li>The <code class="inline-code">default</code> keyword specifies a code to run if there is no match.</li>
+<li>The <code class="inline-code">break</code> keyword allows a code to jump out of a loop.</li>
+</ul>
+<blockquote>
+<p>The <code class="inline-code">continue</code> keyword only breaks one iteration in a loop and continues with the next iteration.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
