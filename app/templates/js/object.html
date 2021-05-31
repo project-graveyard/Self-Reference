@@ -1,0 +1,143 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p>It can created in different events.</p>
+</li>
+<li>
+<p>Method1: Using <code class="inline-code">{name: value}</code> pairs</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const student = {
+     name: &quot;Chris&quot;,
+     age: 21,
+     studies: &quot;Computer Science&quot;,
+ };
+
+document.getElementById(&quot;demo&quot;).innerHTML = `${student.name} is ${student.age}yrs of age and he studies ${student.studies}.`;</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> student = {
+     <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Chris&quot;</span>,
+     <span class="hljs-attr">age</span>: <span class="hljs-number">21</span>,
+     <span class="hljs-attr">studies</span>: <span class="hljs-string">&quot;Computer Science&quot;</span>,
+ };
+
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>).innerHTML = <span class="hljs-string">`<span class="hljs-subst">${student.name}</span> is <span class="hljs-subst">${student.age}</span>yrs of age and he studies <span class="hljs-subst">${student.studies}</span>.`</span>;</code></pre></div>
+</li>
+<li>
+<p>Method2: Using <code class="inline-code">new</code> keyword.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const stu = new Object();
+stu.name = &quot;Chris&quot;;
+stu.studies = &quot;Computer Science&quot;;
+ stu.age = 21;
+
+document.getElementById(&quot;demo&quot;).innerHTML = `${stu.name} is ${stu.age}yrs of age and he studies ${stu.studies}.`;</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> stu = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+stu.name = <span class="hljs-string">&quot;Chris&quot;</span>;
+stu.studies = <span class="hljs-string">&quot;Computer Science&quot;</span>;
+ stu.age = <span class="hljs-number">21</span>;
+
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>).innerHTML = <span class="hljs-string">`<span class="hljs-subst">${stu.name}</span> is <span class="hljs-subst">${stu.age}</span>yrs of age and he studies <span class="hljs-subst">${stu.studies}</span>.`</span>;</code></pre></div>
+</li>
+<li>
+<p>Method3: Using functions</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">function student(name, age, study){
+     this.name = name;
+     this.age = age;
+     this.study = study;
+    }
+</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">student</span>(<span class="hljs-params">name, age, study</span>)</span>{
+     <span class="hljs-built_in">this</span>.name = name;
+     <span class="hljs-built_in">this</span>.age = age;
+     <span class="hljs-built_in">this</span>.study = study;
+    }
+</code></pre></div>
+</li>
+</ul>
+<p>const cate = new student(&quot;Chris&quot;, 21, &quot;Computer&quot;);<br>
+console.log(cate);<br>
+```</p>
+<h4 id="getters-setters">Getters &amp; Setters</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```"> var car = {
+     name: &quot;BMW&quot;,
+     color: &quot;Navy Blue&quot;,
+     fuel_type: &quot;Diesel&quot;,
+     
+     //setter
+     set fuel(fuel){
+          this.fuel_type = fuel;
+      }
+     
+     //getter
+    get color(){
+         return this.color;
+   }
+};
+
+car.fuel_type = &quot;Petrol&quot;;
+console.log(car.fuel_type);</pre><pre class="hljs"><code> <span class="hljs-keyword">var</span> car = {
+     <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;BMW&quot;</span>,
+     <span class="hljs-attr">color</span>: <span class="hljs-string">&quot;Navy Blue&quot;</span>,
+     <span class="hljs-attr">fuel_type</span>: <span class="hljs-string">&quot;Diesel&quot;</span>,
+     
+     <span class="hljs-comment">//setter</span>
+     <span class="hljs-keyword">set</span> <span class="hljs-title">fuel</span>(<span class="hljs-params">fuel</span>){
+          <span class="hljs-built_in">this</span>.fuel_type = fuel;
+      }
+     
+     <span class="hljs-comment">//getter</span>
+    <span class="hljs-keyword">get</span> <span class="hljs-title">color</span>(){
+         <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.color;
+   }
+};
+
+car.fuel_type = <span class="hljs-string">&quot;Petrol&quot;</span>;
+<span class="hljs-built_in">console</span>.log(car.fuel_type);</code></pre></div>
+<h4 id="object-literials">Object Literials</h4>
+<ul>
+<li>
+<p>It is more like key value pairs more like a python dictionary<br>
+Sample&quot;</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```"> const person = {
+     firstName: &quot;John&quot;,
+     lastName: &quot;Doe&quot;,
+     age: 30,
+     hobbies: [&quot;music&quot;, &quot;movies&quot;, &quot;sleeping&quot;],
+     address: {
+         street: &quot;50 main st&quot;,
+         city: &quot;Boston&quot;,
+         state: &quot;MA&quot;
+   }
+};
+
+console.log(person); 	//outputs person object</pre><pre class="hljs"><code> <span class="hljs-keyword">const</span> person = {
+     <span class="hljs-attr">firstName</span>: <span class="hljs-string">&quot;John&quot;</span>,
+     <span class="hljs-attr">lastName</span>: <span class="hljs-string">&quot;Doe&quot;</span>,
+     <span class="hljs-attr">age</span>: <span class="hljs-number">30</span>,
+     <span class="hljs-attr">hobbies</span>: [<span class="hljs-string">&quot;music&quot;</span>, <span class="hljs-string">&quot;movies&quot;</span>, <span class="hljs-string">&quot;sleeping&quot;</span>],
+     <span class="hljs-attr">address</span>: {
+         <span class="hljs-attr">street</span>: <span class="hljs-string">&quot;50 main st&quot;</span>,
+         <span class="hljs-attr">city</span>: <span class="hljs-string">&quot;Boston&quot;</span>,
+         <span class="hljs-attr">state</span>: <span class="hljs-string">&quot;MA&quot;</span>
+   }
+};
+
+<span class="hljs-built_in">console</span>.log(person); 	<span class="hljs-comment">//outputs person object</span></code></pre></div>
+</li>
+<li>
+<p>Keys can be accessed using dot(.) syntax</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">console.log(person.firstName, person.lastName);
+console.log(person.hobbies[1]);</pre><pre class="hljs"><code><span class="hljs-built_in">console</span>.log(person.firstName, person.lastName);
+<span class="hljs-built_in">console</span>.log(person.hobbies[<span class="hljs-number">1</span>]);</code></pre></div>
+</li>
+<li>
+<p>Destructuring can be done and keys pulled out from object literials into actual vaiables.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const { lastName, firstName, address: {city} } = person;
+console.log(lastName, firstName, city);</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> { lastName, firstName, <span class="hljs-attr">address</span>: {city} } = person;
+<span class="hljs-built_in">console</span>.log(lastName, firstName, city);</code></pre></div>
+</li>
+<li>
+<p>Properties can be added later</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">person.email = &quot;johndoe@gamil.com&quot;;
+console.log(person);</pre><pre class="hljs"><code>person.email = <span class="hljs-string">&quot;johndoe@gamil.com&quot;</span>;
+<span class="hljs-built_in">console</span>.log(person);</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
