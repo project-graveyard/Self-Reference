@@ -1,0 +1,89 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>A regular expression is a sequence of characters that forms a search pattern.</li>
+<li>Syntax: <code class="inline-code">/patttern/flags</code></li>
+</ul>
+<h4 id="flags">Flags</h4>
+<ul>
+<li>It specifies the behavior of regular expressions.</li>
+<li>Examples of the flags used include:
+<ul>
+<li>g - global - finds all matches instead of stopping at the first.</li>
+<li>i - ignore case - /[a-z]i is equivalent to /[a-zA-Z]/.</li>
+<li>m - multiline - ^ and $ match the beginning and the end of each line respectively.</li>
+<li>u - unicode.</li>
+<li>y - finds all consecutive adjacent matches.</li>
+</ul>
+</li>
+</ul>
+<h4 id="patterns">Patterns</h4>
+<ul>
+<li>They are usually brackets used to find the range of characters.</li>
+<li>Examples of some patterns:
+<ul>
+<li>[a-z] - Finds all characters from a to z (lowercase)</li>
+<li>[0-9] - Finds any digit berween 0 and 9</li>
+<li>[a-z|0-9] - Finds any character of digits separated by '|'</li>
+</ul>
+</li>
+</ul>
+<h5 id="quantifiers">Quantifiers</h5>
+<ul>
+<li>They define the number of occurences in a string.</li>
+<li>Some include:
+<ul>
+<li>+ - indicates one or more occurence of a character</li>
+<li>* - indicates zero or more occurences of a character</li>
+<li>? - indicates zero or one occurence of a character</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="practical-examples">Practical Examples:</h5>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">/*PHONE NUMBER VALIDATION*/
+const num = &quot;(555)-555-1254&quot;
+const regex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/g
+const found = regex.test(num)
+
+if(!found){
+    console.log(&quot;Not valid!&quot;)
+} else{
+    console.log(&quot;Valid&quot;)
+}
+
+
+/* EMAIL VALIDATION */
+const email = &quot;dasorange@gmail.com&quot;
+const regex = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9\._])+.[com]$/g
+const found = regex.test(email)
+
+if(!found){
+    console.log(&quot;Not valid!&quot;)
+} else{
+    console.log(&quot;Valid&quot;)
+}</pre><pre class="hljs"><code><span class="hljs-comment">/*PHONE NUMBER VALIDATION*/</span>
+<span class="hljs-keyword">const</span> num = <span class="hljs-string">&quot;(555)-555-1254&quot;</span>
+<span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/g</span>
+<span class="hljs-keyword">const</span> found = regex.test(num)
+
+<span class="hljs-keyword">if</span>(!found){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Not valid!&quot;</span>)
+} <span class="hljs-keyword">else</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Valid&quot;</span>)
+}
+
+
+<span class="hljs-comment">/* EMAIL VALIDATION */</span>
+<span class="hljs-keyword">const</span> email = <span class="hljs-string">&quot;dasorange@gmail.com&quot;</span>
+<span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9\._])+.[com]$/g</span>
+<span class="hljs-keyword">const</span> found = regex.test(email)
+
+<span class="hljs-keyword">if</span>(!found){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Not valid!&quot;</span>)
+} <span class="hljs-keyword">else</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Valid&quot;</span>)
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
