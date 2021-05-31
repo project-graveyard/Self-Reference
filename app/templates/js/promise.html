@@ -1,0 +1,117 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p>A promise is an asynchronous action that may complete at some point in the future and produce a value.</p>
+</li>
+<li>
+<p>Promises has 3 states: pending, fulfilled and rejected.</p>
+</li>
+<li>
+<p>General syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">/* let some_action = new Promise(function(resolve, reject){
+    //perform some work
+})*/</pre><pre class="hljs"><code><span class="hljs-comment">/* let some_action = new Promise(function(resolve, reject){
+    //perform some work
+})*/</span></code></pre></div>
+</li>
+<li>
+<p>E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let car = new Promise(function(resolve, reject){
+    fuel_fullTank = true;
+    if(fuel_fullTank){
+        resolve();
+    }
+    else{
+         reject();
+    }
+});
+
+car.then(function(){
+    console.log(&quot;The fuel tank is full&quot;);
+});
+
+car.catch(function(){
+    console.log(&quot;The fuel tank is empty&quot;)
+});</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> car = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+    fuel_fullTank = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">if</span>(fuel_fullTank){
+        resolve();
+    }
+    <span class="hljs-keyword">else</span>{
+         reject();
+    }
+});
+
+car.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;The fuel tank is full&quot;</span>);
+});
+
+car.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;The fuel tank is empty&quot;</span>)
+});</code></pre></div>
+</li>
+<li>
+<p>The <code class="inline-code">resolve()</code> function is called by using the <code class="inline-code">then()</code> method and the <code class="inline-code">reject()</code> function is called by using the <code class="inline-code">catch()</code> method is called.</p>
+</li>
+</ul>
+<h4 id="nested-promises">Nested promises</h4>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let empty_tank = function(){
+    return new Promise(function(resolve, reject){
+        resolve(&quot;The car doesn't have enough fuel.&quot;);
+    });
+}
+
+let hot_engine = function(msg){
+    return new Promise(function(resolve, reject){
+        resolve( msg + &quot;The engine is overheating.&quot;);
+    });
+}
+
+let travel = function(msg){
+    return new Promise(function(resolve, reject){
+        resolve(msg + &quot;The car is not safe for travelling.&quot;);
+    });
+}
+
+
+// The message in the resolve can be retrieved from the `res` param
+// The function name is the arguement
+empty_tank().then(res =&gt; {
+    return hot_engine(res)
+}).then( res =&gt; {
+    return travel(res)
+}).then(res =&gt; {
+     return console.log(res)
+})</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> empty_tank = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+        resolve(<span class="hljs-string">&quot;The car doesn&#x27;t have enough fuel.&quot;</span>);
+    });
+}
+
+<span class="hljs-keyword">let</span> hot_engine = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+        resolve( msg + <span class="hljs-string">&quot;The engine is overheating.&quot;</span>);
+    });
+}
+
+<span class="hljs-keyword">let</span> travel = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+        resolve(msg + <span class="hljs-string">&quot;The car is not safe for travelling.&quot;</span>);
+    });
+}
+
+
+<span class="hljs-comment">// The message in the resolve can be retrieved from the `res` param</span>
+<span class="hljs-comment">// The function name is the arguement</span>
+empty_tank().then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> hot_engine(res)
+}).then( <span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+    <span class="hljs-keyword">return</span> travel(res)
+}).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> {
+     <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.log(res)
+})</code></pre></div>
+</div></div>
+    </div>
+</div>
