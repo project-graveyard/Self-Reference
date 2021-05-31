@@ -1,0 +1,64 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="contructor-function">Contructor Function</h2>
+<ul>
+<li>It makes use of functions.</li>
+<li>Getters and setters are manually set as prototypes.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">function Person(firstName, lastName, dob) {
+     this.firstName = firstName;
+     this.lastName = lastName;
+     this.dob = new Date(dob);
+ }
+ // Prototyping is used to set constructors; it is the recommended practice
+ Person.prototype.getFullName = function(){
+     return `${this.firstName} ${this.lastName}`;
+ }</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">firstName, lastName, dob</span>) </span>{
+     <span class="hljs-built_in">this</span>.firstName = firstName;
+     <span class="hljs-built_in">this</span>.lastName = lastName;
+     <span class="hljs-built_in">this</span>.dob = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(dob);
+ }
+ <span class="hljs-comment">// Prototyping is used to set constructors; it is the recommended practice</span>
+ Person.prototype.getFullName = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+     <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.firstName}</span> <span class="hljs-subst">${<span class="hljs-built_in">this</span>.lastName}</span>`</span>;
+ }</code></pre></div>
+</li>
+</ul>
+<h2 id="syntantic-sugar-oop">Syntatic sugar OOP</h2>
+<ul>
+<li>It makes use of classes.</li>
+<li>It automatically prototypes the getters and setters.</li>
+<li>It is the most recommended method OOP in javascript.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```"> class Person {
+     constructor(firstName, lastName, dob) {
+     this.firstName = firstName;
+     this.lastName = lastName;
+     this.dob = new Date(dob);
+    }
+
+    getFullName(){
+         return `${this.firstName} ${this.lastName}`;
+       }
+ }</pre><pre class="hljs"><code> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+     <span class="hljs-keyword">constructor</span>(firstName, lastName, dob) {
+     <span class="hljs-built_in">this</span>.firstName = firstName;
+     <span class="hljs-built_in">this</span>.lastName = lastName;
+     <span class="hljs-built_in">this</span>.dob = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(dob);
+    }
+
+    getFullName(){
+         <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.firstName}</span> <span class="hljs-subst">${<span class="hljs-built_in">this</span>.lastName}</span>`</span>;
+       }
+ }</code></pre></div>
+</li>
+</ul>
+<h4 id="instantiate-object">Instantiate object</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const person1 = new Person('John', 'Doe', '4-3-1980');
+const person2 = new Person('Mary', 'Smith', '4-3-1890');
+
+console.log(person1.getFullName());
+console.log(person2);</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> person1 = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&#x27;John&#x27;</span>, <span class="hljs-string">&#x27;Doe&#x27;</span>, <span class="hljs-string">&#x27;4-3-1980&#x27;</span>);
+<span class="hljs-keyword">const</span> person2 = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&#x27;Mary&#x27;</span>, <span class="hljs-string">&#x27;Smith&#x27;</span>, <span class="hljs-string">&#x27;4-3-1890&#x27;</span>);
+
+<span class="hljs-built_in">console</span>.log(person1.getFullName());
+<span class="hljs-built_in">console</span>.log(person2);</code></pre></div>
+</div></div>
+    </div>
+</div>
