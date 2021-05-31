@@ -1,0 +1,97 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p><code class="inline-code">this</code> keyword refers to an object which is executing the current piece of code.</p>
+</li>
+<li>
+<p>If the function being referenced is a regular function, <code class="inline-code">this</code> references the global object.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var value = 100
+
+let func = () =&gt; {
+    let value = 50
+    console.log(`Function's value: ${value}`)
+    console.log((`Global value: ${this.value}`))
+}
+
+func()</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> value = <span class="hljs-number">100</span>
+
+<span class="hljs-keyword">let</span> func = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">let</span> value = <span class="hljs-number">50</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Function&#x27;s value: <span class="hljs-subst">${value}</span>`</span>)
+    <span class="hljs-built_in">console</span>.log((<span class="hljs-string">`Global value: <span class="hljs-subst">${<span class="hljs-built_in">this</span>.value}</span>`</span>))
+}
+
+func()</code></pre></div>
+</li>
+<li>
+<p>If the function that is being referenced is a method in an object, 'this' references the object itself.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const random = {
+    name: &quot;John&quot;,
+    info(){
+        console.log(`My name is ${this.name}`)
+    }
+}
+
+random.info()</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> random = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;John&quot;</span>,
+    info(){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`My name is <span class="hljs-subst">${<span class="hljs-built_in">this</span>.name}</span>`</span>)
+    }
+}
+
+random.info()</code></pre></div>
+</li>
+<li>
+<p>It references the object that is executing the current function.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const rand = {
+    name: &quot;Tutorial&quot;,
+    video: [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;CSS&quot;],
+    info(){
+        this.video.forEach(tag =&gt;{
+            console.log(tag, this.name)
+        })
+    }
+}
+
+
+const rand = {
+    name: &quot;Tutorial&quot;,
+    video: [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;CSS&quot;],
+    info(){
+        this.video.forEach(function (tag){
+            console.log(tag, this.name)
+        }, this)
+    }
+}
+
+rand.info()</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> rand = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tutorial&quot;</span>,
+    <span class="hljs-attr">video</span>: [<span class="hljs-string">&quot;JavaScript&quot;</span>, <span class="hljs-string">&quot;Python&quot;</span>, <span class="hljs-string">&quot;CSS&quot;</span>],
+    info(){
+        <span class="hljs-built_in">this</span>.video.forEach(<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span>{
+            <span class="hljs-built_in">console</span>.log(tag, <span class="hljs-built_in">this</span>.name)
+        })
+    }
+}
+
+
+<span class="hljs-keyword">const</span> rand = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Tutorial&quot;</span>,
+    <span class="hljs-attr">video</span>: [<span class="hljs-string">&quot;JavaScript&quot;</span>, <span class="hljs-string">&quot;Python&quot;</span>, <span class="hljs-string">&quot;CSS&quot;</span>],
+    info(){
+        <span class="hljs-built_in">this</span>.video.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tag</span>)</span>{
+            <span class="hljs-built_in">console</span>.log(tag, <span class="hljs-built_in">this</span>.name)
+        }, <span class="hljs-built_in">this</span>)
+    }
+}
+
+rand.info()</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
