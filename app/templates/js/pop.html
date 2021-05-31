@@ -1,0 +1,42 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p><strong>Alert Box:</strong> It is used when you want to ensure that information gets to the user. When it pops up, the user must click <code class="inline-code">ok</code> to proceed.<br>
+E.g.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">alert(&quot;Do you know?&quot;);</pre><pre class="hljs"><code>alert(<span class="hljs-string">&quot;Do you know?&quot;</span>);</code></pre></div>
+</li>
+<li>
+<p><strong>Prompt Box:</strong> It is often used to have the user input a value before entering a page. When a prompt box opens up, the user will either have to click <code class="inline-code">ok</code> or <code class="inline-code">cancel</code> to proceed.</p>
+<ul>
+<li>If user clicks <code class="inline-code">ok</code>, the box returns the input value.</li>
+<li>If the user clicks <code class="inline-code">cancel</code>, the box returns null.</li>
+<li>The <code class="inline-code">prompt()</code> method takes 2 params: The label and the string to display in the text box(optional).<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var user = prompt(&quot;Enter your name&quot;);
+alert(user);</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> user = prompt(<span class="hljs-string">&quot;Enter your name&quot;</span>);
+alert(user);</code></pre></div>
+</li>
+<li>
+<p><strong>Confirm Box:</strong> It is often used to have the user verify something. The user must click <code class="inline-code">ok</code> or <code class="inline-code">cancel</code> to proceed.</p>
+<ul>
+<li>If the user clicks <code class="inline-code">ok</code>, the box returns <code class="inline-code">true</code>; <code class="inline-code">cancel</code>, <code class="inline-code">false</code>.<br>
+E.g.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var result = confirm(&quot;How are you?&quot;);
+if(result == true){
+    alert(&quot;fine&quot;);
+} else{
+    alert(&quot;not fine&quot;);
+}</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> result = confirm(<span class="hljs-string">&quot;How are you?&quot;</span>);
+<span class="hljs-keyword">if</span>(result == <span class="hljs-literal">true</span>){
+    alert(<span class="hljs-string">&quot;fine&quot;</span>);
+} <span class="hljs-keyword">else</span>{
+    alert(<span class="hljs-string">&quot;not fine&quot;</span>);
+}</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
