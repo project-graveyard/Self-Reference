@@ -1,0 +1,114 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p>They are built on top of promises.</p>
+</li>
+<li>
+<p>Genereal Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">async function func_name(){
+    await some_promsise();
+}</pre><pre class="hljs"><code><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func_name</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">await</span> some_promsise();
+}</code></pre></div>
+</li>
+<li>
+<p>Sample:</p>
+</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let result = function (score) {
+    return new Promise(function (resolve, reject) {
+        console.log(&quot;Calculating results...&quot;)
+        if (score &gt; 50) {
+            resolve(&quot;congratulations! You passed&quot;)
+        } else if(typeof score != &quot;number&quot;){
+            reject(&quot;Please enter a valid score&quot;)
+        }
+        else {
+            reject(&quot;You have failed&quot;)
+        }
+    })
+}
+
+let grade = function (response) {
+    return new Promise(function (resolve, reject) {
+        console.log(&quot;Calculating your grade...&quot;)
+        resolve(&quot;Your grade is A, &quot; + response)
+    })
+}
+
+// Implemented using normal promises method
+result(80).then(response =&gt; {
+    console.log(&quot;Results received&quot;)
+    return grade(response)
+}).then(final_grade =&gt; {
+    console.log(final_grade)
+}).catch(err =&gt; {
+    console.log(err)
+})
+
+
+// Implemented using async &amp; await
+//async declarations cannot be initialsed as an arrow function
+async function Calc() {
+    try{
+        const response = await result(80)
+        console.log(&quot;Results received&quot;)
+        const final_grade = await grade(response)
+        console.log(final_grade)
+    } catch(err){
+        console.log(err)
+    }
+}
+
+// Calling the async function
+Calc()</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> result = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">score</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Calculating results...&quot;</span>)
+        <span class="hljs-keyword">if</span> (score &gt; <span class="hljs-number">50</span>) {
+            resolve(<span class="hljs-string">&quot;congratulations! You passed&quot;</span>)
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> score != <span class="hljs-string">&quot;number&quot;</span>){
+            reject(<span class="hljs-string">&quot;Please enter a valid score&quot;</span>)
+        }
+        <span class="hljs-keyword">else</span> {
+            reject(<span class="hljs-string">&quot;You have failed&quot;</span>)
+        }
+    })
+}
+
+<span class="hljs-keyword">let</span> grade = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Calculating your grade...&quot;</span>)
+        resolve(<span class="hljs-string">&quot;Your grade is A, &quot;</span> + response)
+    })
+}
+
+<span class="hljs-comment">// Implemented using normal promises method</span>
+result(<span class="hljs-number">80</span>).then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Results received&quot;</span>)
+    <span class="hljs-keyword">return</span> grade(response)
+}).then(<span class="hljs-function"><span class="hljs-params">final_grade</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(final_grade)
+}).catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(err)
+})
+
+
+<span class="hljs-comment">// Implemented using async &amp; await</span>
+<span class="hljs-comment">//async declarations cannot be initialsed as an arrow function</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Calc</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> result(<span class="hljs-number">80</span>)
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Results received&quot;</span>)
+        <span class="hljs-keyword">const</span> final_grade = <span class="hljs-keyword">await</span> grade(response)
+        <span class="hljs-built_in">console</span>.log(final_grade)
+    } <span class="hljs-keyword">catch</span>(err){
+        <span class="hljs-built_in">console</span>.log(err)
+    }
+}
+
+<span class="hljs-comment">// Calling the async function</span>
+Calc()</code></pre></div>
+</div></div>
+    </div>
+</div>
