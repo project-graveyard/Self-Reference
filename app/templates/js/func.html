@@ -55,6 +55,40 @@ console.log(addNums(5, 5));</pre><pre class="hljs"><code><span class="hljs-keywo
 <li><code class="inline-code">escape</code>: returns the hexadecimal encoding of an arguement.</li>
 <li><code class="inline-code">unescape</code>: Returns the ASCII string for a specified value.</li>
 </ul>
+<h2 id="closures">Closures</h2>
+<ul>
+<li>It is a feature where an inner function has access to the outer function's variables.</li>
+<li>A closure has three scope chains.
+<ul>
+<li>Has access to variables its own scope, outer functions and global variables.</li>
+</ul>
+</li>
+<li>A scope chain is a stack consisting of all the references to the variables for the function being executed.</li>
+</ul>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let a = 10;
+function first(){
+    let b = 20;
+    function second(){
+        let c = 20 + a + b;
+        return c;
+    }
+    return second()
+}
+
+let sum = first();
+console.log(`The sum is ${sum}`);</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">first</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">let</span> b = <span class="hljs-number">20</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">second</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">let</span> c = <span class="hljs-number">20</span> + a + b;
+        <span class="hljs-keyword">return</span> c;
+    }
+    <span class="hljs-keyword">return</span> second()
+}
+
+<span class="hljs-keyword">let</span> sum = first();
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`The sum is <span class="hljs-subst">${sum}</span>`</span>);</code></pre></div>
 </div></div>
     </div>
 </div>
