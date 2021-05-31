@@ -300,9 +300,13 @@ def js():
         {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Object Oriented Programming', 'url': 'js/oop.html'},
         {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'The Math Object', 'url': 'js/math.html'},
         {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'The Date Object', 'url': 'js/date.html'},
-        {'id': "headingFourteen", 'data': 'collapseFourteen', 'heading': 'Events', 'url': 'js/event.html'},
-        {'id': "headingFiftteen", 'data': 'collapseFifteen', 'heading': 'Manipulating The DOM', 'url': 'js/dom.html'},
-        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Things To Note', 'url': 'js/note.html'},
+        {'id': "headingFourteen", 'data': 'collapseFourteen', 'heading': 'Promises', 'url': 'js/promise.html'},
+        {'id': "headingFiftteen", 'data': 'collapseFiftteen', 'heading': 'Async & Await', 'url': 'js/async.html'},
+        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'The this Keyword', 'url': 'js/this.html'},
+        {'id': "headingSeventeen", 'data': 'collapseSeventeen', 'heading': 'Regular Expressions', 'url': 'js/regex.html'},
+        {'id': "headingEighteen", 'data': 'collapseEighteen', 'heading': 'Events', 'url': 'js/event.html'},
+        {'id': "headingNineteen", 'data': 'collapseNineteen', 'heading': 'Manipulating The DOM', 'url': 'js/dom.html'},
+        {'id': "headingTwenty", 'data': 'collapseTwenty', 'heading': 'Things To Note', 'url': 'js/note.html'},
     ]
     return render_template(
         'js/js.html',
