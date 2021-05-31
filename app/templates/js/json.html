@@ -1,0 +1,54 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="json-javascript-object-notation">JSON - Javascript Object Notation</h2>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const todos = [
+     {
+         id: 1,
+         text: &quot;Take out trash&quot;,
+         isCompleted: true
+     },
+    {
+         id: 2,
+         text: &quot;Meeting with boss&quot;,
+        isCompleted: true
+     },
+     {
+         id: 3,
+         text: &quot;Dentist Appointment&quot;,
+         isCompleted: false
+     },
+ ];
+
+console.log(todos);
+console.log(todos[1].text)
+
+// // Converting to JSON
+const todosJSON = JSON.stringify(todos);
+console.log(todosJSON);</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> todos = [
+     {
+         <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+         <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Take out trash&quot;</span>,
+         <span class="hljs-attr">isCompleted</span>: <span class="hljs-literal">true</span>
+     },
+    {
+         <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+         <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Meeting with boss&quot;</span>,
+        <span class="hljs-attr">isCompleted</span>: <span class="hljs-literal">true</span>
+     },
+     {
+         <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
+         <span class="hljs-attr">text</span>: <span class="hljs-string">&quot;Dentist Appointment&quot;</span>,
+         <span class="hljs-attr">isCompleted</span>: <span class="hljs-literal">false</span>
+     },
+ ];
+
+<span class="hljs-built_in">console</span>.log(todos);
+<span class="hljs-built_in">console</span>.log(todos[<span class="hljs-number">1</span>].text)
+
+<span class="hljs-comment">// // Converting to JSON</span>
+<span class="hljs-keyword">const</span> todosJSON = <span class="hljs-built_in">JSON</span>.stringify(todos);
+<span class="hljs-built_in">console</span>.log(todosJSON);</code></pre></div>
+</div></div>
+    </div>
+</div>
