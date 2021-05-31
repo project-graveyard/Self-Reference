@@ -1,0 +1,38 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="concatenation">Concatenation</h2>
+<ul>
+<li>It is used join multiple strings together with the use of <code class="inline-code">+</code>.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const iden = &quot;John&quot;;
+const years = 30;
+console.log(&quot;My name is &quot; + iden + &quot; and I am &quot; + years + &quot; years of age.&quot;);</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> iden = <span class="hljs-string">&quot;John&quot;</span>;
+<span class="hljs-keyword">const</span> years = <span class="hljs-number">30</span>;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;My name is &quot;</span> + iden + <span class="hljs-string">&quot; and I am &quot;</span> + years + <span class="hljs-string">&quot; years of age.&quot;</span>);</code></pre></div>
+</li>
+</ul>
+<h2 id="template-literial">Template literial</h2>
+<ul>
+<li>It allows the use of raw strings with variables.</li>
+<li>It is declared using backticks.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">console.log(`My name is ${iden} and I am ${years} years`);</pre><pre class="hljs"><code><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`My name is <span class="hljs-subst">${iden}</span> and I am <span class="hljs-subst">${years}</span> years`</span>);</code></pre></div>
+</li>
+</ul>
+<h2 id="string-properties">String Properties</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const x = &quot;Hello World&quot;;
+const y = &quot;technology, computers, it, code&quot;
+console.log(x.length); 	//checks the length
+console.log(x.toUpperCase()); 	//converts to uppercase
+console.log(x.toLowerCase()); 	//converts to lowercase
+console.log(x.substring(0, 5)); 	//returns string within the indexes. 
+console.log(y.split(',')); 	//splits string based on any specified character
+    ```
+    </pre><pre class="hljs"><code><span class="hljs-keyword">const</span> x = <span class="hljs-string">&quot;Hello World&quot;</span>;
+<span class="hljs-keyword">const</span> y = <span class="hljs-string">&quot;technology, computers, it, code&quot;</span>
+<span class="hljs-built_in">console</span>.log(x.length); 	<span class="hljs-comment">//checks the length</span>
+<span class="hljs-built_in">console</span>.log(x.toUpperCase()); 	<span class="hljs-comment">//converts to uppercase</span>
+<span class="hljs-built_in">console</span>.log(x.toLowerCase()); 	<span class="hljs-comment">//converts to lowercase</span>
+<span class="hljs-built_in">console</span>.log(x.substring(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>)); 	<span class="hljs-comment">//returns string within the indexes. </span>
+<span class="hljs-built_in">console</span>.log(y.split(<span class="hljs-string">&#x27;,&#x27;</span>)); 	<span class="hljs-comment">//splits string based on any specified character</span>
+    <span class="hljs-string">``</span><span class="hljs-string">`
+    </span></code></pre></div>
+</div></div>
+    </div>
+</div>
