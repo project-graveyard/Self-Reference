@@ -1,0 +1,50 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="setinterval">SetInterval</h2>
+<ul>
+<li>It calls a function or evaluates an expression at specified intervals(in milliseconds).</li>
+<li>It will contine calling the function until <code class="inline-code">clearInterval()</code> is called or the window is closed.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">function myAlert(){
+    alert(&quot;Hi&quot;);
+}
+setInterval(myAlert, 3000);
+//calls myAlert function every 3 seconds</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myAlert</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;Hi&quot;</span>);
+}
+<span class="hljs-built_in">setInterval</span>(myAlert, <span class="hljs-number">3000</span>);
+<span class="hljs-comment">//calls myAlert function every 3 seconds</span></code></pre></div>
+</li>
+</ul>
+<h2 id="form-validation">Form validation</h2>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let validate = () =&gt; {
+    if(document.myform.Email.value == &quot;&quot;){
+        alert(&quot;Please provide your Email ID&quot;)
+        document.myform.Email.focus()
+        return false
+    } else if(document.myform.Password.value == &quot;&quot;){
+        alert(&quot;Please provide your Password&quot;)
+        document.myform.Password.focus()
+        return false
+    } else {
+        return true
+    }
+}</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> validate = <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">document</span>.myform.Email.value == <span class="hljs-string">&quot;&quot;</span>){
+        alert(<span class="hljs-string">&quot;Please provide your Email ID&quot;</span>)
+        <span class="hljs-built_in">document</span>.myform.Email.focus()
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-built_in">document</span>.myform.Password.value == <span class="hljs-string">&quot;&quot;</span>){
+        alert(<span class="hljs-string">&quot;Please provide your Password&quot;</span>)
+        <span class="hljs-built_in">document</span>.myform.Password.focus()
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    }
+}</code></pre></div>
+<blockquote>
+<p>Note: action attribute redirects the user to a new page after successful form submission.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
