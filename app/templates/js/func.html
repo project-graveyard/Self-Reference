@@ -1,0 +1,60 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="declaring-functions">Declaring functions</h2>
+<h4 id="using-let-keyword">Using <code class="inline-code">let</code> keyword</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let x = function(val){ return val * val; };
+console.log(x(5));</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> x = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>)</span>{ <span class="hljs-keyword">return</span> val * val; };
+<span class="hljs-built_in">console</span>.log(x(<span class="hljs-number">5</span>));</code></pre></div>
+<h4 id="using-function-constructor">Using <code class="inline-code">Function</code> constructor</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var myfunction = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a + b&quot;);
+console.log(myfunction(5, 20));</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> myfunction = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>(<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;return a + b&quot;</span>);
+<span class="hljs-built_in">console</span>.log(myfunction(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>));</code></pre></div>
+<h4 id="self-invoking-functions">Self-invoking functions</h4>
+<ul>
+<li>They are invoked automatically without being called.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">//Syntax:
+(function() {
+       function_body   //It calls itself
+  })();
+
+//Sample
+(function() {
+    console.log(5+8);
+})();</pre><pre class="hljs"><code><span class="hljs-comment">//Syntax:</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+       function_body   <span class="hljs-comment">//It calls itself</span>
+  })();
+
+<span class="hljs-comment">//Sample</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-number">5</span>+<span class="hljs-number">8</span>);
+})();</code></pre></div>
+</li>
+</ul>
+<h4 id="arrow-functions">Arrow functions</h4>
+<ul>
+<li>They are not recommended for use as methods and constructors.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">const myfunc = (a, b, c) =&gt; {return a*b*c};
+console.log(myfunc(2,3,4));
+
+//Another sample
+const addNums = (a = 1, b = 1) =&gt; a + b;
+const addNums = num1 =&gt; num1 + 5;
+console.log(addNums(5, 5));</pre><pre class="hljs"><code><span class="hljs-keyword">const</span> myfunc = <span class="hljs-function">(<span class="hljs-params">a, b, c</span>) =&gt;</span> {<span class="hljs-keyword">return</span> a*b*c};
+<span class="hljs-built_in">console</span>.log(myfunc(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>));
+
+<span class="hljs-comment">//Another sample</span>
+<span class="hljs-keyword">const</span> addNums = <span class="hljs-function">(<span class="hljs-params">a = <span class="hljs-number">1</span>, b = <span class="hljs-number">1</span></span>) =&gt;</span> a + b;
+<span class="hljs-keyword">const</span> addNums = <span class="hljs-function"><span class="hljs-params">num1</span> =&gt;</span> num1 + <span class="hljs-number">5</span>;
+<span class="hljs-built_in">console</span>.log(addNums(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));</code></pre></div>
+</li>
+</ul>
+<h4 id="predefined-functions">Predefined functions</h4>
+<ul>
+<li><code class="inline-code">eval</code>: evaluates a string and returns a value</li>
+<li><code class="inline-code">parseInt</code>: parses a string arguement and returns an integer of the specified radix or base.</li>
+<li><code class="inline-code">parseFloat</code>: parses a string arguement and returns a float.</li>
+<li><code class="inline-code">escape</code>: returns the hexadecimal encoding of an arguement.</li>
+<li><code class="inline-code">unescape</code>: Returns the ASCII string for a specified value.</li>
+</ul>
+</div></div>
+    </div>
+</div>
