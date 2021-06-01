@@ -1,6 +1,6 @@
 <div class="html">
     <div class="body">
-<div id="rendered-md"><h2 id="setinterval">SetInterval</h2>
+<div id="rendered-md"><h4 id="setinterval">SetInterval</h4>
 <ul>
 <li>It calls a function or evaluates an expression at specified intervals(in milliseconds).</li>
 <li>It will contine calling the function until <code class="inline-code">clearInterval()</code> is called or the window is closed.<br>
@@ -15,7 +15,7 @@ setInterval(myAlert, 3000);
 <span class="hljs-comment">//calls myAlert function every 3 seconds</span></code></pre></div>
 </li>
 </ul>
-<h2 id="form-validation">Form validation</h2>
+<h4 id="form-validation">Form Validation</h4>
 <p>Sample:</p>
 <div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">let validate = () =&gt; {
     if(document.myform.Email.value == &quot;&quot;){
@@ -45,6 +45,33 @@ setInterval(myAlert, 3000);
 <blockquote>
 <p>Note: action attribute redirects the user to a new page after successful form submission.</p>
 </blockquote>
+<h4 id="animation-moving-an-element">Animation: Moving an element</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div id=&quot;box&quot; style=&quot;background-color: blue; width: 100px; height: 100px; position: relative; border-radius: 50px;&quot;&gt;&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;box&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color: blue; width: 100px; height: 100px; position: relative; border-radius: 50px;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var pos = 0 	//starting position
+
+// Getting the box element
+var box = document.getElementById(&quot;box&quot;)
+
+function move(){
+    console.log(this.pos)
+    this.pos += 10
+    box.style.left = String(this.pos + &quot;px&quot;) 
+}
+
+
+setInterval(move, 1000)</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> pos = <span class="hljs-number">0</span> 	<span class="hljs-comment">//starting position</span>
+
+<span class="hljs-comment">// Getting the box element</span>
+<span class="hljs-keyword">var</span> box = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;box&quot;</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">move</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">this</span>.pos)
+    <span class="hljs-built_in">this</span>.pos += <span class="hljs-number">10</span>
+    box.style.left = <span class="hljs-built_in">String</span>(<span class="hljs-built_in">this</span>.pos + <span class="hljs-string">&quot;px&quot;</span>) 
+}
+
+
+<span class="hljs-built_in">setInterval</span>(move, <span class="hljs-number">1000</span>)</code></pre></div>
 </div></div>
     </div>
 </div>
