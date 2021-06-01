@@ -1,0 +1,206 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="events">Events</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onclick</td>
+<td>occurs when a user clicks on an element</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>occurs when an object has been loaded</td>
+</tr>
+<tr>
+<td>onunload</td>
+<td>occurs once a page has been unloaded (for <code class="inline-code">&lt;body&gt;</code>)</td>
+</tr>
+<tr>
+<td>onchange</td>
+<td>occurs when the content of a form element, the selection, or the checked state have changed (for <code class="inline-code">&lt;input&gt;</code>, <code class="inline-code">&lt;keygen&gt;</code>, <code class="inline-code">&lt;select&gt;</code> and <code class="inline-code">&lt;textarea&gt;</code>)</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>occurs when a pointer is moved onto an element, or onto one of its children</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>occurs when a user moves the mouse pointer out of an element, or out of one of its children</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td>occurs when a user presses a mouse button over an element</td>
+</tr>
+<tr>
+<td>onmouseup</td>
+<td>occurs when a user relaxes a mouse button over an element</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>occurs when an element loses focus</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>occurs when an element gets focus</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Samples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;script&gt;
+    var x = document.getElementById(&quot;demo&quot;)
+    x.onclick = function(){
+        document.body.innerHTML = Date()
+    }
+&lt;/script&gt;
+
+&lt;!-- OR --&gt;
+
+&lt;button onclick=&quot;func()&quot;&gt;Date&lt;/button&gt;
+
+&lt;script&gt;
+    func= () =&gt; {
+        document.body.innerHTML = Date()
+    }
+&lt;/script&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> x = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>)
+    x.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">document</span>.body.innerHTML = <span class="hljs-built_in">Date</span>()
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- OR --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;func()&quot;</span>&gt;</span>Date<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    func= <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">document</span>.body.innerHTML = <span class="hljs-built_in">Date</span>()
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+<hr>
+<ul>
+<li>The <code class="inline-code">onload</code> and <code class="inline-code">onunload</code> events are triggered when the user enters or leave a page.</li>
+<li>The <code class="inline-code">window.onload</code> event can be used to run a code after the whole page is loaded.</li>
+</ul>
+<h2 id="event-listeners">Event Listeners</h2>
+<ul>
+<li>They attach an event handlerto an element without over writing existing event handlers.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">element.addEventListener(event, function, useCapture)</pre><pre class="hljs"><code>element.addEventListener(event, <span class="hljs-function"><span class="hljs-keyword">function</span>, <span class="hljs-title">useCapture</span>)</span></code></pre></div>
+<ul>
+<li>The <span class="joplin-editable"><span class="joplin-source" data-joplin-language="katex" data-joplin-source-open="$" data-joplin-source-close="$">1^{st}</span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>1</mn><mrow><mi>s</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">1^{st}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7935559999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7935559999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span></span></span></span> parameter specifies the event type.</li>
+<li>The <span class="joplin-editable"><span class="joplin-source" data-joplin-language="katex" data-joplin-source-open="$" data-joplin-source-close="$">2^{nd}</span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>n</mi><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">2^{nd}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span></span> parameter specifies the function to call when an event occurs.</li>
+<li>The <span class="joplin-editable"><span class="joplin-source" data-joplin-language="katex" data-joplin-source-open="$" data-joplin-source-close="$">3^{rd}</span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>3</mn><mrow><mi>r</mi><mi>d</mi></mrow></msup></mrow><annotation encoding="application/x-tex">3^{rd}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">3</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span></span> parameter specifies to use event <em>bubbling</em> or event <em>capturing</em>. It is optional.</li>
+</ul>
+</li>
+</ul>
+<h4 id="event-propagation">Event Propagation</h4>
+<ul>
+<li><strong>bubbling:</strong> The innermost elements' events are handleed first and then the outermost elements' events are handled.</li>
+<li><strong>capturing:</strong> The outermost elements' events are handleed first and then the innermost elements' events are handled.</li>
+</ul>
+<blockquote>
+<p>The <code class="inline-code">useCapture</code> parameter specifies the event propagation</p>
+</blockquote>
+<h4 id="samples">Samples</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">//selects button
+const btn = document.querySelector(&quot;.btn&quot;);
+
+//event listener for mouseout event
+//changes the background color of element with id=&quot;my-form&quot; and the body 
+btn.addEventListener('mouseout', (e) =&gt; {
+    e.preventDefault();
+    document.querySelector(&quot;#my-form&quot;).style.background = '#ccc';
+    document.querySelector(&quot;body&quot;).style.background = &quot;#000&quot;;
+});</pre><pre class="hljs"><code><span class="hljs-comment">//selects button</span>
+<span class="hljs-keyword">const</span> btn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.btn&quot;</span>);
+
+<span class="hljs-comment">//event listener for mouseout event</span>
+<span class="hljs-comment">//changes the background color of element with id=&quot;my-form&quot; and the body </span>
+btn.addEventListener(<span class="hljs-string">&#x27;mouseout&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+    e.preventDefault();
+    <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#my-form&quot;</span>).style.background = <span class="hljs-string">&#x27;#ccc&#x27;</span>;
+    <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;body&quot;</span>).style.background = <span class="hljs-string">&quot;#000&quot;</span>;
+});</code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">/* Form handling test */
+//selecting the elements from the DOM
+const myForm = document.querySelector(&quot;#my-form&quot;);
+const nameInput = document.querySelector(&quot;#name&quot;);
+const emailInput = document.querySelector(&quot;#email&quot;);
+const msg = document.querySelector(&quot;.msg&quot;);
+const userList = document.querySelector(&quot;#users&quot;);
+
+//Adding an event listener to execute onsubmit function when event occurs
+myForm.addEventListener(&quot;submit&quot;, onsubmit);
+
+//onsubmit function
+function onsubmit(e) {
+    //prevents default action of button
+    e.preventDefault();
+    
+    //checks if input fields are empty
+    if(nameInput.value === &quot;&quot; || emailInput.value === &quot;&quot;){
+        msg.innerHTML = &quot;Please enter all fields!&quot;;
+        setTimeout(() =&gt; msg.remove(), 3000);
+    }
+    
+    //A new list element is created if the fields are not empty
+    else {
+        const li = document.createElement(&quot;li&quot;);
+        
+        //Appends values to the `&lt;li&gt;`
+        li.appendChild(document.createTextNode(`${nameInput.value}: ${emailInput.value}`));
+
+        //Adds the new &lt;li&gt; item to the parent &lt;ul&gt; and displays data on the screen.
+        userList.appendChild(li);
+
+        //Clear fields for next input
+        nameInput.value = &quot;&quot;;
+        emailInput.value = &quot;&quot;;
+    }
+}</pre><pre class="hljs"><code><span class="hljs-comment">/* Form handling test */</span>
+<span class="hljs-comment">//selecting the elements from the DOM</span>
+<span class="hljs-keyword">const</span> myForm = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#my-form&quot;</span>);
+<span class="hljs-keyword">const</span> nameInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#name&quot;</span>);
+<span class="hljs-keyword">const</span> emailInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#email&quot;</span>);
+<span class="hljs-keyword">const</span> msg = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.msg&quot;</span>);
+<span class="hljs-keyword">const</span> userList = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#users&quot;</span>);
+
+<span class="hljs-comment">//Adding an event listener to execute onsubmit function when event occurs</span>
+myForm.addEventListener(<span class="hljs-string">&quot;submit&quot;</span>, onsubmit);
+
+<span class="hljs-comment">//onsubmit function</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onsubmit</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-comment">//prevents default action of button</span>
+    e.preventDefault();
+    
+    <span class="hljs-comment">//checks if input fields are empty</span>
+    <span class="hljs-keyword">if</span>(nameInput.value === <span class="hljs-string">&quot;&quot;</span> || emailInput.value === <span class="hljs-string">&quot;&quot;</span>){
+        msg.innerHTML = <span class="hljs-string">&quot;Please enter all fields!&quot;</span>;
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> msg.remove(), <span class="hljs-number">3000</span>);
+    }
+    
+    <span class="hljs-comment">//A new list element is created if the fields are not empty</span>
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">const</span> li = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;li&quot;</span>);
+        
+        <span class="hljs-comment">//Appends values to the `&lt;li&gt;`</span>
+        li.appendChild(<span class="hljs-built_in">document</span>.createTextNode(<span class="hljs-string">`<span class="hljs-subst">${nameInput.value}</span>: <span class="hljs-subst">${emailInput.value}</span>`</span>));
+
+        <span class="hljs-comment">//Adds the new &lt;li&gt; item to the parent &lt;ul&gt; and displays data on the screen.</span>
+        userList.appendChild(li);
+
+        <span class="hljs-comment">//Clear fields for next input</span>
+        nameInput.value = <span class="hljs-string">&quot;&quot;</span>;
+        emailInput.value = <span class="hljs-string">&quot;&quot;</span>;
+    }
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
