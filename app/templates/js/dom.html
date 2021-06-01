@@ -1,0 +1,198 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="dom-document-object-module">DOM: Document Object Module</h2>
+<ul>
+<li>
+<p>To see all objects in the window:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">console.log(window);</pre><pre class="hljs"><code><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>);</code></pre></div>
+</li>
+<li>
+<p>To be able to manipulate the DOM elements, they must first be selected.</p>
+</li>
+</ul>
+<h2 id="selecting-elements">Selecting Elements</h2>
+<h4 id="single-elements">Single Elements</h4>
+<ul>
+<li>To find element by id:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">document.getElementById(&quot;id_name&quot;)</pre><pre class="hljs"><code><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;id_name&quot;</span>)</code></pre></div>
+</li>
+<li>Using query selector (It takes class, id or tags as an arguement):<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">console.log(document.querySelector(&quot;h1&quot;));</pre><pre class="hljs"><code><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;h1&quot;</span>));</code></pre></div>
+</li>
+</ul>
+<h4 id="multiple-elements">Multiple Elements</h4>
+<ul>
+<li>
+<p>To find element by class name:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">document.getElementsByClassName(&quot;class_name&quot;)</pre><pre class="hljs"><code><span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&quot;class_name&quot;</span>)</code></pre></div>
+</li>
+<li>
+<p>To find element by tag name:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">document.getElementsByTagName(&quot;tag_name&quot;)</pre><pre class="hljs"><code><span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&quot;tag_name&quot;</span>)</code></pre></div>
+</li>
+<li>
+<p>Using querySelectorAll (It takes class, id or tags as an arguement):</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">console.log(document.querySelectorAll(&quot;.item&quot;));</pre><pre class="hljs"><code><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;.item&quot;</span>));</code></pre></div>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Using the <code class="inline-code">document.getElementsByClassName()</code> method, it treats the tags with <code class="inline-code">class=class_name</code> as arrays.</li>
+<li>It also applies to the other methods of selecting elements.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var arr = document.getElementsByClassName(&quot;demo&quot;)
+// accesing the second element
+arr[1].innerHTML = &quot;Hi&quot;</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> arr = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&quot;demo&quot;</span>)
+<span class="hljs-comment">// accesing the second element</span>
+arr[<span class="hljs-number">1</span>].innerHTML = <span class="hljs-string">&quot;Hi&quot;</span></code></pre></div>
+</li>
+</ul>
+<h2 id="changing-attributes">Changing Attributes</h2>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;img id=&quot;myimg&quot; src=&quot;orange.png&quot; /&gt;
+&lt;a href=&quot;google.com&quot;&gt;link&lt;/a&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myimg&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;orange.png&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;google.com&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var img = document.getElementById(&quot;myimg&quot;)
+//changing the src attribute
+img.src = &quot;pear.jpg&quot;
+
+var links = document.getElementsByTagName('a')
+link[0] = &quot;duckduckgo.com&quot;</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;myimg&quot;</span>)
+<span class="hljs-comment">//changing the src attribute</span>
+img.src = <span class="hljs-string">&quot;pear.jpg&quot;</span>
+
+<span class="hljs-keyword">var</span> links = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&#x27;a&#x27;</span>)
+link[<span class="hljs-number">0</span>] = <span class="hljs-string">&quot;duckduckgo.com&quot;</span></code></pre></div>
+<h2 id="changing-style">Changing Style</h2>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div id=&quot;demo&quot; style=&quot;width:200px;&quot;&gt;text&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:200px;&quot;</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var text = document.getElementById(&quot;demo&quot;)
+//Changing width
+text.style.width = &quot;100px&quot;
+//Adding color attribute
+text.style.color = &quot;#ffffff&quot;</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> text = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>)
+<span class="hljs-comment">//Changing width</span>
+text.style.width = <span class="hljs-string">&quot;100px&quot;</span>
+<span class="hljs-comment">//Adding color attribute</span>
+text.style.color = <span class="hljs-string">&quot;#ffffff&quot;</span></code></pre></div>
+<blockquote>
+<p>All CSS properties can be set using JavaScript</p>
+</blockquote>
+<p>Extra Samples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">ul.firstElementChild.textContent = &quot;Hello&quot;;
+ul.children[1].innerText = &quot;Brad&quot;;
+ul.lastElementChild.innerHTML = &quot;&lt;h4&gt;Hello&lt;/h4&gt;&quot;;
+const btn = document.querySelector(&quot;.btn&quot;);
+btn.style.background = 'red';</pre><pre class="hljs"><code>ul.firstElementChild.textContent = <span class="hljs-string">&quot;Hello&quot;</span>;
+ul.children[<span class="hljs-number">1</span>].innerText = <span class="hljs-string">&quot;Brad&quot;</span>;
+ul.lastElementChild.innerHTML = <span class="hljs-string">&quot;&lt;h4&gt;Hello&lt;/h4&gt;&quot;</span>;
+<span class="hljs-keyword">const</span> btn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.btn&quot;</span>);
+btn.style.background = <span class="hljs-string">&#x27;red&#x27;</span>;</code></pre></div>
+<h2 id="creating-elements">Creating Elements</h2>
+<ul>
+<li>
+<p>Clones an element and resturns a resulting node.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">element.cloneNode()</pre><pre class="hljs"><code>element.cloneNode()</code></pre></div>
+</li>
+<li>
+<p>To create a new element node</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">document.createElement(element)</pre><pre class="hljs"><code><span class="hljs-built_in">document</span>.createElement(element)</code></pre></div>
+</li>
+<li>
+<p>To create a new text node</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">document.createTextNode(text)</pre><pre class="hljs"><code><span class="hljs-built_in">document</span>.createTextNode(text)</code></pre></div>
+</li>
+<li>
+<p>Adding a new child node to an element as the last child node</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">element.appendChild(newNode)</pre><pre class="hljs"><code>element.appendChild(newNode)</code></pre></div>
+</li>
+<li>
+<p>This inserts node1 as a child before node2</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">element.insertBefore(node1, node2)</pre><pre class="hljs"><code>element.insertBefore(node1, node2)</code></pre></div>
+</li>
+</ul>
+<p>Examples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div id=&quot;demo&quot;&gt;Some Content&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span>&gt;</span>Some Content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">// Creating a new paragraph
+let p = document.createElement('p')
+var node = document.createTextNode(&quot;Some new text&quot;)
+
+// Adding the text to the paragraph
+p.appendChild(node)
+
+// Adding the paragraph to the div
+var div = document.getElementById(&quot;demo&quot;)
+div.appendChild(p)</pre><pre class="hljs"><code><span class="hljs-comment">// Creating a new paragraph</span>
+<span class="hljs-keyword">let</span> p = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;p&#x27;</span>)
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.createTextNode(<span class="hljs-string">&quot;Some new text&quot;</span>)
+
+<span class="hljs-comment">// Adding the text to the paragraph</span>
+p.appendChild(node)
+
+<span class="hljs-comment">// Adding the paragraph to the div</span>
+<span class="hljs-keyword">var</span> div = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>)
+div.appendChild(p)</code></pre></div>
+<h2 id="removing-elements">Removing Elements</h2>
+<ul>
+<li>To remove an element, you must select the parent of the element and use the <code class="inline-code">removeChild(node)</code> method.</li>
+</ul>
+<p>Samples:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div id=&quot;demo&quot;&gt;
+    &lt;p id=&quot;p1&quot;&gt;&lt;/p&gt;
+    &lt;p id=&quot;p2&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;p1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;p2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var parent = document.getElementById(&quot;demo&quot;)
+var node = document.getElementById(&quot;p1&quot;)
+parent.removeChild(node)
+
+/* OR */
+
+var node = document.getElementById(&quot;p1&quot;)
+node.parentNode.removeChild(node)
+
+//removing the last child
+div.lastElementChild.remove();</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> parent = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>)
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;p1&quot;</span>)
+parent.removeChild(node)
+
+<span class="hljs-comment">/* OR */</span>
+
+<span class="hljs-keyword">var</span> node = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;p1&quot;</span>)
+node.parentNode.removeChild(node)
+
+<span class="hljs-comment">//removing the last child</span>
+div.lastElementChild.remove();</code></pre></div>
+<ul>
+<li>The parent can also be removed using the <code class="inline-code">.remove()</code> method.<br>
+E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">ul.remove();</pre><pre class="hljs"><code>ul.remove();</code></pre></div>
+</li>
+</ul>
+<h2 id="replacing-an-element">Replacing an element</h2>
+<ul>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">element.replaceChild(newNode, oldNode)</pre><pre class="hljs"><code>element.replaceChild(newNode, oldNode)</code></pre></div>
+</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;div id=&quot;demo&quot;&gt;
+    &lt;p id=&quot;p1&quot;&gt;Hello&lt;/p&gt;
+    &lt;p id=&quot;p2&quot;&gt;Hi&lt;/p&gt;
+&lt;/div&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;p1&quot;</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;p2&quot;</span>&gt;</span>Hi<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="js" data-joplin-source-open="```js&#10;" data-joplin-source-close="&#10;```">var p = document.createElement('p')
+var text = document.createTextNode(&quot;This is new&quot;)
+p.appendChild(text)
+
+var parent = document.getElementById(&quot;demo&quot;)
+var child = document.getElementById(&quot;p1&quot;)
+parent.replaceChild(p, child)</pre><pre class="hljs"><code><span class="hljs-keyword">var</span> p = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;p&#x27;</span>)
+<span class="hljs-keyword">var</span> text = <span class="hljs-built_in">document</span>.createTextNode(<span class="hljs-string">&quot;This is new&quot;</span>)
+p.appendChild(text)
+
+<span class="hljs-keyword">var</span> parent = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;demo&quot;</span>)
+<span class="hljs-keyword">var</span> child = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;p1&quot;</span>)
+parent.replaceChild(p, child)</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
