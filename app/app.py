@@ -342,10 +342,30 @@ def jQuery():
 
 @app.route('/sql')
 def sql():
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Show Keyword', 'url': 'sql/show.html'},
+        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Select Keyword', 'url': 'sql/select.html'},
+        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Distinct Keyword', 'url': 'sql/distinct.html'},
+        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Limit Keyword', 'url': 'sql/limit.html'},
+        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Order By Keyword', 'url': 'sql/order.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Where Keyword', 'url': 'sql/where.html'},
+        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'Operators', 'url': 'sql/operators.html'},
+        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Concat Function', 'url': 'sql/concat.html'},
+        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Sub Queries', 'url': 'sql/sub.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Joining Tables', 'url': 'sql/join.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Set Operations', 'url': 'sql/set.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'Inserting Data', 'url': 'sql/insert.html'},
+        {'id': "headingFifteen", 'data': 'collapseFifteen', 'heading': 'Updating Data', 'url': 'sql/update.html'},
+        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Creating Tables', 'url': 'sql/table.html'},
+        {'id': "headingSeventeen", 'data': 'collapseSeventeen', 'heading': 'Constraints', 'url': 'sql/constraint.html'},
+        {'id': "headingEighteen", 'data': 'collapseEighteen', 'heading': 'Views', 'url': 'sql/view.html'},
+        {'id': "headingNineteen", 'data': 'collapseNineteen', 'heading': 'Things To Note', 'url': 'sql/note.html'}
+    ]
     return render_template(
-        'sql.html',
+        'sql/sql.html',
         title='MySQL',
-        description='Code AutoBiography of MySQL'
+        description='Code AutoBiography of MySQL',
+        block=block
     )
 
 
