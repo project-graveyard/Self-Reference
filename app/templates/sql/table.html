@@ -1,0 +1,53 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>
+<p><code class="inline-code">CREATE TABLE</code> is used to create a new table.</p>
+</li>
+<li>
+<p>It involves naming the table and defining its columns and each column's data type.</p>
+</li>
+<li>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">CREATE TABLE table_name (
+column1 data-type(size) constraint,
+column2 data-type(size) constraint,
+column3 data-type(size) constraint,
+)</pre><pre class="hljs"><code><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> table_name (
+column1 <span class="hljs-keyword">data</span>-<span class="hljs-keyword">type</span>(<span class="hljs-keyword">size</span>) <span class="hljs-keyword">constraint</span>,
+column2 <span class="hljs-keyword">data</span>-<span class="hljs-keyword">type</span>(<span class="hljs-keyword">size</span>) <span class="hljs-keyword">constraint</span>,
+column3 <span class="hljs-keyword">data</span>-<span class="hljs-keyword">type</span>(<span class="hljs-keyword">size</span>) <span class="hljs-keyword">constraint</span>,
+)</code></pre></div>
+</li>
+<li>
+<p><code class="inline-code">size</code> specifies the maximum length of table column.</p>
+</li>
+</ul>
+<h4 id="numeric-datatype">Numeric Datatype</h4>
+<ul>
+<li><code class="inline-code">INT</code>: a normal integer (signed/unsigned)</li>
+<li><code class="inline-code">FLOAT(M, D)</code>: A floating point number that cannot be unsigned.
+<ul>
+<li>M - Display length</li>
+<li>D - Number of decimal places</li>
+</ul>
+</li>
+<li><code class="inline-code">DOUBLE(M, D)</code>: A double-precision floating point number that cannot be unsigned.</li>
+</ul>
+<h4 id="date-type-datatype">Date &amp; Type Datatype</h4>
+<ul>
+<li><code class="inline-code">DATE</code>: A date in YYYY-MM-DD.</li>
+<li><code class="inline-code">DATETIME</code>: A date and time combination in YYYY-MM-DD HH:MM:SS format.</li>
+<li><code class="inline-code">TIMESTAMP</code>: A timestamp is calculated from midnight, January 1, 1970.</li>
+<li><code class="inline-code">TIME</code>: Stores time in HH:MM:SS format.</li>
+</ul>
+<h4 id="string-datatype">String Datatype</h4>
+<ul>
+<li><code class="inline-code">CHAR(M)</code>: Fixed length character string. Size is specified in (M). Max=255.</li>
+<li><code class="inline-code">VARCHAR(M)</code>: Variable-length character.</li>
+<li><code class="inline-code">BLOB</code>: Binary Large Objects; is used to store large amounts of binary data such as images or other files.</li>
+<li><code class="inline-code">TEXT</code>: Large amount of text data.</li>
+</ul>
+</div></div>
+    </div>
+</div>
