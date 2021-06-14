@@ -1,0 +1,52 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>They are used to specify rules for table data.</li>
+</ul>
+<p><strong>Some List Of Constraints</strong></p>
+<table>
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NOT NULL</td>
+<td>Indicates that a column cannot contain a null value.</td>
+</tr>
+<tr>
+<td>UNIQUE</td>
+<td>Does not allow to insert a duplicate value in a column.</td>
+</tr>
+<tr>
+<td>PRIMARY KEY</td>
+<td>Enforces the table to accept unique data for a specific column. It creates a unique index for accessing the table faster.</td>
+</tr>
+<tr>
+<td>CHECK</td>
+<td>Determines whether a value is is valid or not from a logical expression.</td>
+</tr>
+<tr>
+<td>DEFAULT</td>
+<td>While inserting data, if no value is supplied then the column gets the value set as DEFAULT.</td>
+</tr>
+<tr>
+<td>AUTO INCREAMENT</td>
+<td>Allows a unique number to be generated when a new record is inserted into a table.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>During table creation, specify the constraints after the data type of that column</p>
+</blockquote>
+<p><strong>Sample use of constraints:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">CREATE TABLE test (
+UserID NOT NULL AUTO INCREAMENT PRIMARY KEY(UserID)
+    )</pre><pre class="hljs"><code><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">test</span> (
+UserID <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">AUTO</span> INCREAMENT PRIMARY <span class="hljs-keyword">KEY</span>(UserID)
+    )</code></pre></div>
+</div></div>
+    </div>
+</div>
