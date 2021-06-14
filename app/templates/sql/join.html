@@ -1,0 +1,65 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>Joined tables shows a temporary table showing data from the joined tables.</li>
+<li>To join two or more tables, specify them as a comma separated list in the <code class="inline-code">FROM</code> clause; setting a condition that at least each must contain the same primary key.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT customers.ID, customers.Name, orders.name, orders.amount
+FROM customers, orders
+WHERE customers.ID = orders.ID
+ORDER BY customers.ID</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> customers.ID, customers.Name, orders.name, orders.amount
+<span class="hljs-keyword">FROM</span> customers, orders
+<span class="hljs-keyword">WHERE</span> customers.ID = orders.ID
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> customers.ID</code></pre></div>
+</li>
+<li>Custom names can be used for tables to shorten the join statement.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT ct.ID, ct.Name, ord.Name, ord.Amount
+FROM customers AS ct, orders AS ord
+WHERE ct.ID = ord.ID
+ORDER BY ct.ID:</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> ct.ID, ct.Name, ord.Name, ord.Amount
+<span class="hljs-keyword">FROM</span> customers <span class="hljs-keyword">AS</span> ct, orders <span class="hljs-keyword">AS</span> <span class="hljs-keyword">ord</span>
+<span class="hljs-keyword">WHERE</span> ct.ID = ord.ID
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> ct.ID:</code></pre></div>
+</li>
+</ul>
+<h2 id="types-of-join">Types Of Join</h2>
+<ul>
+<li>Inner Join</li>
+<li>Left join</li>
+<li>Right join</li>
+</ul>
+<h4 id="inner-join">Inner Join</h4>
+<ul>
+<li>It is equivalent to join.</li>
+<li>It returns rows where there's a match between tables.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_name(s)
+FROM table1 INNER JOIN table2
+ON table1.column_name = table2.column_name;</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1 <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;</code></pre></div>
+</li>
+<li><code class="inline-code">ON</code> specifies the <code class="inline-code">	INNER JOIN</code> condition.</li>
+<li><code class="inline-code">INNER JOIN</code> is the intersection of tables.</li>
+</ul>
+<h4 id="left-join">Left Join</h4>
+<ul>
+<li>Returns all rows from the left table even if there are no matches in the right table.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_name(s)
+FROM table1 LEFT JOIN table2
+ON table1.column_name = table2.column_name;</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1 <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;</code></pre></div>
+</li>
+</ul>
+<h4 id="right-join">Right Join</h4>
+<ul>
+<li>Returns all rows from the right table, even if there are no matches in the left table.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_name(s)
+FROM table1 RIGHT JOIN table2
+ON table1.column_name = table2.column_name;</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1 <span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
