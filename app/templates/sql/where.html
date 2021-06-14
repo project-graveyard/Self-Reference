@@ -1,0 +1,44 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It is used to extract only records that fulfill a specified criterion.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_list FROM table_name
+WHERE condition;</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_list <span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;</code></pre></div>
+</li>
+<li>E.g. To select a specific record,<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT * from customers
+WHERE ID = 7</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">from</span> customers
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">ID</span> = <span class="hljs-number">7</span></code></pre></div>
+</li>
+<li>Use quotation marks when working with text values. E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT * FROM customers
+WHERE city = 'New York';</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> customers
+<span class="hljs-keyword">WHERE</span> city = <span class="hljs-string">&#x27;New York&#x27;</span>;</code></pre></div>
+</li>
+</ul>
+<h4 id="like-operator">LIKE Operator</h4>
+<ul>
+<li>It is used to specify a search condition within a <code class="inline-code">	WHERE</code> clause.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_name(s)
+FROM table_name
+WHERE column_name LIKE pattern;</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">LIKE</span> pattern;</code></pre></div>
+</li>
+<li><code class="inline-code">pattern</code> uses simple regex expressions for evaluations. E.g.
+<ul>
+<li><code class="inline-code">_</code> matches any single character.</li>
+<li><code class="inline-code">%</code> used to mark an arbituary number of characters (including zero characters).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Pattern Sample Usage:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT * FROM employees
+WHERE FName LIKE 'A%'</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> employees
+<span class="hljs-keyword">WHERE</span> FName <span class="hljs-keyword">LIKE</span> <span class="hljs-string">&#x27;A%&#x27;</span></code></pre></div>
+<blockquote>
+<p><code class="inline-code">'A%'</code> means, beginning with 'A'<br>
+<code class="inline-code">'%A'</code> means, ending with 'A'</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
