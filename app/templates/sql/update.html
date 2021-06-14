@@ -1,0 +1,76 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="update-keyword">Update keyword</h2>
+<ul>
+<li>Allows to alter data in a table.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">UPDATE table_name
+SET column1 = value1, column2 = value2
+WHERE condition;</pre><pre class="hljs"><code><span class="hljs-keyword">UPDATE</span> table_name
+<span class="hljs-keyword">SET</span> column1 = value1, column2 = value2
+<span class="hljs-keyword">WHERE</span> condition;</code></pre></div>
+<blockquote>
+<p>If <code class="inline-code">WHERE</code> clause is omitted, all values in the table will be updated.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="delete-keyword">Delete Keyword</h2>
+<ul>
+<li>Used to remove a record from a table.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">DELETE FROM table_name
+WHERE condition;</pre><pre class="hljs"><code><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;</code></pre></div>
+<blockquote>
+<p>If <code class="inline-code">WHERE</code> clause is omitted, all records in the table will be deleted.</p>
+</blockquote>
+</li>
+</ul>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">DELETE FROM customers
+WHERE customerName = 'Dave';</pre><pre class="hljs"><code><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> customers
+<span class="hljs-keyword">WHERE</span> customerName = <span class="hljs-string">&#x27;Dave&#x27;</span>;</code></pre></div>
+<h2 id="alter-table">Alter Table</h2>
+<ul>
+<li>Used to add, delete, or modify columns in an existing table.</li>
+<li>Used to add or drop various constraints.</li>
+<li>E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">ALTER TABLE People
+ADD DateOfBirth DATE;</pre><pre class="hljs"><code><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> People
+<span class="hljs-keyword">ADD</span> DateOfBirth <span class="hljs-built_in">DATE</span>;</code></pre></div>
+</li>
+</ul>
+<h4 id="dropping">Dropping</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">## Deleting a column
+ALTER TABLE table_name
+DROP COLUMN column_name
+
+## Deleting a table
+DROP TABLE table_name</pre><pre class="hljs"><code><span class="hljs-comment">## Deleting a column</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> table_name
+<span class="hljs-keyword">DROP</span> <span class="hljs-keyword">COLUMN</span> column_name
+
+<span class="hljs-comment">## Deleting a table</span>
+<span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> table_name</code></pre></div>
+<h4 id="renaming">Renaming</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">## Renaming a table
+RENAME TABLE table_name TO new_table_name
+
+## Renaming a column
+ALTER TABLE table_name
+CHANGE column_name new_column_name DATA_TYPE
+
+#OR
+ALTER TABLE table_name
+RENAME COLUMN column_name TO new_column_name</pre><pre class="hljs"><code><span class="hljs-comment">## Renaming a table</span>
+<span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">TABLE</span> table_name <span class="hljs-keyword">TO</span> new_table_name
+
+<span class="hljs-comment">## Renaming a column</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> table_name
+<span class="hljs-keyword">CHANGE</span> column_name new_column_name DATA_TYPE
+
+<span class="hljs-comment">#OR</span>
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> table_name
+<span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">COLUMN</span> column_name <span class="hljs-keyword">TO</span> new_column_name</code></pre></div>
+</div></div>
+    </div>
+</div>
