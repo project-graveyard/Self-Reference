@@ -1,0 +1,46 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It is a query in another query.</li>
+</ul>
+<blockquote>
+<p>DESC sorts in descending order.<br>
+ASC sorts in  ascending order.</p>
+</blockquote>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```"># # separated queries
+
+# Getting the average
+SELECT AVG(salary) FROM employees
+
+# Using the average in next query
+SELECT FName, salary
+FROM employees
+WHERE salary &gt; 3100
+ORDER BY salary DESC;</pre><pre class="hljs"><code><span class="hljs-comment"># # separated queries</span>
+
+<span class="hljs-comment"># Getting the average</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">AVG</span>(salary) <span class="hljs-keyword">FROM</span> employees
+
+<span class="hljs-comment"># Using the average in next query</span>
+<span class="hljs-keyword">SELECT</span> FName, salary
+<span class="hljs-keyword">FROM</span> employees
+<span class="hljs-keyword">WHERE</span> salary &gt; <span class="hljs-number">3100</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary <span class="hljs-keyword">DESC</span>;</code></pre></div>
+<ul>
+<li>Always enclose subquery in parenthesis without using semi-colon.</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">## making same query as above using subquery
+SELECT FName, salary
+FROM employees
+WHERE salary &gt; (SELECT AVG(salary) FROM employees
+)
+ORDER BY salary DESC;</pre><pre class="hljs"><code><span class="hljs-comment">## making same query as above using subquery</span>
+<span class="hljs-keyword">SELECT</span> FName, salary
+<span class="hljs-keyword">FROM</span> employees
+<span class="hljs-keyword">WHERE</span> salary &gt; (<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">AVG</span>(salary) <span class="hljs-keyword">FROM</span> employees
+)
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> salary <span class="hljs-keyword">DESC</span>;</code></pre></div>
+</div></div>
+    </div>
+</div>
