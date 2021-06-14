@@ -1,0 +1,27 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="union">Union</h2>
+<ul>
+<li>It combines the result set of multiple <code class="inline-code">SELECT</code> statements and removes any duplicates.</li>
+<li>All <code class="inline-code">SELECT</code> statements within the <code class="inline-code">UNION</code> must have the same number of columns and the same datatypes. The columns must be in the same order.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">UNION</span>
+<span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2</code></pre></div>
+</li>
+</ul>
+<h2 id="union-all">Union All</h2>
+<ul>
+<li>It combines the result set of multiple <code class="inline-code">SELECT</code> statements and does not remove any duplicates.</li>
+<li>It is faster than <code class="inline-code">UNION</code>.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span>
+<span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
