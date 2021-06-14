@@ -1,0 +1,38 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>A view is a virtual table that is based on the resilt-set of an SQL statement.</li>
+<li>Uses:
+<ul>
+<li>Structure data in a way that users or classes of users find natural or intuitive.</li>
+<li>Restrict access to the data in a way that a user can see and sometimes modify exactly what they need and no more.</li>
+<li>Summarize data from various tables and use it to generate reports.</li>
+</ul>
+</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">CREATE VIEW view_name AS 
+SELECT column_name(s) 
+FROM table_name
+WHERE condition</pre><pre class="hljs"><code><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">VIEW</span> view_name <span class="hljs-keyword">AS</span> 
+<span class="hljs-keyword">SELECT</span> column_name(s) 
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition</code></pre></div>
+<blockquote>
+<p>A view always shows up-to-date data.</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="updating-data">Updating Data</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">CREATE OR REPLACE VIEW view_name AS
+SELECT column_name(s)
+FROM table_name
+WHERE condition;</pre><pre class="hljs"><code><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">OR</span> <span class="hljs-keyword">REPLACE</span> <span class="hljs-keyword">VIEW</span> view_name <span class="hljs-keyword">AS</span>
+<span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;</code></pre></div>
+<h4 id="deleting-views">Deleting Views</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">DROP VIEW view_name</pre><pre class="hljs"><code><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">VIEW</span> view_name</code></pre></div>
+</div></div>
+    </div>
+</div>
