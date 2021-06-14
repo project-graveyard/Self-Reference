@@ -1,0 +1,26 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li><strong>LIMIT</strong> keyword is used to retrieve a subset of records.</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT column_list
+FROM table_name
+LIMIT [number_of_records]</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> column_list
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">LIMIT</span> [number_of_records]</code></pre></div>
+</li>
+</ul>
+<p><strong>Sample:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sql" data-joplin-source-open="```sql&#10;" data-joplin-source-close="&#10;```">SELECT ID, FirstName, LastName, City
+FROM customers
+LIMIT 3, 4;</pre><pre class="hljs"><code><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ID</span>, FirstName, LastName, City
+<span class="hljs-keyword">FROM</span> customers
+<span class="hljs-keyword">LIMIT</span> <span class="hljs-number">3</span>, <span class="hljs-number">4</span>;</code></pre></div>
+<ul>
+<li>This query picks up 4 records, starting from the 3rd position.</li>
+</ul>
+<blockquote>
+<p>The index of the first row is one.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
