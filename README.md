@@ -5,4 +5,4 @@ Disclaimer: This contents of the site contains things worth noting in my journey
 
 Written with Python Flask as backend
 
-Check out the site [here](https://self-reference-ep.web.app).
+<!--Check out the site [here](https://self-reference.web.app).-->
