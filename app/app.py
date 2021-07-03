@@ -33,7 +33,7 @@ def home():
         {'name': 'Flask', 'memo': 'Flask Cheatsheet',
             'url': 'pyflask', 'img': 'static/img/flask.png'},
         {'name': 'React js', 'memo': 'React Cheatsheet',
-            'url': 'react', 'img': 'static/img/react.png'}   
+            'url': 'react', 'img': 'static/img/react.png'}
     ]
 
     return render_template(
@@ -45,10 +45,42 @@ def home():
 
 @app.route('/cpp')
 def cpp():
+    block = [
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Control Structures & Loops', 'url': 'cpp/layout.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'Data Types & Variables', 'url': 'cpp/data.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'Arrays', 'url': 'cpp/arrays.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'Loops', 'url': 'cpp/loops.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'Pointers', 'url': 'cpp/pointers.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven',
+            'heading': 'Memory Management', 'url': 'cpp/memory.html'},
+        {'id': "headingEight", 'data': 'collapseEight',
+            'heading': 'Functions', 'url': 'cpp/functions.html'},
+        {'id': "headingNine", 'data': 'collapseNine',
+            'heading': 'Classes & Objects', 'url': 'cpp/oop.html'},
+        {'id': "headingTen", 'data': 'collapseTen',
+            'heading': 'Handling Classes Externally', 'url': 'cpp/class.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven',
+            'heading': 'Constants', 'url': 'cpp/const.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve',
+            'heading': 'Templating', 'url': 'cpp/templates.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen',
+            'heading': 'Exception Handling', 'url': 'cpp/exceptions.html'},
+        {'id': "headingFourteen", 'data': 'collapseFourteen',
+            'heading': 'File Handling', 'url': 'cpp/files.html'},
+        {'id': "headingFifteen", 'data': 'collapseFifteen',
+            'heading': 'Things To Note', 'url': 'cpp/note.html'},
+    ]
+
     return render_template(
-        'cpp.html',
+        'cpp/cpp.html',
         title='C++',
-        description='Code AutoBiography of C & C++'
+        description='Code AutoBiography of C & C++',
+        block=block
     )
 
 
@@ -81,15 +113,24 @@ def python():
     ]
 
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Control Structures & Loops', 'url': 'python/loops.html'},
-        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Data Structures', 'url': 'python/data.html'},
-        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Functions & Modules', 'url': 'python/func.html'},
-        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Raising Expections & Error Handling', 'url': 'python/err.html'},
-        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'File Handling', 'url': 'python/file.html'},
-        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Object Oriented Programming', 'url': 'python/oop.html'},
-        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'Regular Expressions', 'url': 'python/re.html'},
-        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Packaging', 'url': 'python/pack.html'},
-        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Things To Note', 'url': 'python/note.html'}
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Control Structures & Loops', 'url': 'python/loops.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'Data Structures', 'url': 'python/data.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'Functions & Modules', 'url': 'python/func.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'Raising Expections & Error Handling', 'url': 'python/err.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'File Handling', 'url': 'python/file.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven',
+            'heading': 'Object Oriented Programming', 'url': 'python/oop.html'},
+        {'id': "headingEight", 'data': 'collapseEight',
+            'heading': 'Regular Expressions', 'url': 'python/re.html'},
+        {'id': "headingNine", 'data': 'collapseNine',
+            'heading': 'Packaging', 'url': 'python/pack.html'},
+        {'id': "headingTen", 'data': 'collapseTen',
+            'heading': 'Things To Note', 'url': 'python/note.html'}
     ]
 
     return render_template(
@@ -265,11 +306,16 @@ def htm():
     ]
 
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Layout Structure', 'url': 'html/layout.html'},
-        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Tags Reference', 'url': 'html/tags.html'},
-        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Input Types & Its Attributes', 'url': 'html/input.html'},
-        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Special Characters', 'url': 'html/special.html'},
-        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Things To Note', 'url': 'html/note.html'}
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Layout Structure', 'url': 'html/layout.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'Tags Reference', 'url': 'html/tags.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'Input Types & Its Attributes', 'url': 'html/input.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'Special Characters', 'url': 'html/special.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'Things To Note', 'url': 'html/note.html'}
     ]
 
     return render_template(
@@ -288,25 +334,44 @@ def htm():
 @app.route('/js')
 def js():
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Symbols & Operators', 'url': 'js/symbol.html'},
-        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Variables & Data Structures', 'url': 'js/variable.html'},
-        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Concatenation & String Functions', 'url': 'js/concat.html'},
-        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Arrays', 'url': 'js/array.html'},
-        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Objects', 'url': 'js/object.html'},
-        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'JSON', 'url': 'js/json.html'},
-        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'Conditionals & Loops', 'url': 'js/loops.html'},
-        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Functions', 'url': 'js/func.html'},
-        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Popup Boxes', 'url': 'js/pop.html'},
-        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Object Oriented Programming', 'url': 'js/oop.html'},
-        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'The Math Object', 'url': 'js/math.html'},
-        {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'The Date Object', 'url': 'js/date.html'},
-        {'id': "headingFourteen", 'data': 'collapseFourteen', 'heading': 'Promises', 'url': 'js/promise.html'},
-        {'id': "headingFiftteen", 'data': 'collapseFiftteen', 'heading': 'Async & Await', 'url': 'js/async.html'},
-        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'The this Keyword', 'url': 'js/this.html'},
-        {'id': "headingSeventeen", 'data': 'collapseSeventeen', 'heading': 'Regular Expressions', 'url': 'js/regex.html'},
-        {'id': "headingEighteen", 'data': 'collapseEighteen', 'heading': 'Events', 'url': 'js/event.html'},
-        {'id': "headingNineteen", 'data': 'collapseNineteen', 'heading': 'Manipulating The DOM', 'url': 'js/dom.html'},
-        {'id': "headingTwenty", 'data': 'collapseTwenty', 'heading': 'Things To Note', 'url': 'js/note.html'},
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Symbols & Operators', 'url': 'js/symbol.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'Variables & Data Structures', 'url': 'js/variable.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'Concatenation & String Functions', 'url': 'js/concat.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'Arrays', 'url': 'js/array.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'Objects', 'url': 'js/object.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven',
+            'heading': 'JSON', 'url': 'js/json.html'},
+        {'id': "headingEight", 'data': 'collapseEight',
+            'heading': 'Conditionals & Loops', 'url': 'js/loops.html'},
+        {'id': "headingNine", 'data': 'collapseNine',
+            'heading': 'Functions', 'url': 'js/func.html'},
+        {'id': "headingTen", 'data': 'collapseTen',
+            'heading': 'Popup Boxes', 'url': 'js/pop.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven',
+            'heading': 'Object Oriented Programming', 'url': 'js/oop.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve',
+            'heading': 'The Math Object', 'url': 'js/math.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen',
+            'heading': 'The Date Object', 'url': 'js/date.html'},
+        {'id': "headingFourteen", 'data': 'collapseFourteen',
+            'heading': 'Promises', 'url': 'js/promise.html'},
+        {'id': "headingFiftteen", 'data': 'collapseFiftteen',
+            'heading': 'Async & Await', 'url': 'js/async.html'},
+        {'id': "headingSixteen", 'data': 'collapseSixteen',
+            'heading': 'The this Keyword', 'url': 'js/this.html'},
+        {'id': "headingSeventeen", 'data': 'collapseSeventeen',
+            'heading': 'Regular Expressions', 'url': 'js/regex.html'},
+        {'id': "headingEighteen", 'data': 'collapseEighteen',
+            'heading': 'Events', 'url': 'js/event.html'},
+        {'id': "headingNineteen", 'data': 'collapseNineteen',
+            'heading': 'Manipulating The DOM', 'url': 'js/dom.html'},
+        {'id': "headingTwenty", 'data': 'collapseTwenty',
+            'heading': 'Things To Note', 'url': 'js/note.html'},
     ]
     return render_template(
         'js/js.html',
@@ -319,17 +384,28 @@ def js():
 @app.route("/jQuery")
 def jQuery():
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Selectors', 'url': 'jquery/select.html'},
-        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'The attr() method', 'url': 'jquery/attr.html'},
-        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'The html() method', 'url': 'jquery/html.html'},
-        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'The text() method', 'url': 'jquery/text.html'},
-        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'The val() method', 'url': 'jquery/val.html'},
-        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Class Methods', 'url': 'jquery/class.html'},
-        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'The css() method', 'url': 'jquery/css.html'},
-        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Sizing Methods', 'url': 'jquery/size.html'},
-        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Parent & Child Methods', 'url': 'jquery/parent.html'},
-        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Handling Events', 'url': 'jquery/event.html'},
-        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Things To Note', 'url': 'jquery/note.html'},
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Selectors', 'url': 'jquery/select.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'The attr() method', 'url': 'jquery/attr.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'The html() method', 'url': 'jquery/html.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'The text() method', 'url': 'jquery/text.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'The val() method', 'url': 'jquery/val.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven',
+            'heading': 'Class Methods', 'url': 'jquery/class.html'},
+        {'id': "headingEight", 'data': 'collapseEight',
+            'heading': 'The css() method', 'url': 'jquery/css.html'},
+        {'id': "headingNine", 'data': 'collapseNine',
+            'heading': 'Sizing Methods', 'url': 'jquery/size.html'},
+        {'id': "headingTen", 'data': 'collapseTen',
+            'heading': 'Parent & Child Methods', 'url': 'jquery/parent.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven',
+            'heading': 'Handling Events', 'url': 'jquery/event.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve',
+            'heading': 'Things To Note', 'url': 'jquery/note.html'},
     ]
     return render_template(
         'jquery/jquery.html',
@@ -339,27 +415,43 @@ def jQuery():
     )
 
 
-
 @app.route('/sql')
 def sql():
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Show Keyword', 'url': 'sql/show.html'},
-        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Select Keyword', 'url': 'sql/select.html'},
-        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'Distinct Keyword', 'url': 'sql/distinct.html'},
-        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Limit Keyword', 'url': 'sql/limit.html'},
-        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Order By Keyword', 'url': 'sql/order.html'},
-        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Where Keyword', 'url': 'sql/where.html'},
-        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'Operators', 'url': 'sql/operators.html'},
-        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Concat Function', 'url': 'sql/concat.html'},
-        {'id': "headingTen", 'data': 'collapseTen', 'heading': 'Sub Queries', 'url': 'sql/sub.html'},
-        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Joining Tables', 'url': 'sql/join.html'},
-        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Set Operations', 'url': 'sql/set.html'},
-        {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'Inserting Data', 'url': 'sql/insert.html'},
-        {'id': "headingFifteen", 'data': 'collapseFifteen', 'heading': 'Updating Data', 'url': 'sql/update.html'},
-        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Creating Tables', 'url': 'sql/table.html'},
-        {'id': "headingSeventeen", 'data': 'collapseSeventeen', 'heading': 'Constraints', 'url': 'sql/constraint.html'},
-        {'id': "headingEighteen", 'data': 'collapseEighteen', 'heading': 'Views', 'url': 'sql/view.html'},
-        {'id': "headingNineteen", 'data': 'collapseNineteen', 'heading': 'Things To Note', 'url': 'sql/note.html'}
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Show Keyword', 'url': 'sql/show.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'Select Keyword', 'url': 'sql/select.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'Distinct Keyword', 'url': 'sql/distinct.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'Limit Keyword', 'url': 'sql/limit.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'Order By Keyword', 'url': 'sql/order.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven',
+            'heading': 'Where Keyword', 'url': 'sql/where.html'},
+        {'id': "headingEight", 'data': 'collapseEight',
+            'heading': 'Operators', 'url': 'sql/operators.html'},
+        {'id': "headingNine", 'data': 'collapseNine',
+            'heading': 'Concat Function', 'url': 'sql/concat.html'},
+        {'id': "headingTen", 'data': 'collapseTen',
+            'heading': 'Sub Queries', 'url': 'sql/sub.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven',
+            'heading': 'Joining Tables', 'url': 'sql/join.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve',
+            'heading': 'Set Operations', 'url': 'sql/set.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen',
+            'heading': 'Inserting Data', 'url': 'sql/insert.html'},
+        {'id': "headingFifteen", 'data': 'collapseFifteen',
+            'heading': 'Updating Data', 'url': 'sql/update.html'},
+        {'id': "headingSixteen", 'data': 'collapseSixteen',
+            'heading': 'Creating Tables', 'url': 'sql/table.html'},
+        {'id': "headingSeventeen", 'data': 'collapseSeventeen',
+            'heading': 'Constraints', 'url': 'sql/constraint.html'},
+        {'id': "headingEighteen", 'data': 'collapseEighteen',
+            'heading': 'Views', 'url': 'sql/view.html'},
+        {'id': "headingNineteen", 'data': 'collapseNineteen',
+            'heading': 'Things To Note', 'url': 'sql/note.html'}
     ]
     return render_template(
         'sql/sql.html',
@@ -381,22 +473,38 @@ def react():
 @app.route('/css')
 def css():
     block = [
-        {'id': "headingTwo", 'data': 'collapseTwo', 'heading': 'Vertical Align', 'url': 'css/valign.html'},
-        {'id': "headingThree", 'data': 'collapseThree', 'heading': 'Text Styling', 'url': 'css/text.html'},
-        {'id': "headingFour", 'data': 'collapseFour', 'heading': 'White Spaces', 'url': 'css/space.html'},
-        {'id': "headingFive", 'data': 'collapseFive', 'heading': 'Positioning Elements', 'url': 'css/position.html'},
-        {'id': "headingSix", 'data': 'collapseSix', 'heading': 'Table & Border Styling', 'url': 'css/border.html'},
-        {'id': "headingSeven", 'data': 'collapseSeven', 'heading': 'Backgroung Styling', 'url': 'css/background.html'},
-        {'id': "headingEight", 'data': 'collapseEight', 'heading': 'List Styling', 'url': 'css/list.html'},
-        {'id': "headingNine", 'data': 'collapseNine', 'heading': 'Box Shadow', 'url': 'css/shadow.html'},
-        {'id': "headingTen", 'data': 'collapseTen', 'heading': '@Font-face Rule', 'url': 'css/font.html'},
-        {'id': "headingEleven", 'data': 'collapseEleven', 'heading': 'Pseudo Classes', 'url': 'css/class.html'},
-        {'id': "headingTwelve", 'data': 'collapseTwelve', 'heading': 'Linear & Radial Gradients', 'url': 'css/gradient.html'},
-        {'id': "headingThirteen", 'data': 'collapseThirteen', 'heading': 'Transitions', 'url': 'css/transition.html'},
-        {'id': "headingFourteen", 'data': 'collapseFourteen', 'heading': 'Transformations', 'url': 'css/transform.html'},
-        {'id': "headingFifteen", 'data': 'collapseFifteen', 'heading': 'Animations', 'url': 'css/animate.html'},
-        {'id': "headingSixteen", 'data': 'collapseSixteen', 'heading': 'Filters', 'url': 'css/filter.html'},
-        {'id': "headingSeventeen", 'data': 'collapseSeventeen', 'heading': 'Things To Note', 'url': 'css/note.html'},
+        {'id': "headingTwo", 'data': 'collapseTwo',
+            'heading': 'Vertical Align', 'url': 'css/valign.html'},
+        {'id': "headingThree", 'data': 'collapseThree',
+            'heading': 'Text Styling', 'url': 'css/text.html'},
+        {'id': "headingFour", 'data': 'collapseFour',
+            'heading': 'White Spaces', 'url': 'css/space.html'},
+        {'id': "headingFive", 'data': 'collapseFive',
+            'heading': 'Positioning Elements', 'url': 'css/position.html'},
+        {'id': "headingSix", 'data': 'collapseSix',
+            'heading': 'Table & Border Styling', 'url': 'css/border.html'},
+        {'id': "headingSeven", 'data': 'collapseSeven',
+            'heading': 'Backgroung Styling', 'url': 'css/background.html'},
+        {'id': "headingEight", 'data': 'collapseEight',
+            'heading': 'List Styling', 'url': 'css/list.html'},
+        {'id': "headingNine", 'data': 'collapseNine',
+            'heading': 'Box Shadow', 'url': 'css/shadow.html'},
+        {'id': "headingTen", 'data': 'collapseTen',
+            'heading': '@Font-face Rule', 'url': 'css/font.html'},
+        {'id': "headingEleven", 'data': 'collapseEleven',
+            'heading': 'Pseudo Classes', 'url': 'css/class.html'},
+        {'id': "headingTwelve", 'data': 'collapseTwelve',
+            'heading': 'Linear & Radial Gradients', 'url': 'css/gradient.html'},
+        {'id': "headingThirteen", 'data': 'collapseThirteen',
+            'heading': 'Transitions', 'url': 'css/transition.html'},
+        {'id': "headingFourteen", 'data': 'collapseFourteen',
+            'heading': 'Transformations', 'url': 'css/transform.html'},
+        {'id': "headingFifteen", 'data': 'collapseFifteen',
+            'heading': 'Animations', 'url': 'css/animate.html'},
+        {'id': "headingSixteen", 'data': 'collapseSixteen',
+            'heading': 'Filters', 'url': 'css/filter.html'},
+        {'id': "headingSeventeen", 'data': 'collapseSeventeen',
+            'heading': 'Things To Note', 'url': 'css/note.html'},
     ]
 
     return render_template(
