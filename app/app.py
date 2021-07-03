@@ -53,7 +53,7 @@ def cpp():
         {'id': "headingFour", 'data': 'collapseFour',
             'heading': 'Arrays', 'url': 'cpp/arrays.html'},
         {'id': "headingFive", 'data': 'collapseFive',
-            'heading': 'Loops', 'url': 'cpp/loops.html'},
+            'heading': 'Loops & Control Structures', 'url': 'cpp/loops.html'},
         {'id': "headingSix", 'data': 'collapseSix',
             'heading': 'Pointers', 'url': 'cpp/pointers.html'},
         {'id': "headingSeven", 'data': 'collapseSeven',
