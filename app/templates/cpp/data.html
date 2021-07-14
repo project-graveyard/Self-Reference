@@ -1,0 +1,82 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="declaring-variables">Declaring variables</h2>
+<ul>
+<li>A data type is required when declaring a variable.</li>
+</ul>
+<blockquote>
+<p>C++ is case sensitive.</p>
+</blockquote>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">// data_type variable_name;
+// data_type variable_name = value
+
+int sum = 500;</pre><pre class="hljs"><code><span class="hljs-comment">// data_type variable_name;</span>
+<span class="hljs-comment">// data_type variable_name = value</span>
+
+<span class="hljs-keyword">int</span> sum = <span class="hljs-number">500</span>;</code></pre></div>
+<ul>
+<li>Mutiple variables can be declared by separating them with commas.</li>
+</ul>
+<h2 id="data-types">Data Types</h2>
+<ul>
+<li>Numerical data type: integers, floats.</li>
+<li>Strings: letters, numbers, symbols, characters.</li>
+<li>Boolean: true, false.</li>
+</ul>
+<h4 id="integers">Integers</h4>
+<ul>
+<li><code class="inline-code">int</code>: integer</li>
+<li><code class="inline-code">signed int</code>: hold both positive and negative numbers</li>
+<li><code class="inline-code">unsigned int</code>: hold only positive values</li>
+<li><code class="inline-code">short</code>: half the default size</li>
+<li><code class="inline-code">long</code>: twice the default size</li>
+</ul>
+<h4 id="float">Float</h4>
+<ul>
+<li><code class="inline-code">float</code>(4 bytes)</li>
+<li><code class="inline-code">double</code> (8 bytes)</li>
+<li><code class="inline-code">long double</code> (16 bytes)</li>
+</ul>
+<blockquote>
+<p>Float numbers are always signed.</p>
+</blockquote>
+<h4 id="string">String</h4>
+<ul>
+<li>A string is an ordered sequence of characters, enclosed in double quotation mark.</li>
+<li><code class="inline-code">string</code>: string</li>
+<li><code class="inline-code">char</code>: character</li>
+<li><code class="inline-code">bool</code>: boolean</li>
+</ul>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<ul>
+<li><strong>Pascal Case:</strong> The first letter in the identifier and the first letter of each subsequent concatenated word are capitalised. E.g. BackColor.</li>
+<li><strong>Camel Case:</strong> The first letter in the identifier is lowercase and the first letter of each subsequent concatenated word are capitalised. E.g. backColor.</li>
+</ul>
+<h2 id="local-global-variables">Local &amp; Global Variables</h2>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+int tuna = 69   //Global variable
+
+int main(){
+    int tuna = 10   //local variable
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-keyword">int</span> tuna = <span class="hljs-number">69</span>   <span class="hljs-comment">//Global variable</span>
+
+<span class="hljs-keyword">int</span> main(){
+    <span class="hljs-keyword">int</span> tuna = <span class="hljs-number">10</span>   <span class="hljs-comment">//local variable</span>
+}</code></pre></div>
+<ul>
+<li>All functions can use global variables but local variables are limited to the functions they are declared in.</li>
+<li><strong>Note:</strong>
+<ul>
+<li>If you want to use a global variable while a local variable is declared with the same name, use a uniary scope resolution operator(<code class="inline-code">::</code>)</li>
+</ul>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
