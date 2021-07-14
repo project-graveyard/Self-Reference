@@ -1,0 +1,154 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="access-specifiers">Access specifiers</h2>
+<ul>
+<li>They set access levels to particular members of a class. They are public, private and protected.</li>
+<li><strong>public:</strong> It can be accessed and modified from outside the class.</li>
+<li><strong>private:</strong> Cannot be accessed or viewed outside the class.</li>
+</ul>
+<blockquote>
+<p>A public member function may be used to access the private members.</p>
+</blockquote>
+<ul>
+<li>If no access specifier is defined, all members of a class are set to <code class="inline-code">private</code> by default.</li>
+<li><strong>Protected:</strong> It is similar to private but with one difference; it can be accessed in the derived classes.</li>
+</ul>
+<h2 id="classes-objects">Classes &amp; Objects</h2>
+<ul>
+<li>A class is mainly used to group similar functions together in a program.</li>
+<li>An object is used to access methods or functions in a class.</li>
+<li>A method is a function that belongs to a class.</li>
+<li>Sample<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+
+class TestClass{
+    public:
+        //Code written here can be used outside the class
+        void coolSay(){
+            cout &lt;&lt; &quot;Preaching to the choir&quot; &lt;&lt; endl;
+        }
+};
+
+int main() {
+    //defining an object
+    TestClass testObject;
+    
+    testObject.coolSay();
+    return 0;
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestClass</span>{</span>
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-comment">//Code written here can be used outside the class</span>
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">coolSay</span><span class="hljs-params">()</span></span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Preaching to the choir&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">//defining an object</span>
+    TestClass testObject;
+    
+    testObject.coolSay();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>Making class variables public is not good programming practice, make them private.</p>
+</blockquote>
+<h4 id="using-getters-setters-to-access-private-variables">Using Getters &amp; Setters To Access Private Variables</h4>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+
+class StringClass{
+    private:
+        string name;
+    
+    public:
+        //setters are named as set&lt;variable_name&gt;
+        void setName(string x) {
+            name = x;
+        }
+
+        //getters are named as get&lt;variable_name&gt;
+        string getName() {
+            return name;
+        }
+};
+
+int main() {
+    StringClass test;
+    test.setName(&quot;Tommy&quot;);
+    cout &lt;&lt; test.getName();
+    return 0;
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StringClass</span>{</span>
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-built_in">string</span> name;
+    
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-comment">//setters are named as set&lt;variable_name&gt;</span>
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(<span class="hljs-built_in">string</span> x)</span> </span>{
+            name = x;
+        }
+
+        <span class="hljs-comment">//getters are named as get&lt;variable_name&gt;</span>
+        <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> name;
+        }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    StringClass test;
+    test.setName(<span class="hljs-string">&quot;Tommy&quot;</span>);
+    <span class="hljs-built_in">cout</span> &lt;&lt; test.getName();
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>
+<h2 id="constructors">Constructors</h2>
+<ul>
+<li>It is a function that is automatically called when you instantiate an object.</li>
+<li>They do not have a return type.</li>
+<li>It is the same as the class name.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class TestClass{
+    public:
+        TestClass() {
+            cout &lt;&lt; &quot;I am a constructor&quot;;
+        }
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestClass</span>{</span>
+    <span class="hljs-keyword">public</span>:
+        TestClass() {
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;I am a constructor&quot;</span>;
+        }
+}</code></pre></div>
+</li>
+</ul>
+<h2 id="destructors">Destructors</h2>
+<ul>
+<li>They are special functions that are called when an object is destroyed or deleted.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class TestClass{
+    public:
+        ~TestClass() {
+            //some code
+        }
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestClass</span>{</span>
+    <span class="hljs-keyword">public</span>:
+        ~TestClass() {
+            <span class="hljs-comment">//some code</span>
+        }
+}</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
