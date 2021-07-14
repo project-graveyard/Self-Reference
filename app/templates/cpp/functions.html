@@ -1,0 +1,85 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>A function is a group of statements that perform a particular task.</li>
+</ul>
+<h4 id="defining-a-function">Defining A Function</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">return_type function_name($args) {
+    //Statements
+}</pre><pre class="hljs"><code><span class="hljs-function">return_type <span class="hljs-title">function_name</span><span class="hljs-params">($args)</span> </span>{
+    <span class="hljs-comment">//Statements</span>
+}</code></pre></div>
+<ul>
+<li>If a function does not return a value, use a <code class="inline-code">return_type</code> of <code class="inline-code">void</code></li>
+<li>A function must be declared before <code class="inline-code">main</code>.</li>
+</ul>
+<h2 id="prototyping">Prototyping</h2>
+<ul>
+<li>Functions must be created before the <code class="inline-code">`main`</code> function but if you want to keep the main function above the other functions, you can use function prototyping to solve that issue. </li>
+<li>This is where a function is declared before <code class="inline-code">main</code> but is defined after it.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">void func();
+
+int main(){
+    //some code
+}
+
+void func(){
+    //some code
+}</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">func</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-comment">//some code</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">func</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-comment">//some code</span>
+}</code></pre></div>
+</li>
+</ul>
+<h2 id="function-overloading">Function Overloading</h2>
+<ul>
+<li>It is building more than one function with the same name that takes a different data type as parameters.</li>
+<li>A function cannot be overloaded if they only differ by return type.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+void printNumber(int x){
+    cout &lt;&lt; &quot;I am printing an integer &quot; &lt;&lt; x &lt;&lt; endl;
+}
+
+void printNumber(float y){
+    cout &lt;&lt; &quot;I am printing a float &quot; &lt;&lt; y &lt;&lt; endl;
+}
+
+int main()
+{
+    int a = 54;
+    float b = 32.4896;
+
+    printNumber(a);
+    printNumber(b);
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>{
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;I am printing an integer &quot;</span> &lt;&lt; x &lt;&lt; <span class="hljs-built_in">endl</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printNumber</span><span class="hljs-params">(<span class="hljs-keyword">float</span> y)</span></span>{
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;I am printing a float &quot;</span> &lt;&lt; y &lt;&lt; <span class="hljs-built_in">endl</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> a = <span class="hljs-number">54</span>;
+    <span class="hljs-keyword">float</span> b = <span class="hljs-number">32.4896</span>;
+
+    printNumber(a);
+    printNumber(b);
+}</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
