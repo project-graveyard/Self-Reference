@@ -1,0 +1,35 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It is an expression with a fixed value and cannot be changed while a program is running.</li>
+<li>E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">cont int x = 42;</pre><pre class="hljs"><code>cont <span class="hljs-keyword">int</span> x = <span class="hljs-number">42</span>;</code></pre></div>
+</li>
+<li>All constants must be initialised during their declaration.</li>
+</ul>
+<h4 id="constant-function">Constant Function</h4>
+<ul>
+<li>For a constant object to work, you need to declare a constant function.</li>
+<li>To specify a function as a constant member, the <code class="inline-code">const</code> keyword must follow the function prototype, outside of its parameters' closing parenthesis.
+<ul>
+<li>E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class myPrintClass {
+    public:
+        void myPrint() const;
+}
+    
+//defining a constant object
+const myPrintClass obj;
+obj.myPrint();</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">myPrintClass</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">myPrint</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span></span>;
+}
+    
+<span class="hljs-comment">//defining a constant object</span>
+<span class="hljs-keyword">const</span> myPrintClass obj;
+obj.myPrint();</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
