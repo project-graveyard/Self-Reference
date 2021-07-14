@@ -1,0 +1,46 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="pointers">Pointers</h2>
+<ul>
+<li>&amp;(Address-of -operator) denotes an address in memory. E.g. <code class="inline-code">&amp;var</code>.</li>
+<li>A pointer is a variable with the address of another variable as its value.</li>
+<li><code class="inline-code">*</code>(asterisk) is used to declare a variable a pointer.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int *p 	//integer
+double *p 	//double
+float *p 	//float
+char *p  	//character</pre><pre class="hljs"><code><span class="hljs-keyword">int</span> *p 	<span class="hljs-comment">//integer</span>
+<span class="hljs-keyword">double</span> *p 	<span class="hljs-comment">//double</span>
+<span class="hljs-keyword">float</span> *p 	<span class="hljs-comment">//float</span>
+<span class="hljs-keyword">char</span> *p  	<span class="hljs-comment">//character</span></code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>For assigning do not add <code class="inline-code">*</code>.<br>
+Contents of the (deference operator, <code class="inline-code">*</code>), returns value stored in address location. E.g. <code class="inline-code">cout &lt;&lt; &quot;Hello&quot; &lt;&lt; *char</code></p>
+</blockquote>
+<h2 id="memory">Memory</h2>
+<ul>
+<li>In C++ memory is divided into 2 parts.</li>
+<li><strong>The Stack:</strong> All of your local variables take up memory from the stack.</li>
+<li><strong>The Heap:</strong> unused program memory that can be used when the program runs dynamically to allocate memory.</li>
+</ul>
+<h4 id="dynamic-memory">Dynamic Memory</h4>
+<ul>
+<li>It is the memory allocated at runtime.</li>
+<li>It is done using the <code class="inline-code">new</code> operator.</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int *p = new int;
+*p = 5;</pre><pre class="hljs"><code><span class="hljs-keyword">int</span> *p = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>;
+*p = <span class="hljs-number">5</span>;</code></pre></div>
+</li>
+<li>The pointer, <code class="inline-code">p</code>is stored on the stack as a local variable and holds the heap's allocated address as its value. The value of 5 is stored at the address in the heap.</li>
+</ul>
+<blockquote>
+<p>Dynamic memoty must be freed using <code class="inline-code">delete</code> keyword. E.g. <code class="inline-code">delete p;</code><br>
+Dangling pointers are pointers pointing to a non-existent memory locations</p>
+</blockquote>
+<ul>
+<li>To delete a pointer pointing to an array, using <code class="inline-code">delete [] pointer_name;</code></li>
+</ul>
+</div></div>
+    </div>
+</div>
