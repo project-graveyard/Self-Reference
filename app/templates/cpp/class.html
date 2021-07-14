@@ -1,0 +1,99 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="sample">Sample</h2>
+<p><strong>main.cpp</strong> -- main file</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+#include &quot;./MyClass.h&quot;
+
+using namespace std;
+
+int main()
+{
+    MyClass obj;
+    return 0;
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;./MyClass.h&quot;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    MyClass obj;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre></div>
+<p><strong>MyClass.h</strong> -- header file: It holds the function declaration(prototypes) and variable declarations.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#ifndef MYCLASS_H
+#define MYCLASS_H
+
+class MyClass
+{
+public:
+    MyClass();
+    void myPrint();
+
+protected:
+private:
+};
+
+#endif //MYCLASS_H
+</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> MYCLASS_H</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MYCLASS_H</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span>
+{</span>
+<span class="hljs-keyword">public</span>:
+    MyClass();
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">myPrint</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-keyword">protected</span>:
+<span class="hljs-keyword">private</span>:
+};
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">//MYCLASS_H</span></span>
+</code></pre></div>
+<p><strong>MyClass.cpp</strong> -- source file: Contains the implementation of the class and it's methods.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &quot;./MyClass.h&quot;
+#include &lt;iostream&gt;
+
+using namespace std;
+
+MyClass::MyClass()
+{
+    cout &lt;&lt; &quot;Hello World&quot;;
+}
+
+void MyClass::myPrint()
+{
+    cout &lt;&lt; &quot;This is a member function&quot;;
+}
+</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;./MyClass.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+MyClass::MyClass()
+{
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Hello World&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">MyClass::myPrint</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;This is a member function&quot;</span>;
+}
+</code></pre></div>
+<ul>
+<li><code class="inline-code">::</code> is called the binary resolution scope operator and it is used for constructor definition; It is used to define a partiulcar class' member functions, which have alredy been declared.</li>
+<li>The header declares &quot;what&quot; a class will do, while the source file declares &quot;how&quot;.</li>
+</ul>
+<h4 id="selection-operators">Selection Operators</h4>
+<ul>
+<li><code class="inline-code">#ifndef</code> --&gt; &quot;If not defined&quot;</li>
+<li><code class="inline-code">#define</code></li>
+<li><code class="inline-code">#endif</code> --&gt; ends the condition</li>
+</ul>
+<blockquote>
+<p>Selection operators prevents a header file from being included more than once within a file.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
