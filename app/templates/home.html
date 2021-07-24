@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="head">Welcome To My Personal Reference WebApp</h1>
+    <h1 class="_home">Welcome To My Personal Reference WebApp</h1>
     {% for link in nav %}
     <a href="{{ url_for(link.url) }}">
     <div class="card" style="background-color: azure;">
         <div class="container">
             <img src='{{ link.img }}' alt="img"/>
-            <h4><b>{{ link.name }}</b></h4>
-            <p>{{ link.memo }}</p>
+            <h4 class="_home">{{ link.name }}</h4>
+            <p class="_home">{{ link.memo }}</p>
         </div>
     </div>
     </a>
