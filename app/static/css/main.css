@@ -1,12 +1,30 @@
-h1.head {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  background-color: aquamarine;
+@font-face {
+  font-family: EBGaramond;
+  src: url(fonts/EBGaramond-VariableFont_wght.ttf);
 }
 
-h2 {
-  font-weight: bold;
-  font-family: sans-serif;
+@font-face {
+  font-family: Harlow;
+  src: url(fonts/HARLOWSI.TTF);
+}
+
+@font-face {
+  font-family: Imprisha;
+  src: url(fonts/IMPRISHA.TTF);
+}
+
+body {
+  font-family: EBGaramond;
+}
+
+h2.title {
+  font-family: Harlow;
+}
+
+h1._home {
+  text-align: center;
+  font-family: Imprisha;
+  background-color: aquamarine;
 }
 
 .card {
@@ -49,7 +67,6 @@ a:visited {
   }
 }
 
-
 /* #### Tablets Portrait #### */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: Portrait) {
   html,
@@ -63,7 +80,6 @@ a:visited {
     width: 30vw;
   }
 }
-
 
 @media only screen and (max-width: 640px) {
   html,
