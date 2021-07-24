@@ -14,51 +14,24 @@
     />
     <meta name="description" content="{{ description }}" />
     {% block icon %}{% endblock %}
-     <!-- add icon link 
-     <link rel = "icon" href = 
-     "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" 
-             type = "image/x-icon">-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!--<script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-196192381-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-196192381-1");
-    </script>-->
-
     <link
       rel="stylesheet"
       href='{{ url_for("static", filename="pluginAssets/katex/katex.css") }}'
     />
-    <script
-      type="application/javascript"
-      src='{{ url_for("static", filename="pluginAssets/mermaid/mermaid.min.js") }}'
-    ></script>
-    <script
-      type="application/javascript"
-      src='{{ url_for("static", filename="pluginAssets/mermaid/mermaid_render.js") }}'
-    ></script>
     <link
       rel="stylesheet"
       href='{{ url_for("static", filename="pluginAssets/highlight.js/atom-one-light.css") }}'
     />
     <link
       rel="stylesheet"
-      href='{{ url_for("static", filename="css/main.css") }}'
+      href='{{ url_for("static", filename="css/bootstrap.min.css") }}'
     />
     <link
       rel="stylesheet"
-      href='{{ url_for("static", filename="css/bootstrap.min.css") }}'
+      href='{{ url_for("static", filename="css/main.css") }}'
     />
   </head>
-  <body style="background-color: azure;">
+  <body style="background-color: azure">
     {% include 'joplin.html' %} {% block content %}{% endblock %}
   </body>
 </html>
