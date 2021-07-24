@@ -5,13 +5,19 @@
       pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
       b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
 
+      /* Custom css font family */
+      @font-face {
+        font-family: EBGaramond;
+        src: url(fonts/EBGaramond-VariableFont_wght.ttf);
+      }
+
       .body {
           font-size: 15px;
           color: #32373F;
           word-wrap: break-word;
           line-height: 1.6em;
           background-color: azure;
-          font-family: 'Avenir', 'Arial', sans-serif;
+          font-family: EBGaramond;
           padding-bottom: 0px;
           padding-top: 0px;
       }
@@ -200,7 +206,7 @@
           padding: .5em 1em .5em 1em;
           font-size: 15;
           color: #32373F;
-          font-family: 'Avenir', 'Arial', sans-serif;
+          font-family: EBGaramond;
       }
 
       .jop-tinymce table td,
@@ -390,7 +396,7 @@
 
               ul.joplin-checklist li::before {
                   content:"\f14a";
-                  font-family:"Font Awesome 5 Free";
+                  font-family: EBGaramond;
                   background-size: 16px 16px;
                   pointer-events: all;
                   cursor: pointer;
@@ -404,7 +410,6 @@
               .joplin-checklist li:not(.checked)::before {
                   content:"\f0c8";
               }
-  .mermaid { background-color: white; width: 640px; }
 
   /*******************************************************************************
  * Nord2 - A sub-theme of Joplin's Built-in Nord theme.
