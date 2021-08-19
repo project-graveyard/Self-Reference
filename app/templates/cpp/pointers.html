@@ -3,22 +3,92 @@
 <div id="rendered-md"><h2 id="pointers">Pointers</h2>
 <ul>
 <li>&amp;(Address-of -operator) denotes an address in memory. E.g. <code class="inline-code">&amp;var</code>.</li>
-<li>A pointer is a variable with the address of another variable as its value.</li>
+<li>A pointer is a variable with the memory address of another variable as its value.
+<ul>
+<li>sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int value = 25;
+int *valuePointer;
+
+valuePointer = &amp;fish;</pre><pre class="hljs"><code><span class="hljs-keyword">int</span> value = <span class="hljs-number">25</span>;
+<span class="hljs-keyword">int</span> *valuePointer;
+
+valuePointer = &amp;fish;</code></pre></div>
+</li>
+</ul>
+</li>
 <li><code class="inline-code">*</code>(asterisk) is used to declare a variable a pointer.</li>
-<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int *p 	//integer
-double *p 	//double
-float *p 	//float
-char *p  	//character</pre><pre class="hljs"><code><span class="hljs-keyword">int</span> *p 	<span class="hljs-comment">//integer</span>
-<span class="hljs-keyword">double</span> *p 	<span class="hljs-comment">//double</span>
-<span class="hljs-keyword">float</span> *p 	<span class="hljs-comment">//float</span>
-<span class="hljs-keyword">char</span> *p  	<span class="hljs-comment">//character</span></code></pre></div>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int *p; 	//integer
+double *p; 	//double
+float *p; 	//float
+char *p;  	//character</pre><pre class="hljs"><code><span class="hljs-keyword">int</span> *p; 	<span class="hljs-comment">//integer</span>
+<span class="hljs-keyword">double</span> *p; 	<span class="hljs-comment">//double</span>
+<span class="hljs-keyword">float</span> *p; 	<span class="hljs-comment">//float</span>
+<span class="hljs-keyword">char</span> *p;  	<span class="hljs-comment">//character</span></code></pre></div>
 </li>
 </ul>
 <blockquote>
 <p>For assigning do not add <code class="inline-code">*</code>.<br>
-Contents of the (deference operator, <code class="inline-code">*</code>), returns value stored in address location. E.g. <code class="inline-code">cout &lt;&lt; &quot;Hello&quot; &lt;&lt; *char</code></p>
+Contents of the (dereference operator, <code class="inline-code">*</code>), returns value stored in address location. E.g. <code class="inline-code">cout &lt;&lt; &quot;Hello&quot; &lt;&lt; *char</code></p>
 </blockquote>
-<h2 id="memory">Memory</h2>
+<h2 id="application-of-pointers">Application of Pointers</h2>
+<h4 id="pass-by-value-and-reference">Pass by value and reference</h4>
+<ul>
+<li>Whenever a function takes in an arguement, it makes a copy of the variable and uses it - this is called pass by value.</li>
+<li>But if the function takes a pointer as the arguement, it uses the variable itself without making a copy of it - this is called pass ny reference.</li>
+</ul>
+<p><strong>Demo:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+
+void passByValue(int x);
+void passByReference(int *x);
+
+int main(){
+    int apple = 13;
+    int orange = 13;
+    
+    passByValue(apple);
+    passByReference(&amp;orange);
+
+    cout &lt;&lt; apple &lt;&lt; endl; 	// apple = 13
+    cout &lt;&lt; orange &lt;&lt; endl; 	// orange = 66
+}
+
+void passByValue(int x){
+    x = 99;
+}
+
+void passByReference(int *x){
+    *x = 66;
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">passByValue</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">passByReference</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *x)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> apple = <span class="hljs-number">13</span>;
+    <span class="hljs-keyword">int</span> orange = <span class="hljs-number">13</span>;
+    
+    passByValue(apple);
+    passByReference(&amp;orange);
+
+    <span class="hljs-built_in">cout</span> &lt;&lt; apple &lt;&lt; <span class="hljs-built_in">endl</span>; 	<span class="hljs-comment">// apple = 13</span>
+    <span class="hljs-built_in">cout</span> &lt;&lt; orange &lt;&lt; <span class="hljs-built_in">endl</span>; 	<span class="hljs-comment">// orange = 66</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">passByValue</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>{
+    x = <span class="hljs-number">99</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">passByReference</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *x)</span></span>{
+    *x = <span class="hljs-number">66</span>;
+}</code></pre></div>
+<ul>
+<li>Pointers cannot undergo normal addition. Instead of changing the memory address of the pointer, it changes what element it is pointing to.</li>
+</ul>
+<h4 id="memory">Memory</h4>
 <ul>
 <li>In C++ memory is divided into 2 parts.</li>
 <li><strong>The Stack:</strong> All of your local variables take up memory from the stack.</li>
