@@ -17,6 +17,10 @@ body {
   font-family: EBGaramond;
 }
 
+.accordion-button {
+  font-size: 13pt;
+}
+
 h2.title {
   font-family: Harlow;
 }
