@@ -1,0 +1,54 @@
+<div class="html">
+    <div class="body">
+        <div id="rendered-md"><ul>
+<li>Friend functions are non-members of a class used access all members of the class and modify it.</li>
+<li>In order make a function a friend, you prototype it in the class. Sample of prototype: <code class="inline-code">friend void func_name(class_name &amp;obj)</code></li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+class Stank{
+    public:
+        Stank(){
+                stinky = 0;
+        }
+    private:
+        int stinky;
+
+    friend void stanksFriend(Stank &amp;sfo);
+};
+
+void stanksFriend(Stank &amp;sfo){
+    sfo.stinky = 99;
+    cout &lt;&lt; sfo.stinky &lt;&lt; endl;
+}
+
+int main(){
+    Stank bob;
+    stanksFriend(bob);
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stank</span>{</span>
+    <span class="hljs-keyword">public</span>:
+        Stank(){
+                stinky = <span class="hljs-number">0</span>;
+        }
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">int</span> stinky;
+
+    <span class="hljs-function"><span class="hljs-keyword">friend</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stanksFriend</span><span class="hljs-params">(Stank &amp;sfo)</span></span>;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">stanksFriend</span><span class="hljs-params">(Stank &amp;sfo)</span></span>{
+    sfo.stinky = <span class="hljs-number">99</span>;
+    <span class="hljs-built_in">cout</span> &lt;&lt; sfo.stinky &lt;&lt; <span class="hljs-built_in">endl</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    Stank bob;
+    stanksFriend(bob);
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
