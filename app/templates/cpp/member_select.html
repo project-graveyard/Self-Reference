@@ -1,0 +1,42 @@
+<div class="html">
+    <div class="body">
+        <div id="rendered-md"><p><code class="inline-code">-&gt;</code> is the operator used to access member functions from a pointer. Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+class Sally {
+    public:
+        void printCrap() {
+            cout &lt;&lt; &quot;Did someone say steak?&quot; &lt;&lt; endl;
+        }
+};
+
+int main() {
+    Sally obj;
+    Sally *objPointer = &amp;obj;
+
+    obj.printCrap(); 	//accesses printCrap()
+    objPointer -&gt; printCrap(); 	//accesses printCrap() from the pointer
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sally</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printCrap</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Did someone say steak?&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    Sally obj;
+    Sally *objPointer = &amp;obj;
+
+    obj.printCrap(); 	<span class="hljs-comment">//accesses printCrap()</span>
+    objPointer -&gt; printCrap(); 	<span class="hljs-comment">//accesses printCrap() from the pointer</span>
+}</code></pre></div>
+<blockquote>
+<p>To access member functions, whenever you use an object, use a dot(.) operator while if it's a pointer, use the arrow member selection operator(-&gt;)</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
