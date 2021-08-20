@@ -1,0 +1,61 @@
+<div class="html">
+    <div class="body">
+        <div id="rendered-md"><p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">: variable(value), variable(value)</pre><pre class="hljs"><code>: variable(value), variable(value)</code></pre></div>
+<p>Sample:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+using namespace std;
+
+
+class Body{
+    public:
+        Body(int a, int b) 
+        : regVar(a), constVar(b)
+        {	
+        }
+    
+        print() {
+            cout &lt;&lt; &quot;The regular variable is: &quot; &lt;&lt; regVar &lt;&lt; endl;
+            cout &lt;&lt; &quot;The constant variable is: &quot; &lt;&lt; constVar &lt;&lt; endl;
+        }
+    
+    private:
+        int regVar;
+        const int constVar;
+};
+
+int main() {
+    
+    Body obj(5, 56);
+    obj.print();
+    
+}</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Body</span>{</span>
+    <span class="hljs-keyword">public</span>:
+        Body(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b) 
+        : regVar(a), constVar(b)
+        {	
+        }
+    
+        print() {
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;The regular variable is: &quot;</span> &lt;&lt; regVar &lt;&lt; <span class="hljs-built_in">endl</span>;
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;The constant variable is: &quot;</span> &lt;&lt; constVar &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+    
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">int</span> regVar;
+        <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> constVar;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    
+    <span class="hljs-function">Body <span class="hljs-title">obj</span><span class="hljs-params">(<span class="hljs-number">5</span>, <span class="hljs-number">56</span>)</span></span>;
+    obj.print();
+    
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
