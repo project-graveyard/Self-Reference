@@ -1,0 +1,86 @@
+<div class="html">
+    <div class="body">
+        <div id="rendered-md"><ul>
+<li>
+<p>Composition involves using classes as member variables in other classes. It serves to keep individual classes relatively simple, straightforward, and focused on performing one task. It also enables each sub-object to be self-contained and allowing for reusability</p>
+</li>
+<li>
+<p>Sample:</p>
+</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Birthday {
+    public:
+        Birthday(int d, int m, int y)
+        : month(m), day(d), year(y)
+        {
+        }
+    
+        void printDate() {
+            cout &lt;&lt; day &lt;&lt; &quot;/&quot;  &lt;&lt; month &lt;&lt; &quot;/&quot; &lt;&lt; year &lt;&lt; endl;
+        }
+    private:
+        int month;
+        int day;
+        int year;
+};
+
+class People {
+    public:
+        People(string x, Birthday bo) 
+        : name(x), dateOfBirth(bo)
+        {	
+        }
+    
+        void printInfo() {
+            cout &lt;&lt; name &lt;&lt; &quot; was born on &quot;;
+            cout &lt;&lt; dateOfBirth.printDate() &lt;&lt; endl;
+        }
+    private:
+        string name;
+        Birthday dateOfBirth;
+};
+
+int main() {
+    Birthday birthObj(20, 30, 2002);
+    People person(&quot;David&quot;, birthObj);
+    person.printInfo();
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Birthday</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        Birthday(<span class="hljs-keyword">int</span> d, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> y)
+        : month(m), day(d), year(y)
+        {
+        }
+    
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDate</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; day &lt;&lt; <span class="hljs-string">&quot;/&quot;</span>  &lt;&lt; month &lt;&lt; <span class="hljs-string">&quot;/&quot;</span> &lt;&lt; year &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-keyword">int</span> month;
+        <span class="hljs-keyword">int</span> day;
+        <span class="hljs-keyword">int</span> year;
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        People(<span class="hljs-built_in">string</span> x, Birthday bo) 
+        : name(x), dateOfBirth(bo)
+        {	
+        }
+    
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printInfo</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; name &lt;&lt; <span class="hljs-string">&quot; was born on &quot;</span>;
+            <span class="hljs-built_in">cout</span> &lt;&lt; dateOfBirth.printDate() &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+    <span class="hljs-keyword">private</span>:
+        <span class="hljs-built_in">string</span> name;
+        Birthday dateOfBirth;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function">Birthday <span class="hljs-title">birthObj</span><span class="hljs-params">(<span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">2002</span>)</span></span>;
+    <span class="hljs-function">People <span class="hljs-title">person</span><span class="hljs-params">(<span class="hljs-string">&quot;David&quot;</span>, birthObj)</span></span>;
+    person.printInfo();
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
