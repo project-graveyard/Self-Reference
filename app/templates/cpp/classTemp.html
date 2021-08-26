@@ -1,0 +1,64 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h4 id="syntax">Syntax:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T&gt;
+class MyClass {};</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;
+<span class="hljs-title">class</span> <span class="hljs-title">MyClass</span> {</span>};</code></pre></div>
+<h4 id="demo">Demo:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T&gt;
+class Pair {
+    private:
+        T first, second;
+    public: 
+        Pair(T a, T b) : first(a), second(b) {}
+    
+        T bigger();
+};
+
+template &lt;class T&gt;
+T Pair&lt;T&gt;::bigger() {
+    return (first &gt; second ? first : second);
+}
+
+
+int main() {
+    Pair &lt;int&gt; obj(69, 245);
+    cout &lt;&lt; obj.bigger() &lt;&lt; endl;
+}</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;
+<span class="hljs-title">class</span> <span class="hljs-title">Pair</span> {</span>
+    <span class="hljs-keyword">private</span>:
+        T first, second;
+    <span class="hljs-keyword">public</span>: 
+        Pair(T a, T b) : first(a), second(b) {}
+    
+        <span class="hljs-function">T <span class="hljs-title">bigger</span><span class="hljs-params">()</span></span>;
+};
+
+<span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;
+<span class="hljs-title">T</span> <span class="hljs-title">Pair</span>&lt;T&gt;:</span>:bigger() {
+    <span class="hljs-keyword">return</span> (first &gt; second ? first : second);
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    Pair &lt;<span class="hljs-keyword">int</span>&gt; obj(<span class="hljs-number">69</span>, <span class="hljs-number">245</span>);
+    <span class="hljs-built_in">cout</span> &lt;&lt; obj.bigger() &lt;&lt; <span class="hljs-built_in">endl</span>;
+}</code></pre></div>
+<blockquote>
+<p><code class="inline-code">bigger()</code> can be declared in the class:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```"> T bigger() {
+     return (first &gt; second ? first : second);
+   }</pre><pre class="hljs"><code> <span class="hljs-function">T <span class="hljs-title">bigger</span><span class="hljs-params">()</span> </span>{
+     <span class="hljs-keyword">return</span> (first &gt; second ? first : second);
+   }</code></pre></div>
+</blockquote>
+<h4 id="things-to-note">Things to note</h4>
+<ul>
+<li>If you're declaring any function member outside the declaration of a class, you need to have the template definition again.</li>
+<li><code class="inline-code">&lt;T&gt;</code>(blank generic data type) tells the compiler that the function's template parameter is the same as used in the class.</li>
+<li>When creating the objects, you have to explicitly declare the data type. E.g:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">Pair &lt;int&gt; obj(69, 245);</pre><pre class="hljs"><code>Pair &lt;<span class="hljs-keyword">int</span>&gt; obj(<span class="hljs-number">69</span>, <span class="hljs-number">245</span>);</code></pre></div>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
