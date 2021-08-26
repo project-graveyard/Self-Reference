@@ -1,0 +1,69 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h4 id="using-one-data-type-at-a-time">Using one data type at a time</h4>
+<p>Syntax:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T&gt;
+    T func_name(T a) {
+    return a;
+}</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;
+    <span class="hljs-title">T</span> <span class="hljs-title">func_name</span>(<span class="hljs-title">T</span> <span class="hljs-title">a</span>) {</span>
+    <span class="hljs-keyword">return</span> a;
+}</code></pre></div>
+<ul>
+<li>T is not a specific data type but a generic type of data.</li>
+</ul>
+<blockquote>
+<p>A generic class is a variable for the type of data instead of the value itself.<br>
+In this sense, T is a variable for a data type.</p>
+</blockquote>
+<p><strong>Demo</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T&gt;
+    T sum(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    int x = 7, y = 3, z;
+    z = sum(x, y)
+    cout &lt;&lt; z &lt;&lt; endl;
+}</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;
+    <span class="hljs-title">T</span> <span class="hljs-title">sum</span>(<span class="hljs-title">T</span> <span class="hljs-title">a</span>, <span class="hljs-title">T</span> <span class="hljs-title">b</span>) {</span>
+    <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> x = <span class="hljs-number">7</span>, y = <span class="hljs-number">3</span>, z;
+    z = sum(x, y)
+    <span class="hljs-built_in">cout</span> &lt;&lt; z &lt;&lt; <span class="hljs-built_in">endl</span>;
+}</code></pre></div>
+<blockquote>
+<p>If you need a function to do the same thing and work with multiple types of data, you can build a template function.</p>
+</blockquote>
+<h4 id="using-multiple-data-types-at-a-time">Using multiple data types at a time</h4>
+<ul>
+<li>To declare multiple generic data types, use a comma-separated list.</li>
+<li>E.g.<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T, class U&gt;</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>, <span class="hljs-title">class</span> <span class="hljs-title">U</span>&gt;</span></code></pre></div>
+</li>
+<li>Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T, class U&gt;
+U smaller(T a, U b) {
+    return (a &lt; b ? a : b); 
+}
+
+int main(){
+    cout &lt;&lt; smaller(1, 4.25) &lt;&lt; endl;
+}</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>, <span class="hljs-title">class</span> <span class="hljs-title">U</span>&gt;
+<span class="hljs-title">U</span> <span class="hljs-title">smaller</span>(<span class="hljs-title">T</span> <span class="hljs-title">a</span>, <span class="hljs-title">U</span> <span class="hljs-title">b</span>) {</span>
+    <span class="hljs-keyword">return</span> (a &lt; b ? a : b); 
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">cout</span> &lt;&lt; smaller(<span class="hljs-number">1</span>, <span class="hljs-number">4.25</span>) &lt;&lt; <span class="hljs-built_in">endl</span>;
+}</code></pre></div>
+</li>
+</ul>
+<blockquote>
+<p>When you declare a template parameter, you must use it in your function else the compiler will complain.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
