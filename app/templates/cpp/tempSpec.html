@@ -1,0 +1,70 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It allows for the definition of a different implementation of a template when a specific type is passed as a template arguement.</li>
+</ul>
+<h4 id="syntax">Syntax</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;&gt;
+class MyClass &lt;char&gt; {
+    public:
+        MyClass(char x) {};
+
+// where `char` can be any data type</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;&gt;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> &lt;char&gt; {</span>
+    <span class="hljs-keyword">public</span>:
+        MyClass(<span class="hljs-keyword">char</span> x) {};
+
+<span class="hljs-comment">// where `char` can be any data type</span></code></pre></div>
+<h4 id="demo">Demo</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">template &lt;class T&gt;
+class MyClass {
+    public:
+        MyClass(T x) {
+            cout &lt;&lt; x &lt;&lt; &quot; is not a character&quot; &lt;&lt; endl;
+        }
+};
+
+
+// using template specialisation
+// testing for data type `char`
+template &lt;&gt;
+class MyClass &lt;char&gt; {
+    public:
+        MyClass(char x) {
+            cout &lt;&lt; x &lt;&lt; &quot; is a character&quot; &lt;&lt; endl;
+        }
+};
+
+
+int main() {
+    MyClass &lt;int&gt; obj1(7);
+    MyClass &lt;double&gt; obj2(7.25);
+    MyClass &lt;char&gt; obj3('d');
+}</pre><pre class="hljs"><code><span class="hljs-keyword">template</span> &lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;
+<span class="hljs-title">class</span> <span class="hljs-title">MyClass</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        MyClass(T x) {
+            <span class="hljs-built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="hljs-string">&quot; is not a character&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+
+<span class="hljs-comment">// using template specialisation</span>
+<span class="hljs-comment">// testing for data type `char`</span>
+<span class="hljs-keyword">template</span> &lt;&gt;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> &lt;char&gt; {</span>
+    <span class="hljs-keyword">public</span>:
+        MyClass(<span class="hljs-keyword">char</span> x) {
+            <span class="hljs-built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="hljs-string">&quot; is a character&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    MyClass &lt;<span class="hljs-keyword">int</span>&gt; obj1(<span class="hljs-number">7</span>);
+    MyClass &lt;<span class="hljs-keyword">double</span>&gt; obj2(<span class="hljs-number">7.25</span>);
+    MyClass &lt;<span class="hljs-keyword">char</span>&gt; obj3(<span class="hljs-string">&#x27;d&#x27;</span>);
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
