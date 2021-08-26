@@ -1,0 +1,86 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It is a function or method whose behavior can be overriden within an inheriting class by a function.</li>
+<li>It is a base class function that is declared by the keyword <code class="inline-code">virtual</code>.</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Enemy {
+    public:
+        virtual void attack() {}
+};
+
+class Ninja : public Enemy {
+    public:
+        void attack() {
+            cout &lt;&lt; &quot;ninja attack!&quot; &lt;&lt; endl;
+        }
+};
+
+class Monster : public Enemy {
+    public:
+        void attack() {
+            cout &lt;&lt; &quot;monster attack!&quot; &lt;&lt; endl;
+        }
+};
+
+int main () {
+    Ninja n;
+    Monster m;
+    // since a ninja and a monster are a specific types of enemy, 
+    // an Enemy object can be created and it's pointer is set equal to the 
+    // memory address of their objects respectively
+    Enemy *enemy1 = &amp;n;
+    Enemy *enemy2 = &amp;m;
+    
+    enemy1-&gt;attack();
+    enemy2-&gt;attack();
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Enemy</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">attack</span><span class="hljs-params">()</span> </span>{}
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ninja</span> :</span> <span class="hljs-keyword">public</span> Enemy {
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">attack</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;ninja attack!&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Monster</span> :</span> <span class="hljs-keyword">public</span> Enemy {
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">attack</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;monster attack!&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>{
+    Ninja n;
+    Monster m;
+    <span class="hljs-comment">// since a ninja and a monster are a specific types of enemy, </span>
+    <span class="hljs-comment">// an Enemy object can be created and it&#x27;s pointer is set equal to the </span>
+    <span class="hljs-comment">// memory address of their objects respectively</span>
+    Enemy *enemy1 = &amp;n;
+    Enemy *enemy2 = &amp;m;
+    
+    enemy1-&gt;attack();
+    enemy2-&gt;attack();
+}</code></pre></div>
+<blockquote>
+<p>Virtual functions are overriden by polymorphic classes.</p>
+</blockquote>
+<h2 id="pure-virtual-functions">Pure Virtual Functions</h2>
+<ul>
+<li>They are virtual functions without definitions</li>
+<li>Syntax:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">virtual return_type function_name() = 0;</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">virtual</span> return_type <span class="hljs-title">function_name</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;</code></pre></div>
+</li>
+<li>The <code class="inline-code">= 0</code> tells the compiler that the function has no body.</li>
+<li>Every derived class inheriting from a base class with a pure virtual function must override that function, else the code fails to compile and results in an error when you try to instantiate an object of the derived class.</li>
+</ul>
+<h2 id="abstract-class">Abstract Class</h2>
+<ul>
+<li>It is a class with a pure virtual function in it.</li>
+</ul>
+</div></div>
+    </div>
+</div>
