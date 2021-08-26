@@ -1,0 +1,78 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>Polymorhism means &quot;having many forms&quot;.</li>
+<li>It occurs in a direct hierachy of classes and they are related by inheritance.</li>
+<li>In C++, it means that a call to a member function will cause a different implementation to be executed depending on the type of object that invokes the function.</li>
+</ul>
+<h2 id="demo">Demo</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Enemy {
+    protected:
+        int attackPower;
+    public:
+        void setAttackPower (int a) {
+            attackPower = a;
+        }
+};
+
+class Ninja : public Enemy {
+    public:
+        void attack() {
+            cout &lt;&lt; &quot;I am a ninja, chop! -&quot; &lt;&lt; attackPower &lt;&lt; endl;
+        }
+};
+
+class Monster : public Enemy {
+    public:
+        void attack() {
+            cout &lt;&lt; &quot;Monster must eat!  -&quot; &lt;&lt; attackPower &lt;&lt; endl;
+        }
+};
+
+int main () {
+    Ninja n;
+    Monster m;
+    Enemy *enemy1 = &amp;n;
+    Enemy *enemy2 = &amp;m;
+    enemy1-&gt;setAttackPower(28); 
+    enemy2-&gt;setAttackPower(50);
+    
+    n.attack();
+    m.attack();
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Enemy</span> {</span>
+    <span class="hljs-keyword">protected</span>:
+        <span class="hljs-keyword">int</span> attackPower;
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setAttackPower</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> a)</span> </span>{
+            attackPower = a;
+        }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ninja</span> :</span> <span class="hljs-keyword">public</span> Enemy {
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">attack</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;I am a ninja, chop! -&quot;</span> &lt;&lt; attackPower &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Monster</span> :</span> <span class="hljs-keyword">public</span> Enemy {
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">attack</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Monster must eat!  -&quot;</span> &lt;&lt; attackPower &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>{
+    Ninja n;
+    Monster m;
+    Enemy *enemy1 = &amp;n;
+    Enemy *enemy2 = &amp;m;
+    enemy1-&gt;setAttackPower(<span class="hljs-number">28</span>); 
+    enemy2-&gt;setAttackPower(<span class="hljs-number">50</span>);
+    
+    n.attack();
+    m.attack();
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
