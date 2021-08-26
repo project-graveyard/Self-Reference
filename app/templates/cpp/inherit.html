@@ -1,0 +1,82 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>Inheritance allows one to define a class based on another class.</li>
+<li>The class whose properties are inherited by another class is called the <em><strong>base class</strong></em>.</li>
+<li>The class which inherits the properties is called the <em><strong>derived class</strong></em>.</li>
+</ul>
+<blockquote>
+<p>The derived class inherits all it's features from the base class, and can have its own additional features as well.</p>
+</blockquote>
+<h2 id="syntax">Syntax</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Derived : public Base {
+    
+}
+// public means that all the public members of the Base class 
+// become public in the Derived class.</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">public</span> Base {
+    
+}
+<span class="hljs-comment">// public means that all the public members of the Base class </span>
+<span class="hljs-comment">// become public in the Derived class.</span></code></pre></div>
+<h4 id="sample">Sample</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Mother {
+    public:
+        void sayName() {
+            cout &lt;&lt; &quot;I am Saah&quot; &lt;&lt; endl;
+        }
+};
+
+class Daughter : public Mother {
+    public:
+        
+};
+
+int main () {
+    Mother mom;
+    mom.sayName();
+    
+    Daughter tina;
+    tina.sayName();
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Mother</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sayName</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;I am Saah&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+        }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Daughter</span> :</span> <span class="hljs-keyword">public</span> Mother {
+    <span class="hljs-keyword">public</span>:
+        
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>{
+    Mother mom;
+    mom.sayName();
+    
+    Daughter tina;
+    tina.sayName();
+}</code></pre></div>
+<ul>
+<li>A derived class inherits all base class methods with the following exceptions:
+<ul>
+<li>Constructors</li>
+<li>Destructors</li>
+<li>Overload operators</li>
+<li>Friend functions</li>
+</ul>
+</li>
+<li>A class can be derived from multiple classes by specifying the base classes in a comma-separated list.</li>
+<li>Whenever you make anything protected in the class:
+<ul>
+<li>Anything inside the class has access to it.</li>
+<li>Any friend has access.</li>
+<li>Derived class has access to it.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>In inheritance, the derived class gets access to the public and protected variables.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
