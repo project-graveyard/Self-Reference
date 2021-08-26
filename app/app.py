@@ -74,7 +74,6 @@ def cpp():
             'heading': 'Constants', 'url': 'cpp/const.html'},
         {'id': "headingSeventeen", 'data': 'collapseSeventeen',
             'heading': 'This Keyword', 'url': 'cpp/this.html'},
-
         {'id': "headingEighteen", 'data': 'collapseEighteen',
             'heading': 'Operator Overloading', 'url': 'cpp/opp_overload.html'},
         {'id': "headingNineteen", 'data': 'collapseNineteen',
@@ -91,7 +90,6 @@ def cpp():
             'heading': 'Class Templates', 'url': 'cpp/classTemp.html'},
         {'id': "headingTwentyFive", 'data': 'collapseTwentyFive',
             'heading': 'Template Specialisation', 'url': 'cpp/tempSpec.html'},
-        
         {'id': "headingTwentySix", 'data': 'collapseTwentySix',
             'heading': 'Exception Handling', 'url': 'cpp/exceptions.html'},
         {'id': "headingTwentySeven", 'data': 'collapseTwentySeven',
