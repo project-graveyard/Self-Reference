@@ -1,0 +1,27 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><h2 id="demo">Demo</h2>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Derived : public Base {}
+class Derived : protected Base {}
+class Derived : private Base {}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">public</span> Base {}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">protected</span> Base {}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">private</span> Base {}</code></pre></div>
+<h2 id="types">Types</h2>
+<ul>
+<li><strong>Public:</strong> Public members of the base class become the public members of the derived class and protected members of the base class become protected members of the derived class.</li>
+<li><strong>Protected:</strong> Public and protected members of the base class become protected members of the derived class.</li>
+<li><strong>Private:</strong> Public and protected members of the base class become private members of the derived class.</li>
+</ul>
+<h2 id="note">Note:</h2>
+<ul>
+<li>if no access specifier is used when inheriting classes, the type becomes <em><strong>private</strong></em> by default.</li>
+<li>During inheritance:
+<ul>
+<li>Constructors: The base class constructor is called first.</li>
+<li>Destructors: The derived class destructor is called first.</li>
+</ul>
+</li>
+</ul>
+</div></div>
+    </div>
+</div>
