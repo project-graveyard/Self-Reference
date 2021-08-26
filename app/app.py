@@ -46,7 +46,6 @@ def home():
 @app.route('/cpp')
 def cpp():
     block = [
-
         {'id': "headingTwo", 'data': 'collapseTwo',
             'heading': 'Control Structures & Loops', 'url': 'cpp/loops.html'},
         {'id': "headingThree", 'data': 'collapseThree',
@@ -75,11 +74,29 @@ def cpp():
             'heading': 'Constants', 'url': 'cpp/const.html'},
         {'id': "headingSeventeen", 'data': 'collapseSeventeen',
             'heading': 'This Keyword', 'url': 'cpp/this.html'},
+
         {'id': "headingEighteen", 'data': 'collapseEighteen',
-            'heading': 'Exception Handling', 'url': 'cpp/exceptions.html'},
+            'heading': 'Operator Overloading', 'url': 'cpp/opp_overload.html'},
         {'id': "headingNineteen", 'data': 'collapseNineteen',
-            'heading': 'File Handling', 'url': 'cpp/files.html'},
+            'heading': 'Inheritance', 'url': 'cpp/inherit.html'},
         {'id': "headingTwenty", 'data': 'collapseTwenty',
+            'heading': 'Types Of Inheritance', 'url': 'cpp/inherit_types.html'},
+        {'id': "headingTwentyOne", 'data': 'collapseTwentyOne',
+            'heading': 'Polymorphism', 'url': 'cpp/poly.html'},
+        {'id': "headingTwentyTwo", 'data': 'collapseTwentyTwo',
+            'heading': 'Virtual Functions', 'url': 'cpp/virtFunc.html'},
+        {'id': "headingTwentyThree", 'data': 'collapseTwentyThree',
+            'heading': 'Function Templates', 'url': 'cpp/funcTemp.html'},
+        {'id': "headingTwentyFour", 'data': 'collapseTwentyFour',
+            'heading': 'Class Templates', 'url': 'cpp/classTemp.html'},
+        {'id': "headingTwentyFive", 'data': 'collapseTwentyFive',
+            'heading': 'Template Specialisation', 'url': 'cpp/tempSpec.html'},
+        
+        {'id': "headingTwentySix", 'data': 'collapseTwentySix',
+            'heading': 'Exception Handling', 'url': 'cpp/exceptions.html'},
+        {'id': "headingTwentySeven", 'data': 'collapseTwentySeven',
+            'heading': 'File Handling', 'url': 'cpp/files.html'},
+        {'id': "headingTwentyEight", 'data': 'collapseTwentyEight',
             'heading': 'Things To Note', 'url': 'cpp/note.html'},
     ]
 
