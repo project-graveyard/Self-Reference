@@ -1,0 +1,79 @@
+<div class="html">
+    <div class="body">
+<div id="rendered-md"><ul>
+<li>It allows you to use operators and change them way they are used.</li>
+<li>To overload the operator, use the keyword <code class="inline-code">operator</code> and then the operator you want to overload.</li>
+</ul>
+<h4 id="sample">Sample:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">class Sally {
+    public:
+        int num;
+        Sally() {}
+        Sally(int a) {
+            num = a;
+        }
+        Sally operator+(Sally aso) {
+            Sally brandNew;
+            brandNew.num = num + aso.num;
+            return (brandNew);
+        }
+};
+
+
+int main() {
+    Sally a(34);
+    Sally b(21);
+    Sally c;
+    
+    c = a + b; 
+    cout &lt;&lt; c.num;
+    
+    //outputs 55
+}</pre><pre class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sally</span> {</span>
+    <span class="hljs-keyword">public</span>:
+        <span class="hljs-keyword">int</span> num;
+        Sally() {}
+        Sally(<span class="hljs-keyword">int</span> a) {
+            num = a;
+        }
+        Sally <span class="hljs-keyword">operator</span>+(Sally aso) {
+            Sally brandNew;
+            brandNew.num = num + aso.num;
+            <span class="hljs-keyword">return</span> (brandNew);
+        }
+};
+
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function">Sally <span class="hljs-title">a</span><span class="hljs-params">(<span class="hljs-number">34</span>)</span></span>;
+    <span class="hljs-function">Sally <span class="hljs-title">b</span><span class="hljs-params">(<span class="hljs-number">21</span>)</span></span>;
+    Sally c;
+    
+    c = a + b; 
+    <span class="hljs-built_in">cout</span> &lt;&lt; c.num;
+    
+    <span class="hljs-comment">//outputs 55</span>
+}</code></pre></div>
+<h4 id="explanation-of-code">Explanation of code</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">// This overloads the + operator
+// The function takes the current object in our case is a and
+// it treats the object after the operator as a parameter of the function, in our case is b
+Sally operator+(Sally aso) {
+    Sally brandNew;
+    // It takes the current object and adds it to another Sally object
+    brandNew.num = num + aso.num;
+    // returns the sum as a new Sally object
+    return (brandNew);
+}</pre><pre class="hljs"><code><span class="hljs-comment">// This overloads the + operator</span>
+<span class="hljs-comment">// The function takes the current object in our case is a and</span>
+<span class="hljs-comment">// it treats the object after the operator as a parameter of the function, in our case is b</span>
+Sally <span class="hljs-keyword">operator</span>+(Sally aso) {
+    Sally brandNew;
+    <span class="hljs-comment">// It takes the current object and adds it to another Sally object</span>
+    brandNew.num = num + aso.num;
+    <span class="hljs-comment">// returns the sum as a new Sally object</span>
+    <span class="hljs-keyword">return</span> (brandNew);
+}</code></pre></div>
+</div></div>
+    </div>
+</div>
