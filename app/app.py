@@ -30,10 +30,10 @@ def home():
             'url': 'sql', 'img': 'static/img/sql.png'},
         {'name': 'C++', 'memo': 'C++ Cheatsheet',
             'url': 'cpp', 'img': 'static/img/cpp.png'},
-        {'name': 'Flask', 'memo': 'Flask Cheatsheet',
-            'url': 'pyflask', 'img': 'static/img/flask.png'},
-        {'name': 'React js', 'memo': 'React Cheatsheet',
-            'url': 'react', 'img': 'static/img/react.png'}
+        # {'name': 'Flask', 'memo': 'Flask Cheatsheet',
+        #     'url': 'pyflask', 'img': 'static/img/flask.png'},
+        # {'name': 'React js', 'memo': 'React Cheatsheet',
+        #     'url': 'react', 'img': 'static/img/react.png'}
     ]
 
     return render_template(
