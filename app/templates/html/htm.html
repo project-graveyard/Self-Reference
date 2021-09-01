@@ -5,19 +5,20 @@
   type="image/x-icon"
 />
 {% endblock %} {% block content %}
-<div>
-  <img
-    src="{{ url_for('static', filename='img/htm.png')}}"
-    alt="html-icon"
-    style="position: relative; float: left"
-  />
-  <h2 class="title">HTML Reference</h2>
+<div class="__main">
+  <div class="main__heading">
+    <img src="{{ url_for('static', filename='img/htm.png')}}" alt="html-icon" />
+    <h2 class="title">HTML Reference</h2>
+  </div>
+  <div class="main__button">
+    <a href="/"><button class="btn btn-primary align-right">Back</button></a>
+  </div>
 </div>
 <article class="my-3" id="accordion">
   <div>
     <div class="bd-example">
       <div class="accordion" id="accordionExample">
-        <div class="accordion-item" style="background-color: azure;">
+        <div class="accordion-item" style="background-color: azure">
           <h4 class="accordion-header" id="headingOne">
             <button
               class="accordion-button"
@@ -26,7 +27,7 @@
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              style="background-color: azure;"
+              style="background-color: azure"
             >
               Introduction
             </button>
@@ -42,7 +43,7 @@
         </div>
 
         {% for val in block %}
-        <div class="accordion-item" style="background-color: azure;">
+        <div class="accordion-item" style="background-color: azure">
           <h4 class="accordion-header" id="{{ val.id }}">
             <button
               class="accordion-button collapsed"
@@ -51,7 +52,7 @@
               data-bs-target="#{{ val.data }}"
               aria-expanded="false"
               aria-controls="{{ val.data }}"
-              style="background-color: azure;"
+              style="background-color: azure"
             >
               {{ val.heading }}
             </button>
@@ -70,5 +71,4 @@
     </div>
   </div>
 </article>
-
 {% endblock %}

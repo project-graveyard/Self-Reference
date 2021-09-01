@@ -5,15 +5,18 @@
   type="image/x-icon"
 />
 {% endblock %} {% block content %}
-<div>
-  <img
-    src="{{ url_for('static', filename='img/jquery.png') }}"
-    alt="jquery-icon"
-    style="position: relative; float: left"
-  />
-  <h2 class="title">jQuery Reference</h2>
+<div class="__main">
+  <div class="main__heading">
+    <img
+      src="{{ url_for('static', filename='img/jquery.png')}}"
+      alt="jquery-icon"
+    />
+    <h2 class="title">jQuery Reference</h2>
+  </div>
+  <div class="main__button">
+    <a href="/"><button class="btn btn-primary align-right">Back</button></a>
+  </div>
 </div>
-
 <article class="my-3" id="accordion">
   <div>
     <div class="bd-example">
