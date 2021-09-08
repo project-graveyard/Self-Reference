@@ -1,0 +1,134 @@
+<div class="html">
+    <div class="body">
+div id="rendered-md"><ul>
+<li>Include another header file: <code class="inline-code">&lt;fstream&gt;</code></li>
+<li>An object needs to be built since cpp cannot work with files directly.</li>
+</ul>
+<h4 id="sample">Sample:</h4>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+# Create a file object
+ofstream objName;
+
+# Open the file
+# If a file opened does not exist, a new file is created
+objName.open(&quot;das.txt&quot;);
+
+# To output into file
+objName &lt;&lt; &quot;I am being saved in a file!\n&quot;;
+
+## At the end of the program, close the file
+# To close the file
+objName.close();</pre><pre class="hljs"><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;fstream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+# Create a file object
+ofstream objName;
+
+# Open the file
+# If a file opened does <span class="hljs-keyword">not</span> exist, a <span class="hljs-keyword">new</span> file is created
+objName.<span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;das.txt&quot;</span>);
+
+# To output into file
+objName &lt;&lt; <span class="hljs-string">&quot;I am being saved in a file!\n&quot;</span>;
+
+## At the end of the program, close the file
+# To close the file
+objName.<span class="hljs-built_in">close</span>();</code></pre></div>
+<h2 id="tips-when-working-with-files">Tips When Working With Files</h2>
+<ul>
+<li>You can create an object and pass the filename as an arguement in the constructor<br>
+Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">ofstream fileObj(&quot;filename&quot;);</pre><pre class="hljs"><code><span class="hljs-function">ofstream <span class="hljs-title">fileObj</span><span class="hljs-params">(<span class="hljs-string">&quot;filename&quot;</span>)</span></span>;</code></pre></div>
+</li>
+<li>It's good practice to close file objects after working with them. E.g. <code class="inline-code">fileObj.close()</code></li>
+</ul>
+<blockquote>
+<p>In working with files, the output of a code can be stored in them.</p>
+</blockquote>
+<ul>
+<li><code class="inline-code">isopen()</code> function: It returns <code class="inline-code">true</code> if an object is associated with a file. It is used to check if a file is opened.<br>
+Sample:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">if(fileObj.is_open()) {
+    cout &lt;&lt; &quot;The file is open&quot; &lt;&lt; endl;
+} else {
+    cout &lt;&lt; &quot;The file is not open&quot; &lt;&lt; endl;
+}</pre><pre class="hljs"><code><span class="hljs-keyword">if</span>(fileObj.<span class="hljs-built_in">is_open</span>()) {
+    cout &lt;&lt; <span class="hljs-string">&quot;The file is open&quot;</span> &lt;&lt; endl;
+} <span class="hljs-keyword">else</span> {
+    cout &lt;&lt; <span class="hljs-string">&quot;The file is not open&quot;</span> &lt;&lt; endl;
+}</code></pre></div>
+<ul>
+<li>Before working with file objects, check to see if they are opened first.</li>
+</ul>
+<h2 id="making-a-custom-file-structure">Making A Custom File Structure</h2>
+<ul>
+<li>Every file on the computer has an end of file marker.<br>
+Sample:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int main() {
+    ofstream fileObj(&quot;filename.txt&quot;)
+    cout &lt;&lt; &quot;Enter ID, Name and Money&quot; &lt;&lt; endl;
+    // cout &lt;&lt; &quot;Press Ctrl+Z to quit\n&quot; &lt;&lt; endl;
+
+    int ID;
+    string name;
+    double money;
+
+    while(cin &gt;&gt; ID &gt;&gt; name &gt;&gt; money) {
+    fileObj &lt;&lt; ID &lt;&lt; &quot; &quot; &lt;&lt; name &lt;&lt; &quot; &quot; &lt;&lt; money &lt;&lt; endl; 
+    }
+}</pre><pre class="hljs"><code><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function">ofstream <span class="hljs-title">fileObj</span><span class="hljs-params">(<span class="hljs-string">&quot;filename.txt&quot;</span>)</span>
+    cout &lt;&lt; &quot;Enter ID, Name <span class="hljs-keyword">and</span> Money&quot; &lt;&lt; endl</span>;
+    <span class="hljs-comment">// cout &lt;&lt; &quot;Press Ctrl+Z to quit\n&quot; &lt;&lt; endl;</span>
+
+    <span class="hljs-type">int</span> ID;
+    string name;
+    <span class="hljs-type">double</span> money;
+
+    <span class="hljs-keyword">while</span>(cin &gt;&gt; ID &gt;&gt; name &gt;&gt; money) {
+    fileObj &lt;&lt; ID &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; name &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; money &lt;&lt; endl; 
+    }
+}</code></pre></div>
+<blockquote>
+<p>&quot;of&quot; (as in <code class="inline-code">ofstream</code>) is used for outputing data to a stream. To read data from a file, use <code class="inline-code">ifstream</code>.</p>
+</blockquote>
+<h2 id="how-to-read-custom-data">How To Read Custom Data</h2>
+<ul>
+<li>To read data in from a file, use <code class="inline-code">ifstream</code>.</li>
+<li>Whenever working with files, there's something called a file pointer. It keeps track of where in the file cpp is working with.<br>
+Sample:</li>
+</ul>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">ifstream fileObj(&quot;filename.txt&quot;);
+
+int ID;
+string name;
+double money;
+
+while(fileObj &gt;&gt; id &gt;&gt; name &gt;&gt; money) {
+    cout &lt;&lt; ID &lt;&lt; &quot;, &quot; &lt;&lt; name &lt;&lt; &quot;, &quot; &lt;&lt; money &lt;&lt; endl;
+}</pre><pre class="hljs"><code><span class="hljs-function">ifstream <span class="hljs-title">fileObj</span><span class="hljs-params">(<span class="hljs-string">&quot;filename.txt&quot;</span>)</span></span>;
+
+<span class="hljs-type">int</span> ID;
+string name;
+<span class="hljs-type">double</span> money;
+
+<span class="hljs-keyword">while</span>(fileObj &gt;&gt; id &gt;&gt; name &gt;&gt; money) {
+    cout &lt;&lt; ID &lt;&lt; <span class="hljs-string">&quot;, &quot;</span> &lt;&lt; name &lt;&lt; <span class="hljs-string">&quot;, &quot;</span> &lt;&lt; money &lt;&lt; endl;
+}</code></pre></div>
+<blockquote>
+<p>When the file pointer gets to the end of the file, it automatically returns false.</p>
+</blockquote>
+<ul>
+<li>When the file pointer reaches the end of the file, the fileObj is going to be deleted automatically.</li>
+</ul>
+<blockquote>
+<p>The deconstructor calls the <code class="inline-code">close()</code> method.</p>
+</blockquote>
+</div></div>
+    </div>
+</div>
