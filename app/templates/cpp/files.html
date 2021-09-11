@@ -4,7 +4,7 @@
 <li>Include another header file: <code class="inline-code">&lt;fstream&gt;</code></li>
 <li>An object needs to be built since cpp cannot work with files directly.</li>
 </ul>
-<h4 id="sample">Sample:</h4>
+<p><strong>Sample:</strong></p>
 <div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">#include &lt;iostream&gt;
 #include &lt;fstream&gt;
 using namespace std;
@@ -41,7 +41,7 @@ objName.<span class="hljs-built_in">close</span>();</code></pre></div>
 <h2 id="tips-when-working-with-files">Tips When Working With Files</h2>
 <ul>
 <li>You can create an object and pass the filename as an arguement in the constructor<br>
-Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">ofstream fileObj(&quot;filename&quot;);</pre><pre class="hljs"><code><span class="hljs-function">ofstream <span class="hljs-title">fileObj</span><span class="hljs-params">(<span class="hljs-string">&quot;filename&quot;</span>)</span></span>;</code></pre></div>
+<strong>Sample:</strong><div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">ofstream fileObj(&quot;filename&quot;);</pre><pre class="hljs"><code><span class="hljs-function">ofstream <span class="hljs-title">fileObj</span><span class="hljs-params">(<span class="hljs-string">&quot;filename&quot;</span>)</span></span>;</code></pre></div>
 </li>
 <li>It's good practice to close file objects after working with them. E.g. <code class="inline-code">fileObj.close()</code></li>
 </ul>
@@ -49,8 +49,8 @@ Sample:<div class="joplin-editable"><pre class="joplin-source" data-joplin-langu
 <p>In working with files, the output of a code can be stored in them.</p>
 </blockquote>
 <ul>
-<li><code class="inline-code">isopen()</code> function: It returns <code class="inline-code">true</code> if an object is associated with a file. It is used to check if a file is opened.<br>
-Sample:</li>
+<li><code class="inline-code">isopen() function:</code> It returns <code class="inline-code">true</code> if an object is associated with a file. It is used to check if a file is opened.<br>
+<strong>Sample:</strong></li>
 </ul>
 <div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">if(fileObj.is_open()) {
     cout &lt;&lt; &quot;The file is open&quot; &lt;&lt; endl;
@@ -67,9 +67,7 @@ Sample:</li>
 <h2 id="making-a-custom-file-structure">Making A Custom File Structure</h2>
 <ul>
 <li>Every file on the computer has an end of file marker.<br>
-Sample:</li>
-</ul>
-<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int main() {
+<strong>Sample:</strong><div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">int main() {
     ofstream fileObj(&quot;filename.txt&quot;)
     cout &lt;&lt; &quot;Enter ID, Name and Money&quot; &lt;&lt; endl;
     // cout &lt;&lt; &quot;Press Ctrl+Z to quit\n&quot; &lt;&lt; endl;
@@ -94,6 +92,8 @@ Sample:</li>
     fileObj &lt;&lt; ID &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; name &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; money &lt;&lt; endl; 
     }
 }</code></pre></div>
+</li>
+</ul>
 <blockquote>
 <p>&quot;of&quot; (as in <code class="inline-code">ofstream</code>) is used for outputing data to a stream. To read data from a file, use <code class="inline-code">ifstream</code>.</p>
 </blockquote>
@@ -101,7 +101,7 @@ Sample:</li>
 <ul>
 <li>To read data in from a file, use <code class="inline-code">ifstream</code>.</li>
 <li>Whenever working with files, there's something called a file pointer. It keeps track of where in the file cpp is working with.<br>
-Sample:</li>
+<strong>Sample:</strong></li>
 </ul>
 <div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">ifstream fileObj(&quot;filename.txt&quot;);
 
@@ -127,7 +127,7 @@ string name;
 <li>When the file pointer reaches the end of the file, the fileObj is going to be deleted automatically.</li>
 </ul>
 <blockquote>
-<p>The deconstructor calls the <code class="inline-code">close()</code> method.</p>
+<p>The deconstructor calls the close() method.</p>
 </blockquote>
 </div></div>
     </div>
