@@ -94,8 +94,8 @@ def cpp():
             'heading': 'Exception Handling', 'url': 'cpp/exceptions.html'},
         {'id': "headingTwentySeven", 'data': 'collapseTwentySeven',
             'heading': 'File Handling', 'url': 'cpp/files.html'},
-        # {'id': "headingTwentyEight", 'data': 'collapseTwentyEight',
-        #     'heading': 'Things To Note', 'url': 'cpp/note.html'},
+        {'id': "headingTwentyEight", 'data': 'collapseTwentyEight',
+            'heading': 'Things To Note', 'url': 'cpp/note.html'},
 
     ]
 
