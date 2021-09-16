@@ -1,12 +1,26 @@
 <div class="html">
     <div class="body">
 <div id="rendered-md"><ul>
-<li>An exception is a way of handling an error that might occur when your program is running.</li>
-<li>In order to throw an exception, error numbers can be used. E.g. <code class="inline-code">throw 99;</code>.</li>
+<li>Problems that happen during program execution are called exceptions.</li>
+<li>C++ exception handling is built upon 3 keywords: <strong>try</strong>, <strong>catch</strong> and <strong>throw</strong>.
+<ul>
+<li>In order to throw an exception, error numbers can be used. E.g. <code class="inline-code">throw 0;</code>.</li>
 <li>To handle the error, you need to catch the error (Which is the error number).</li>
-<li>This is done using the <code class="inline-code">catch</code> keyword and enter a block of code to run if an error occurs.</li>
+<li>This is done using the catch keyword and enter a block of code to run if an error occurs.</li>
 </ul>
-<h4 id="sample">Sample</h4>
+</li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">try {
+    // code
+} catch(...) {
+    // code to handle exceptions
+}</pre><pre class="hljs"><code><span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// code</span>
+} <span class="hljs-built_in">catch</span>(...) {
+    <span class="hljs-comment">// code to handle exceptions</span>
+}</code></pre></div>
+<p><strong>Sample:</strong></p>
 <div class="joplin-editable"><pre class="joplin-source" data-joplin-language="cpp" data-joplin-source-open="```cpp&#10;" data-joplin-source-close="&#10;```">try {
     int num1 = 55;
     int num2 = 0;
@@ -26,9 +40,6 @@
 } <span class="hljs-built_in">catch</span>(<span class="hljs-type">int</span> x) {
     cout &lt;&lt; <span class="hljs-string">&quot;Math error: cannot divide by &quot;</span> &lt;&lt; x &lt;&lt; endl;
 } </code></pre></div>
-<ul>
-<li>To catch any error in your program, use <code class="inline-code">...</code> as an arguement for <code class="inline-code">catch</code> 'function'. E.g. <code class="inline-code">catch(...)</code></li>
-</ul>
 </div></div>
     </div>
 </div>
