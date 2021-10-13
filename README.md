@@ -13,7 +13,7 @@ Disclaimer: The site’s contents contain things worth noting in my journey as a
 
 ## Technologies Used:
 * Python Flask for the backend.
-* Bootstrap for the frontend.
+* HTML, CSS and Bootstrap 4 for the frontend.
 
 Check out the site [here](https://self-reference.web.app)
 
