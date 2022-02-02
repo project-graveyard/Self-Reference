@@ -18,8 +18,8 @@ Disclaimer: The site’s contents contain things worth noting in my journey as a
 Check out the site [here](https://self-reference.web.app)
 
 ## Screenshots
-![Screenshot_32](https://user-images.githubusercontent.com/53381103/136451519-d34601c7-d0a0-45dc-bfa0-57a4696df744.png)
+![Screenshot from 2022-02-02 20-54-39](https://user-images.githubusercontent.com/53381103/152235841-9a228e4f-611f-4c76-b8f4-b5bf3275ddb6.png)
 
-![Screenshot_33](https://user-images.githubusercontent.com/53381103/136451535-4e3d85f3-4e0f-4f13-8888-177785b74e75.png)
+![Screenshot from 2022-02-02 20-52-34](https://user-images.githubusercontent.com/53381103/152235561-309bb9ee-c638-44b5-813c-788723fe74cc.png)
 
-![Screenshot_34](https://user-images.githubusercontent.com/53381103/136451549-2a5ad073-df55-462a-8986-4c726a63a09f.png)
+![Screenshot from 2022-02-02 20-53-40](https://user-images.githubusercontent.com/53381103/152235713-107da9e0-2d0b-4816-b904-458f79c0893c.png)
