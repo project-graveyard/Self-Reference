@@ -15,6 +15,7 @@ when referencing a link url use url_for(function_name)
 @app.route('/')
 @app.route('/home')
 def home():
+    '''Route to the home page'''
     nav = [
         {'name': 'HTML', 'memo': 'HTML Cheatsheet',
             'url': 'htm', 'img': 'static/img/htm.png'},
@@ -45,6 +46,7 @@ def home():
 
 @app.route('/cpp')
 def cpp():
+    '''Route to the c++ page'''
     block = [
         {'id': "headingTwo", 'data': 'collapseTwo',
             'heading': 'Control Structures & Loops', 'url': 'cpp/loops.html'},
@@ -109,6 +111,7 @@ def cpp():
 
 @app.route('/python')
 def python():
+    '''Route to the python page'''
     operator = [
         {"sign": "**", "description": "Exponentiation"},
         {"sign": "~, +, -", "description": "Complement, plus, minus"},
@@ -168,6 +171,7 @@ def python():
 
 @app.route('/htm')
 def htm():
+    '''Route to the html page'''
     tags = [
         {"tag": "!-- --", "description": "Defines a comment"},
         {"tag": "!DOCTYPE html", "description": "Defines a document type"},
@@ -356,6 +360,7 @@ def htm():
 
 @app.route('/js')
 def js():
+    '''Route to javascript page'''
     block = [
         {'id': "headingTwo", 'data': 'collapseTwo',
             'heading': 'Symbols & Operators', 'url': 'js/symbol.html'},
@@ -406,6 +411,7 @@ def js():
 
 @app.route("/jQuery")
 def jQuery():
+    '''Route to jQuery page'''
     block = [
         {'id': "headingTwo", 'data': 'collapseTwo',
             'heading': 'Selectors', 'url': 'jquery/select.html'},
@@ -440,6 +446,7 @@ def jQuery():
 
 @app.route('/sql')
 def sql():
+    '''Route to SQL page'''
     block = [
         {'id': "headingTwo", 'data': 'collapseTwo',
             'heading': 'Show Keyword', 'url': 'sql/show.html'},
@@ -486,6 +493,7 @@ def sql():
 
 @app.route('/react')
 def react():
+    '''Route to react js page'''
     return render_template(
         'react.html',
         title='React',
@@ -495,6 +503,7 @@ def react():
 
 @app.route('/css')
 def css():
+    '''Route to css page'''
     block = [
         {'id': "headingTwo", 'data': 'collapseTwo',
             'heading': 'Vertical Align', 'url': 'css/valign.html'},
@@ -540,6 +549,7 @@ def css():
 
 @app.route('/flask')
 def pyflask():
+    '''Route to flask page'''
     return render_template(
         'flask.html',
         title='Flask',
