@@ -10,7 +10,10 @@
     <div class="main__button">
       <a href="/"><button class="btn btn-primary align-right">Back</button></a>
     </div>
-    <img src="{{ url_for('static', filename='img/cpp.png')}}" alt="cpp-icon" />
+    <img
+      src="{{ url_for('static', filename='img/cpp.png')}}"
+      alt="cpp-icon"
+    />
     <h2 class="title">C++ Reference</h2>
   </div>
 </div>
@@ -38,7 +41,9 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body">{% include 'cpp/intro.html' %}</div>
+            <div class="accordion-body">
+              {% include 'cpp/intro.html' %}
+            </div>
           </div>
         </div>
 
@@ -63,7 +68,19 @@
             aria-labelledby="{{ val.id }}"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body">{% include val.url %}</div>
+            <div class="accordion-body">
+              {% include val.url %}
+              <button
+                class="btn btn-danger main__button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#{{ val.data }}"
+                aria-expanded="false"
+                aria-controls="{{ val.data }}"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
         {% endfor %}
