@@ -7,14 +7,14 @@
 {% endblock %} {% block content %}
 <div class="__main">
   <div class="main__heading">
+    <div class="main__button">
+      <a href="/"><button class="btn btn-primary align-right">Back</button></a>
+    </div>
     <img
       src="{{ url_for('static', filename='img/Python.png')}}"
       alt="python-icon"
     />
     <h2 class="title">Python Reference</h2>
-  </div>
-  <div class="main__button">
-    <a href="/"><button class="btn btn-primary align-right">Back</button></a>
   </div>
 </div>
 <article class="my-3" id="accordion">
