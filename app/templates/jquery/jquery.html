@@ -7,21 +7,21 @@
 {% endblock %} {% block content %}
 <div class="__main">
   <div class="main__heading">
+    <div class="main__button">
+      <a href="/"><button class="btn btn-primary align-right">Back</button></a>
+    </div>
     <img
       src="{{ url_for('static', filename='img/jquery.png')}}"
       alt="jquery-icon"
     />
     <h2 class="title">jQuery Reference</h2>
   </div>
-  <div class="main__button">
-    <a href="/"><button class="btn btn-primary align-right">Back</button></a>
-  </div>
 </div>
 <article class="my-3" id="accordion">
   <div>
     <div class="bd-example">
       <div class="accordion" id="accordionExample">
-        <div class="accordion-item" style="background-color: azure;">
+        <div class="accordion-item" style="background-color: azure">
           <h4 class="accordion-header" id="headingOne">
             <button
               class="accordion-button"
@@ -30,7 +30,7 @@
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              style="background-color: azure;"
+              style="background-color: azure"
             >
               Introduction
             </button>
@@ -46,7 +46,7 @@
         </div>
 
         {% for val in block %}
-        <div class="accordion-item" style="background-color: azure;">
+        <div class="accordion-item" style="background-color: azure">
           <h4 class="accordion-header" id="{{ val.id }}">
             <button
               class="accordion-button collapsed"
@@ -55,7 +55,7 @@
               data-bs-target="#{{ val.data }}"
               aria-expanded="false"
               aria-controls="{{ val.data }}"
-              style="background-color: azure;"
+              style="background-color: azure"
             >
               {{ val.heading }}
             </button>
