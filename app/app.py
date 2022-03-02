@@ -31,10 +31,8 @@ def home():
             'url': 'sql', 'img': 'static/img/sql.png'},
         {'name': 'C++', 'memo': 'C++ Cheatsheet',
             'url': 'cpp', 'img': 'static/img/cpp.png'},
-        # {'name': 'Flask', 'memo': 'Flask Cheatsheet',
-        #     'url': 'pyflask', 'img': 'static/img/flask.png'},
-        # {'name': 'React js', 'memo': 'React Cheatsheet',
-        #     'url': 'react', 'img': 'static/img/react.png'}
+        {'name': 'Julia', 'memo': 'Julia Cheatsheet',
+            'url': 'julia', 'img': 'static/img/julia.png'},
     ]
 
     return render_template(
@@ -555,6 +553,17 @@ def pyflask():
         title='Flask',
         description='Code AutoBiography of Flask'
     )
+
+
+@app.route("/julia")
+def julia():
+    '''Route to julia page'''
+    return render_template(
+        'julia/julia.html',
+        title='Julia',
+        description='Code AutoBiography of Julia'
+    )
+
 
 
 if __name__ == "__main__":
