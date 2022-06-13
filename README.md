@@ -16,6 +16,7 @@ Disclaimer: The site’s contents contain things worth noting in my journey as a
 
 * Python Flask for the backend.
 * HTML, CSS and Bootstrap 4 for the frontend.
+> The use of joplin desktop md to html rendering.
 
 Check out the site [here](https://self-reference.web.app)
 
@@ -26,10 +27,3 @@ Check out the site [here](https://self-reference.web.app)
 ![Screenshot from 2022-02-02 20-52-34](https://user-images.githubusercontent.com/53381103/152235561-309bb9ee-c638-44b5-813c-788723fe74cc.png)
 
 ![Screenshot from 2022-02-02 20-53-40](https://user-images.githubusercontent.com/53381103/152235713-107da9e0-2d0b-4816-b904-458f79c0893c.png)
-
-## Note
-
-* This project has been archived. Any tips & tricks learnt would be shared on github README for the respective repository.
-* The previous information is still available on the site.
-
-Thank you.
