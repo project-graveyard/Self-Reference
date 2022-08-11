@@ -1,9 +1,4 @@
 @font-face {
-  font-family: EBGaramond;
-  src: url(fonts/EBGaramond-VariableFont_wght.ttf);
-}
-
-@font-face {
   font-family: Harlow;
   src: url(fonts/HARLOWSI.TTF);
 }
@@ -14,7 +9,8 @@
 }
 
 body {
-  font-family: EBGaramond;
+  font-family: sans-serif; 
+  font-size: 12pt;
 }
 
 .accordion-button {
