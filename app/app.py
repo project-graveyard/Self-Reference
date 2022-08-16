@@ -31,8 +31,8 @@ def home():
             'url': 'sql', 'img': 'static/img/sql.png'},
         {'name': 'C++', 'memo': 'C++ Cheatsheet',
             'url': 'cpp', 'img': 'static/img/cpp.png'},
-        {'name': 'Julia', 'memo': 'Julia Cheatsheet',
-            'url': 'julia', 'img': 'static/img/julia.png'},
+       # {'name': 'Julia', 'memo': 'Julia Cheatsheet',
+        #    'url': 'julia', 'img': 'static/img/julia.png'},
     ]
 
     return render_template(
